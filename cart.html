@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>কার্ট | Khati Shad by Takia</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+
+<div class="container">
+
+<a class="navbar-brand" href="index.html">
+
+<img src="image/logo 2.png" width="50">
+
+Khati Shad by Takia
+
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">হোম</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="products.html">পণ্য</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">আমাদের সম্পর্কে</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">যোগাযোগ</a>
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link active position-relative" href="cart.html">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="cartCount"
+class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+0
+</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- Page Title -->
+
+<section class="py-5 bg-light">
+
+<div class="container text-center">
+
+<h1 class="text-success fw-bold">
+
+🛒 আপনার কার্ট
+
+</h1>
+
+<p>
+
+আপনার নির্বাচিত পণ্যসমূহ
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Cart -->
+
+<section class="container py-5">
+
+<div class="table-responsive">
+
+<table class="table table-bordered align-middle">
+
+<thead class="table-success">
+
+<tr>
+
+<th>ছবি</th>
+
+<th>পণ্যের নাম</th>
+
+<th>ওজন</th>
+
+<th>দাম</th>
+
+<th>পরিমাণ</th>
+
+<th>মোট</th>
+
+<th>Remove</th>
+
+</tr>
+
+</thead>
+
+<tbody id="cartItems">
+</tbody>
+
+</table>
+
+</div>
+
+<!-- Summary -->
+
+<div class="row justify-content-end mt-5">
+
+<div class="col-lg-4">
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<h4 class="text-success">
+
+অর্ডার সারাংশ
+
+</h4>
+
+<hr>
+
+<p>
+    সাবটোটাল
+    <span id="subTotal" class="float-end">৳0</span>
+</p>
+
+<p>
+    ডেলিভারি চার্জ
+    <span id="deliveryCharge" class="float-end">৳150</span>
+</p>
+
+<hr>
+
+<h4>
+    মোট
+    <span id="grandTotal" class="float-end text-success">৳0</span>
+</h4>
+
+<a href="checkout.html"
+class="btn btn-success w-100 mt-3">
+
+<i class="fa-brands fa-whatsapp"></i>
+অর্ডার সম্পন্ন করুন
+
+</a>
+
+<a href="products.html"
+
+class="btn btn-outline-success w-100 mt-2">
+
+আরও কেনাকাটা
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="bg-success text-white text-center p-4">
+
+<h5>
+
+Khati Shad by Takia
+
+</h5>
+
+<p>
+
+খাঁটি স্বাদের বিশ্বস্ত ঠিকানা
+
+</p>
+
+<p>
+
+© ২০২৬ সকল স্বত্ব সংরক্ষিত
+
+</p>
+
+</footer>
+
+<script src="app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পণ্যসমূহ | Khati Shad by Takia</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+
+<div class="container">
+
+<a class="navbar-brand" href="index.html">
+<img src="image/logo 2.png" width="50">
+Khati Shad by Takia
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a class="nav-link" href="index.html">হোম</a></li>
+
+<li class="nav-item"><a class="nav-link active" href="products.html">পণ্য</a></li>
+
+<li class="nav-item"><a class="nav-link" href="about.html">আমাদের সম্পর্কে</a></li>
+
+<li class="nav-item"><a class="nav-link" href="contact.html">যোগাযোগ</a></li>
+
+<li class="nav-item">
+
+    <a class="nav-link position-relative" href="cart.html">
+        <i class="fa-solid fa-cart-shopping"></i>
+        
+        <span id="cartCount"
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+        0
+        </span>
+        
+        </a>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- Banner -->
+
+<section class="py-5 text-center bg-light">
+
+<div class="container">
+
+<h1 class="text-success fw-bold">
+
+আমাদের পণ্যসমূহ
+
+</h1>
+
+<p>
+
+খাঁটি ও নিরাপদ খাদ্যপণ্য
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Search -->
+
+<div class="container mt-4">
+
+    <input
+    type="text"
+    id="searchInput"
+    class="form-control form-control-lg"
+    placeholder="পণ্য খুঁজুন..."
+    onkeyup="searchProducts()">
+
+</div>
+
+<!-- Products -->
+
+<section class="container py-5">
+
+<div class="row g-4">
+
+<!-- Honey -->
+
+<div class="col-lg-3 col-md-6">
+
+    <div class="card h-100 shadow product-card">
+
+<span class="badge bg-success position-absolute m-2">
+
+Best Seller
+
+</span>
+
+<img src="image/modhu-+ (2).jpeg" class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>সুন্দরবনের খাঁটি মধু</h5>
+
+<h4 class="text-success fw-bold">
+
+৳ ১৮০০
+
+</h4>
+
+<p>
+
+১,০০০ গ্রাম
+
+</p>
+
+<button
+class="btn btn-success w-100"
+onclick="addToCart('সুন্দরবনের খাঁটি মধু',1800,'image/modhu-+ (2).jpeg','১,০০০ গ্রাম')"
+
+<i class="fa fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Ghee -->
+
+<div class="col-lg-3 col-md-6">
+
+    <div class="card h-100 shadow product-card">
+
+<img src="image/ghe.offical.jpeg" class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>দেশি গাওয়া ঘি</h5>
+
+<h4 class="text-success fw-bold">
+৳ ১৭০০
+
+</h4>
+
+<p>
+
+১,০০০ গ্রাম
+
+</p>
+
+<button
+class="btn btn-success w-100"
+onclick="addToCart('দেশি গাওয়া ঘি',1700,'image/ghe.offical.jpeg','১,০০০ গ্রাম')"
+
+<i class="fa fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Turmeric -->
+
+<div class="col-lg-3 col-md-6">
+
+    <div class="card h-100 shadow product-card">
+
+<img src="image/holud-gura.jpeg" class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>হলুদ গুঁড়া</h5>
+
+<h4 class="text-success fw-bold">
+
+৳৭০
+
+</h4>
+
+<p>
+
+১০০ গ্রাম
+
+</p>
+
+<button
+class="btn btn-success w-100"
+onclick="addToCart('হলুদ গুঁড়া',70,'image/holud-gura.jpeg','১০০ গ্রাম')"
+
+<i class="fa fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Chili -->
+
+<div class="col-lg-3 col-md-6">
+
+    <div class="card h-100 shadow product-card">
+
+<img src="image/moris gur.png" class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>মরিচ গুঁড়া</h5>
+
+<h4 class="text-success fw-bold">
+৳৭০
+
+</h4>
+
+<p>
+
+১০০ গ্রাম
+
+</p>
+
+<button
+class="btn btn-success w-100"
+onclick="addToCart('মরিচ গুঁড়া',70,'image/moris gur.png','১০০ গ্রাম')"
+
+<i class="fa fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Rice Flour -->
+
+<div class="col-lg-3 col-md-6">
+
+    <div class="card h-100 shadow product-card">
+
+<img src="image/atob-chal.jpeg" class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>আতপ-চাল গুঁড়া</h5>
+
+<h4 class="text-success fw-bold">
+
+৳১৯০
+
+</h4>
+
+<p>
+
+১ কেজি
+
+</p>
+
+<button
+class="btn btn-success w-100"
+onclick="addToCart('আতপ-চাল গুঁড়া',190,'image/atob-chal.jpeg','১ কেজি')"
+
+<i class="fa fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6">
+
+    <div class="card h-100 shadow product-card">
+
+<img src="image/rosun-achar.jpeg" class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>রসুনের আচার</h5>
+
+<h4 class="text-success">
+
+৳২২০
+
+</h4>
+
+<p>
+
+ ২৫০ গ্রাম
+
+</p>
+
+<button
+class="btn btn-success w-100"
+onclick="addToCart('রসুনের আচার',220,'image/rosun-achar.jpeg','২৫০ গ্রাম')"
+
+<i class="fa fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6">
+
+    <div class="card h-100 shadow product-card">
+
+<img src="image/narikeltel.jpeg" class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>নারিকেল তেল</h5>
+
+<h4 class="text-success">
+
+৳২২০
+
+</h4>
+
+<p>
+
+ ২৫০ গ্রাম
+
+</p>
+
+<button
+class="btn btn-success w-100"
+onclick="addToCart('নারিকেল তেল',220,'image/narikeltel.jpeg','২৫০ গ্রাম')"
+
+<i class="fa fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6">
+
+    <div class="card h-100 shadow product-card">
+
+<img src="image/sorisertel.jpeg" class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5> সরিসের তেল</h5>
+
+<h4 class="text-success">
+
+৳২২০
+
+</h4>
+
+<p>
+
+ ২৫০ গ্রাম
+
+</p>
+
+<button
+class="btn btn-success w-100"
+onclick="addToCart('সরিসের তেল',220,'image/sorisertel.jpeg','২৫০ গ্রাম')"
+
+<i class="fa fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+<footer class="bg-success text-white text-center p-4">
+
+©  Khati Shad by Takia
+
+</footer>
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
