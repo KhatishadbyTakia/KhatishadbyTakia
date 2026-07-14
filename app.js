@@ -70,9 +70,9 @@ function addToCart(name, price, image, weight) {
 
     saveCart();
 
-    updateCartCount();
+updateCartCount();
 
-    alert("✅ পণ্যটি কার্টে যোগ করা হয়েছে");
+showMessage("আপনার কার্টে পণ্যটি সফলভাবে যোগ করা হয়েছে।");
 
 }
 
@@ -442,3 +442,34 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 });
+// =======================
+// Custom Toast
+// =======================
+
+function showMessage(message) {
+
+    const toast = document.createElement("div");
+
+    toast.className = "custom-toast";
+
+    toast.innerHTML = `
+        <i class="fa-solid fa-circle-check"></i>
+        <span>${message}</span>
+    `;
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.classList.add("show");
+    }, 100);
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+
+        setTimeout(() => {
+            toast.remove();
+        }, 300);
+
+    }, 2500);
+
+}
