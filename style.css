@@ -51,7 +51,7 @@ transform:translateY(-8px);
 box-shadow:0 18px 35px rgba(0,0,0,.15);
 }
 .card img{
-height:240px;
+height:320px;
 object-fit:cover;
 transition:.4s;
 }
