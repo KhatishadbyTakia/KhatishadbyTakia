@@ -72,7 +72,7 @@ function addToCart(name, price, image, weight) {
 
 updateCartCount();
 
-showMessage("আপনার কার্টে পণ্যটি সফলভাবে যোগ করা হয়েছে।");
+showCartToast(name);
 
 }
 
@@ -485,16 +485,5 @@ function showCartToast(productName){
     setTimeout(()=>{
         toast.classList.remove("show");
     },3000);
-
-}
-function addToCart(name, price, image, weight){
-
-    // Existing Cart Code...
-
-    saveCart();
-
-    updateCartCount();
-
-    showCartToast(name);
 
 }
