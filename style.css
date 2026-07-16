@@ -25,7 +25,7 @@ align-items:center;
 justify-content:center;
 text-align:center;
 color:#fff;
-background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url('./image/background.png') center/cover;
+
 }
 .hero h1{font-size:58px;font-weight:700}
 .hero p{font-size:20px;margin:20px 0}
