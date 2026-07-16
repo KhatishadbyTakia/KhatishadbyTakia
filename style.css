@@ -331,3 +331,39 @@ to{opacity:1;transform:translateY(0)}
 }
 
 }
+.cart-toast{
+    position:fixed;
+    top:25px;
+    right:-400px;
+    width:320px;
+    background:#fff;
+    border-left:6px solid #198754;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    border-radius:12px;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    z-index:99999;
+    transition:.4s;
+}
+
+.cart-toast.show{
+    right:20px;
+}
+
+.cart-toast i{
+    font-size:35px;
+    color:#198754;
+}
+
+.cart-toast strong{
+    display:block;
+    font-size:17px;
+}
+
+.cart-toast p{
+    margin:0;
+    color:#666;
+    font-size:14px;
+}
