@@ -72,7 +72,7 @@ function addToCart(name, price, image, weight) {
 
 updateCartCount();
 
-showCartToast(name);
+showMessage("আপনার কার্টে পণ্যটি সফলভাবে যোগ করা হয়েছে।");
 
 }
 
@@ -471,19 +471,5 @@ function showMessage(message) {
         }, 300);
 
     }, 2500);
-
-}
-function showCartToast(productName){
-
-    const toast = document.getElementById("cartToast");
-    const text = document.getElementById("toastText");
-
-    text.innerHTML = `<b>${productName}</b> কার্টে যোগ হয়েছে`;
-
-    toast.classList.add("show");
-
-    setTimeout(()=>{
-        toast.classList.remove("show");
-    },3000);
 
 }
