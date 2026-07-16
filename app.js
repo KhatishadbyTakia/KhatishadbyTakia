@@ -473,3 +473,28 @@ function showMessage(message) {
     }, 2500);
 
 }
+function showCartToast(productName){
+
+    const toast = document.getElementById("cartToast");
+    const text = document.getElementById("toastText");
+
+    text.innerHTML = `<b>${productName}</b> কার্টে যোগ হয়েছে`;
+
+    toast.classList.add("show");
+
+    setTimeout(()=>{
+        toast.classList.remove("show");
+    },3000);
+
+}
+function addToCart(name, price, image, weight){
+
+    // Existing Cart Code...
+
+    saveCart();
+
+    updateCartCount();
+
+    showCartToast(name);
+
+}
