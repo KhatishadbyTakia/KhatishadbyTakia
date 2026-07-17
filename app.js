@@ -1,6 +1,5 @@
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
 let DELIVERY_CHARGE =
     Number(localStorage.getItem("deliveryCharge")) || 80;
 
