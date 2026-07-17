@@ -4,15 +4,11 @@ padding:0;
 box-sizing:border-box;
 }
 
-
-
 body{
 
 font-family: "Noto Sans Bengali", sans-serif;
 
 }
-
-
 
 /* HERO */
 
@@ -36,7 +32,7 @@ rgba(0,0,0,.45),
 rgba(0,0,0,.45)
 ),
 
-url("/image/background-1.jpeg")
+url("/images/background-1.jpeg")
 
 center/cover no-repeat;
 
