@@ -2,6 +2,7 @@
    Khati Shad by Takia
    Premium Style CSS
 =================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 
 :root{
@@ -206,7 +207,7 @@ section{
 
     background:
     linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("images/background-1.png") center center/cover no-repeat;
+    url("/image/background.png") center center/cover no-repeat;
 }
 
 .hero h1{
@@ -773,17 +774,23 @@ background:none;
     overflow-y:auto;
 
 }
+/* texting */
+/* ==================================
+   MOBILE CART FIX
+================================== */
+
 .cart-product{
     display:flex;
-    gap:12px;
-    align-items:flex-start;
+    align-items:center;
+    gap:15px;
 }
 
 .cart-product img{
-    width:70px;
-    height:70px;
+    width:90px;
+    height:90px;
     object-fit:cover;
-    border-radius:10px;
+    border-radius:12px;
+    border:1px solid #eee;
     flex-shrink:0;
 }
 
@@ -793,39 +800,81 @@ background:none;
 }
 
 .cart-info h6{
-    margin:0;
-    font-size:15px;
+    font-size:17px;
     font-weight:700;
+    color:#222;
+    margin-bottom:6px;
     line-height:1.4;
-    word-break:break-word;
 }
 
 .cart-info .weight{
     display:block;
-    margin-top:4px;
     color:#666;
-    font-size:13px;
+    font-size:14px;
+    margin-bottom:5px;
 }
 
 .cart-info .price{
-    margin-top:5px;
     color:#198754;
     font-weight:700;
+    font-size:16px;
+}
+
+@media (max-width:768px){
+
+    .table{
+        min-width:650px;
+    }
+
 }
 
 @media (max-width:576px){
 
+    .table{
+        min-width:620px;
+    }
+
+    .cart-product{
+        align-items:flex-start;
+        gap:10px;
+    }
+
     .cart-product img{
-        width:60px;
-        height:60px;
+        width:65px;
+        height:65px;
     }
 
     .cart-info h6{
         font-size:14px;
+        line-height:1.4;
+        margin-bottom:4px;
+        word-break:break-word;
     }
 
     .cart-info .weight{
         font-size:12px;
+        margin-bottom:3px;
+    }
+
+    .cart-info .price{
+        font-size:13px;
+    }
+
+    #cartItems td{
+        padding:8px 6px;
+        vertical-align:top;
+    }
+
+    .quantity-box button{
+        width:28px;
+        height:28px;
+        font-size:13px;
+    }
+
+    .quantity-box input{
+        width:38px;
+        height:28px;
+        font-size:13px;
     }
 
 }
