@@ -1,7 +1,9 @@
 
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport"
@@ -32,40 +34,48 @@ href="style.css">
 Navbar Start
 ========================================== -->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+
 
 <div class="container">
 
-<a class="navbar-brand fw-bold"
-href="index.html">
+
+<a class="navbar-brand fw-bold" href="#">
+
+
 <img src="images/logo 2.png"
 width="55"
 class="me-2">
+
+
 Khati Shad by Takia
+
 
 </a>
 
-<button
-class="navbar-toggler"
-type="button"
+
+<button class="navbar-toggler"
 data-bs-toggle="collapse"
-data-bs-target="#navbarNav">
+data-bs-target="#menu">
 
 <span class="navbar-toggler-icon"></span>
 
 </button>
 
-<div
-class="collapse navbar-collapse"
-id="navbarNav">
 
-<ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+<div class="collapse navbar-collapse" id="menu">
+
+
+<ul class="navbar-nav ms-auto">
+
+
 
 <li class="nav-item">
 
-<a
-class="nav-link"
-href="index.html">
+<a class="nav-link active" href="#">
 
 হোম
 
@@ -73,69 +83,49 @@ href="index.html">
 
 </li>
 
+
+
 <li class="nav-item">
 
-<a
-class="nav-link"
-href="products.html">
+<a class="nav-link" href="products.html">
 
-পণ্যসমূহ
+পণ্য
 
 </a>
 
 </li>
 
-<li class="nav-item">
-
-<a
-class="nav-link"
-href="about.html">
-
-আমাদের সম্পর্কে
-
-</a>
-
-</li>
 
 <li class="nav-item">
-
-<a
-class="nav-link"
-href="contact.html">
-
-যোগাযোগ
-
-</a>
-
-</li>
-
-<li class="nav-item ms-lg-3">
-
-<a
-href="cart.html"
-class="btn btn-warning position-relative">
-
+<a class="nav-link position-relative"
+href="cart.html">
 <i class="fa-solid fa-cart-shopping"></i>
-
-<span
-id="cartCount"
-class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+<span id="cartCount"
+class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
 
 0
 
 </span>
 
+
 </a>
+
 
 </li>
 
+
+
 </ul>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 </nav>
+
 
 <!-- ==========================================
 Page Title
@@ -182,7 +172,7 @@ Cart Items
 
 <h2 class="fw-bold mb-2">
 
-🛒 আপনার কার্ট
+🛒 আপনার বাছাইকৃত কার্ট
 
 </h2>
 
@@ -293,8 +283,7 @@ Order Summary
 
 <div class="col-lg-4">
 
-<div class="card shadow-sm border-0 sticky-top"
-style="top:90px;">
+<div class="card shadow-sm border-0 order-summary">
 
 <div class="card-body">
 
@@ -450,23 +439,155 @@ class="btn btn-outline-success w-100 mt-2">
 Footer
 ========================================== -->
 
-<footer class="bg-success text-white text-center py-4 mt-5">
+<footer class="footer-section">
 
-<div class="container">
+    <div class="container">
 
-<h5 class="fw-bold">
+        <div class="row gy-4 align-items-start">
 
-Khati Shad by Takia
+            <!-- Brand -->
 
-</h5>
+            <div class="col-lg-4">
 
-<p class="mb-0">
+                <h3 class="fw-bold mb-3">
 
-খাঁটি স্বাদের বিশ্বস্ত ঠিকানা
+                    Khati Shad by Takia
 
-</p>
+                </h3>
 
-</div>
+                <p class="footer-text">
+
+                    খাঁটি ও প্রাকৃতিক খাদ্যপণ্যের বিশ্বস্ত ঠিকানা।
+                    বিশুদ্ধ মধু, দেশি ঘি, আচার, মসলা, সরিষার তেল,
+                    নারিকেল তেল এবং আরও অনেক প্রিমিয়াম পণ্য
+                    সারা বাংলাদেশে হোম ডেলিভারির মাধ্যমে পৌঁছে দিচ্ছি।
+
+                </p>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="col-lg-4">
+
+                <h5 class="footer-title">
+
+                    দ্রুত লিংক
+
+                </h5>
+
+                <ul class="footer-links list-unstyled">
+
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-house me-2"></i>
+                            হোম
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html">
+                            <i class="fa-solid fa-store me-2"></i>
+                            পণ্যসমূহ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cart.html">
+                            <i class="fa-solid fa-cart-shopping me-2"></i>
+                            কার্ট
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-phone me-2"></i>
+                            যোগাযোগ
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="col-lg-4">
+
+                <h5 class="footer-title">
+
+                    যোগাযোগ
+
+                </h5>
+
+                <p class="footer-text">
+
+                    <i class="fa-solid fa-phone me-2"></i>
+
+                    +8801791649266
+
+                </p>
+
+                <p class="footer-text">
+
+                    <i class="fa-solid fa-envelope me-2"></i>
+
+                    jebatakia8@gmail.com
+
+                </p>
+
+                <p class="footer-text">
+
+                    <i class="fa-solid fa-location-dot me-2"></i>
+
+                    Khulna, Bangladesh
+
+                </p>
+
+                <div class="social-icons mt-3">
+
+                    <a href="https://www.facebook.com/profile.php?id=61591897260380"
+                       target="_blank"
+                       class="social-icon">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="social-icon">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="social-icon">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr class="footer-line">
+
+        <div class="text-center">
+
+            <p class="footer-copy mb-0">
+
+                © 2026 <strong>Khati Shad by Takia</strong> |
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
 
 </footer>
 
