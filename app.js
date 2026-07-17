@@ -404,26 +404,27 @@
 
 // <td>
 
-// <div class="d-flex align-items-center">
+<div class="d-flex align-items-center">
 
-// <img src="${item.image}"
-// width="60"
-// height="60"
-// class="rounded me-2 object-fit-cover">
+<img src="${item.image}"
+class="rounded me-2"
+width="70"
+height="70"
+style="object-fit:cover;">
 
-// <div>
+<div>
 
-// <div class="fw-bold">
-// ${item.name}
-// </div>
+<div class="fw-bold">
+${item.name}
+</div>
 
-// <small class="text-muted">
-// ${item.weight}
-// </small>
+<small class="text-muted">
+${item.weight || ""}
+</small>
 
-// </div>
+</div>
 
-// </div>
+</div>
 
 // </td>
 
