@@ -2,8 +2,11 @@
 <html lang="bn">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>পণ্যসমূহ | Khati Shad by Takia</title>
 
     <!-- Bootstrap -->
@@ -25,84 +28,99 @@
 
 <!-- Navbar Start -->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
 
-    <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
 
-        <a class="navbar-brand fw-bold" href="index.html">
-            <img src="images/logo 2.png"
+
+<div class="container">
+
+
+<a class="navbar-brand fw-bold" href="#">
+
+
+<img src="images/logo 2.png"
 width="55"
 class="me-2">
-             Khati Shad by Takia
-        </a>
 
 
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
+Khati Shad by Takia
 
 
-        <div class="collapse navbar-collapse" id="navbarNav">
+</a>
 
 
-            <ul class="navbar-nav ms-auto align-items-lg-center">
 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        হোম
-                    </a>
-                </li>
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
 
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="products.html">
-                        পণ্যসমূহ
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">
-                        যোগাযোগ
-                    </a>
-                </li>
+<ul class="navbar-nav ms-auto">
 
 
-                <li class="nav-item ms-lg-3">
 
-                    <a href="cart.html"
-                       class="btn btn-warning position-relative">
+<li class="nav-item">
 
-                        <i class="fa-solid fa-cart-shopping"></i>
+<a class="nav-link active" href="index.html">
 
+হোম
 
-                        <span id="cartCount"
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+</a>
 
-                            0
-
-                        </span>
+</li>
 
 
-                    </a>
 
-                </li>
+<li class="nav-item">
+
+<a class="nav-link" href="products.html">
+
+পণ্য
+
+</a>
+
+</li>
 
 
-            </ul>
+<li class="nav-item">
+<a class="nav-link position-relative"
+href="cart.html">
+<i class="fa-solid fa-cart-shopping"></i>
+<span id="cartCount"
+class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+
+0
+
+</span>
 
 
-        </div>
+</a>
 
 
-    </div>
+</li>
+
+
+
+</ul>
+
+
+</div>
+
+
+</div>
+
 
 </nav>
+
+
+
 
 <!-- Navbar End -->
 <!-- ================= PRODUCTS ================= -->
@@ -448,7 +466,7 @@ class="me-2">
 
     <div class="card product-card h-100">
 
-        <img src="images/moris-gur.jpeg"
+        <img src="images/moris gur.jpeg"
              class="card-img-top"
              alt="মরিচ গুঁড়া">
 
@@ -485,7 +503,7 @@ class="me-2">
                 </button>
 
                 <button class="size-btn"
-                        onclick="changeSize(4,175,'২৫০ গ্রাম',this)">
+                        onclick="changeSize(4,350,'২৫০ গ্রাম',this)">
 
                     250g
 
@@ -526,7 +544,7 @@ class="me-2">
             <!-- Add To Cart -->
 
             <button class="btn btn-success w-100 mt-3"
-                    onclick="addSelectedCart('মরিচ গুঁড়া','images/moris-gur.jpeg',4)">
+                    onclick="addSelectedCart('মরিচ গুঁড়া','images/moris gur.jpeg',4)">
 
                 <i class="fa-solid fa-cart-plus"></i>
 
@@ -964,10 +982,6 @@ class="me-2">
 
             </small>
 
-
-
-
-
             <!-- Size Selector -->
 
             <div class="size-selector">
@@ -1070,7 +1084,7 @@ class="me-2">
 
 </div>
 <div id="cartToast"
-     class="toast position-fixed top-0 end-0 m-3"
+     class="toast position-fixed bottom-0 end-0 m-3"
      role="alert"
      data-bs-autohide="true"
      data-bs-delay="2500">
@@ -1087,7 +1101,7 @@ class="me-2">
     </div>
 
 </div>
-
+<!-- Premium Toast -->
 <!-- ==========================
      Footer
 ========================== -->
