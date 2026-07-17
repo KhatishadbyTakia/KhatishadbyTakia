@@ -3,6 +3,9 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 }
+
+
+
 body{
 
 font-family: "Noto Sans Bengali", sans-serif;
@@ -33,7 +36,7 @@ rgba(0,0,0,.45),
 rgba(0,0,0,.45)
 ),
 
-url("/images/background-1.jprg")
+url("./image/background-1.jpeg")
 
 center/cover no-repeat;
 
@@ -60,23 +63,72 @@ margin-top:20px;
 
 }
 
+/* =========================
+   Navbar
+========================= */
 
+.navbar .container{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-right: 15px;
+}
 
 .navbar-brand img{
-
-border-radius:50%;
-
+    width: 55px;
+    border-radius: 50%;
 }
 
+.navbar-brand span{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-left: 8px;
+}
 
+.navbar-nav{
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    margin-left: auto;
+}
 
 .nav-link{
-
-font-size:17px;
-
+    font-size: 17px;
+    color: #fff !important;
+    padding: 0 10px !important;
+    white-space: nowrap;
 }
 
+/* =========================
+   Mobile
+========================= */
 
+@media (max-width:576px){
+
+    .navbar-brand img{
+        width: 42px;
+    }
+
+    .navbar-brand span{
+        font-size: .85rem;
+    }
+
+    .nav-link{
+        font-size: 14px;
+        padding: 0 6px !important;
+    }
+
+    #cartCount{
+        font-size: 10px;
+    }
+}
 
 #cartCount{
 
