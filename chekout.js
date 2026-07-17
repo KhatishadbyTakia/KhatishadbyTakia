@@ -1,2087 +1,556 @@
 /* ==========================================
-PREMIUM CHECKOUT JS FIX PART-1
-CART LOAD + TOTAL SYSTEM
+   Khati Shad by Takia
+   checkout.js
+   Final Part 1 (Core)
 ========================================== */
-// ==========================
-// GET CART
-// ==========================
 
-let cart = JSON.parse(
-localStorage.getItem("cart")
-) || [];
+// =======================
+// Cart Variables
+// =======================
 
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 
+// =======================
+// Reload Cart
+// =======================
 
-// ==========================
-// DOM LOAD
-// ==========================
+function reloadCart() {
 
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-loadCheckoutCart();
-
-updateCartCount();
-
-calculateTotal();
-
-
-}
-);
-
-
-
-
-
-// ==========================
-// LOAD CHECKOUT CART
-// ==========================
-
-function loadCheckoutCart(){
-
-
-const box =
-document.getElementById(
-"checkoutItems"
-);
-
-
-
-if(!box) return;
-
-
-
-box.innerHTML="";
-
-
-
-if(cart.length===0){
-
-box.innerHTML=`
-
-<div class="text-center p-4">
-
-<i class="fa-solid fa-cart-shopping fa-2x text-muted"></i>
-
-<p class="mt-2">
-আপনার কার্ট খালি
-</p>
-
-
-<a href="index.html"
-class="btn btn-success">
-
-পণ্য দেখুন
-
-</a>
-
-</div>
-
-`;
-
-return;
+    cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 }
 
 
+// =======================
+// Update Cart Count
+// =======================
 
+function updateCartCount() {
 
+    reloadCart();
 
-cart.forEach(item=>{
+    let count = 0;
 
+    cart.forEach(function(item){
 
-let price =
-Number(item.price) || 0;
+        count += Number(item.qty || item.quantity || 1);
 
+    });
 
-let qty =
-Number(item.qty) || 1;
+    const badge = document.getElementById("cartCount");
 
+    if(badge){
 
+        badge.innerHTML = count;
 
-let itemTotal =
-price * qty;
-
-
-
-box.innerHTML += `
-
-
-<div class="checkout-product-item">
-
-
-<div class="d-flex align-items-center">
-
-
-<div class="checkout-product-image">
-
-
-<img src="${item.image || 'image/default.png'}">
-
-
-</div>
-
-
-
-<div class="checkout-product-info">
-
-
-<div class="checkout-product-name">
-
-${item.name}
-
-</div>
-
-
-
-<div class="checkout-product-weight">
-
-${item.variant || item.weight || ""}
-
-</div>
-
-
-
-<div class="checkout-product-weight">
-
-Qty: ${qty}
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-<div class="checkout-product-price">
-
-৳${itemTotal}
-
-</div>
-
-
-
-</div>
-
-
-`;
-
-
-
-});
-
+    }
 
 }
 
 
+// =======================
+// Load Checkout Summary
+// =======================
 
+function loadCheckoutSummary(){
 
+    reloadCart();
 
+    let subTotal = 0;
 
+    cart.forEach(function(item){
 
-// ==========================
-// CART COUNT
-// ==========================
+        subTotal += Number(item.price) *
+                    Number(item.qty || 1);
 
-function updateCartCount(){
+    });
 
+    let delivery =
+        Number(localStorage.getItem("checkoutDelivery")) || 0;
 
-const count =
-document.getElementById(
-"cartCount"
-);
+    if(subTotal === 0){
 
+        delivery = 0;
 
+    }
 
-if(!count) return;
+    let grandTotal = subTotal + delivery;
 
+    // Save Again
 
+    localStorage.setItem(
+        "checkoutSubtotal",
+        subTotal
+    );
 
-let totalQty = 0;
+    localStorage.setItem(
+        "checkoutGrandTotal",
+        grandTotal
+    );
 
+    // Show Summary
 
+    const sub =
+        document.getElementById("subTotal");
 
-cart.forEach(item=>{
+    const del =
+        document.getElementById("deliveryCharge");
 
+    const grand =
+        document.getElementById("grandTotal");
 
-totalQty += Number(item.qty) || 0;
+    if(sub){
 
+        sub.innerHTML = "৳" + subTotal;
 
-});
+    }
 
+    if(del){
 
+        del.innerHTML = "৳" + delivery;
 
-count.innerHTML =
-totalQty;
+    }
 
+    if(grand){
 
-}
+        grand.innerHTML = "৳" + grandTotal;
 
-
-
-
-
-
-
-
-// ==========================
-// SUBTOTAL
-// ==========================
-
-
-function calculateSubtotal(){
-
-
-let subtotal = 0;
-
-
-
-cart.forEach(item=>{
-
-
-let price =
-Number(item.price) || 0;
-
-
-let qty =
-Number(item.qty) || 0;
-
-
-
-subtotal +=
-price * qty;
-
-
-
-});
-
-
-
-return subtotal;
-
+    }
 
 }
 
 
+// =======================
+// Page Load
+// =======================
 
+document.addEventListener("DOMContentLoaded",function(){
 
+    updateCartCount();
 
-
-
-
-// ==========================
-// TOTAL CALCULATE
-// ==========================
-
-
-function calculateTotal(){
-
-
-
-let subtotal =
-calculateSubtotal();
-
-
-
-
-const area =
-document.getElementById(
-"deliveryArea"
-);
-
-
-
-
-let delivery = 150;
-
-
-
-if(area){
-
-delivery =
-Number(area.value);
-
-}
-
-
-
-
-
-let grandTotal =
-subtotal + delivery;
-
-
-
-
-
-const sub =
-document.getElementById(
-"subTotal"
-);
-
-
-
-const deliveryBox =
-document.getElementById(
-"deliveryCharge"
-);
-
-
-
-const grand =
-document.getElementById(
-"grandTotal"
-);
-
-
-
-
-
-
-if(sub){
-
-sub.innerHTML =
-"৳"+subtotal;
-
-}
-
-
-
-
-if(deliveryBox){
-
-deliveryBox.innerHTML =
-"৳"+delivery;
-
-}
-
-
-
-
-if(grand){
-
-grand.innerHTML =
-"৳"+grandTotal;
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-// ==========================
-// DELIVERY CHANGE
-// ==========================
-
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-
-const area =
-document.getElementById(
-"deliveryArea"
-);
-
-
-
-if(area){
-
-
-area.addEventListener(
-"change",
-calculateTotal
-);
-
-
-}
-
-
+    loadCheckoutSummary();
 
 });
 /* ==========================================
-PREMIUM CHECKOUT JS FIX PART-2
-PAYMENT + BKASH + VALIDATION
+   Khati Shad by Takia
+   checkout.js
+   Final Part 2
+   Payment & Validation
 ========================================== */
 
+// =======================
+// Toggle bKash Section
+// =======================
 
+function toggleBkash() {
 
-// ==========================
-// PAYMENT CHANGE
-// ==========================
+    const payment =
+        document.getElementById("paymentMethod");
 
-function paymentChanged(){
+    const trxBox =
+        document.getElementById("trxId")
+        .closest(".alert");
 
+    if (!payment || !trxBox) return;
 
-const selectedPayment =
-document.querySelector(
-'input[name="payment"]:checked'
-);
+    if (payment.value === "bKash") {
 
+        trxBox.style.display = "block";
 
+    } else {
 
-const bkashBox =
-document.getElementById(
-"bkashBox"
-);
+        trxBox.style.display = "none";
 
+        document.getElementById("trxId").value = "";
 
-
-if(!selectedPayment || !bkashBox)
-return;
-
-
-
-if(selectedPayment.value === "bKash"){
-
-
-bkashBox.classList.add(
-"show-payment"
-);
-
-
-}
-
-else{
-
-
-bkashBox.classList.remove(
-"show-payment"
-);
-
+    }
 
 }
 
 
+// =======================
+// Validate Checkout Form
+// =======================
+
+function validateCheckout() {
+
+    const name =
+        document.getElementById("customerName")
+        .value.trim();
+
+    const phone =
+        document.getElementById("customerPhone")
+        .value.trim();
+
+    const address =
+        document.getElementById("customerAddress")
+        .value.trim();
+
+    const payment =
+        document.getElementById("paymentMethod")
+        .value;
+
+    const trx =
+        document.getElementById("trxId")
+        .value.trim();
+
+    // Name
+
+    if (name === "") {
+
+        alert("আপনার নাম লিখুন");
+
+        document.getElementById("customerName").focus();
+
+        return false;
+
+    }
+
+    // Phone
+
+    if (phone === "") {
+
+        alert("মোবাইল নম্বর লিখুন");
+
+        document.getElementById("customerPhone").focus();
+
+        return false;
+
+    }
+
+    // Bangladesh Mobile Validation
+
+    const phoneRegex = /^01[3-9]\d{8}$/;
+
+    if (!phoneRegex.test(phone)) {
+
+        alert("সঠিক মোবাইল নম্বর লিখুন");
+
+        document.getElementById("customerPhone").focus();
+
+        return false;
+
+    }
+
+    // Address
+
+    if (address === "") {
+
+        alert("সম্পূর্ণ ঠিকানা লিখুন");
+
+        document.getElementById("customerAddress").focus();
+
+        return false;
+
+    }
+
+    // bKash Validation
+
+    if (payment === "bKash" && trx === "") {
+
+        alert("Transaction ID লিখুন");
+
+        document.getElementById("trxId").focus();
+
+        return false;
+
+    }
+
+    return true;
 
 }
 
 
+// =======================
+// Page Initialization
+// =======================
 
+document.addEventListener("DOMContentLoaded", function () {
 
+    toggleBkash();
 
+    const payment =
+        document.getElementById("paymentMethod");
 
+    if (payment) {
 
-// ==========================
-// PAYMENT LISTENER
-// ==========================
+        payment.addEventListener(
+            "change",
+            toggleBkash
+        );
 
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-
-const payments =
-document.querySelectorAll(
-'input[name="payment"]'
-);
-
-
-
-payments.forEach(payment=>{
-
-
-payment.addEventListener(
-"change",
-paymentChanged
-);
-
-
-});
-
-
-
-paymentChanged();
-
-
-
-});
-
-
-
-
-
-
-
-
-// ==========================
-// INPUT VALIDATION
-// ==========================
-
-
-function validateInput(
-id,
-regex=null
-){
-
-
-
-const input =
-document.getElementById(id);
-
-
-
-if(!input)
-return false;
-
-
-
-
-let value =
-input.value.trim();
-
-
-
-let valid = true;
-
-
-
-
-if(value === ""){
-
-
-valid=false;
-
-
-}
-
-
-
-
-if(regex && value){
-
-
-valid =
-regex.test(value);
-
-
-}
-
-
-
-
-
-input.classList.remove(
-"input-success",
-"input-error"
-);
-
-
-
-
-
-if(valid){
-
-
-input.classList.add(
-"input-success"
-);
-
-
-}
-
-else{
-
-
-input.classList.add(
-"input-error"
-);
-
-
-}
-
-
-
-
-
-return valid;
-
-
-
-}
-
-
-
-
-
-
-
-
-
-// ==========================
-// LIVE VALIDATION
-// ==========================
-
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-
-
-const name =
-document.getElementById(
-"customerName"
-);
-
-
-
-const phone =
-document.getElementById(
-"customerPhone"
-);
-
-
-
-const address =
-document.getElementById(
-"customerAddress"
-);
-
-
-
-
-
-
-
-// NAME
-
-
-if(name){
-
-
-name.addEventListener(
-"input",
-()=>{
-
-
-validateInput(
-"customerName"
-);
-
-
-}
-
-);
-
-
-}
-
-
-
-
-
-
-
-
-// PHONE
-
-
-if(phone){
-
-
-
-phone.addEventListener(
-"input",
-()=>{
-
-
-
-phone.value =
-phone.value.replace(
-/[^0-9]/g,
-""
-);
-
-
-
-validateInput(
-"customerPhone",
-/^01[3-9]\d{8}$/
-);
-
-
-
-}
-
-);
-
-
-
-}
-
-
-
-
-
-
-
-// ADDRESS
-
-
-if(address){
-
-
-address.addEventListener(
-"input",
-()=>{
-
-
-validateInput(
-"customerAddress"
-);
-
-
-
-}
-
-);
-
-
-
-}
-
-
-
-
-
-});
-
-
-
-
-
-
-
-
-// ==========================
-// COPY BKASH NUMBER
-// ==========================
-
-
-function copyBkash(){
-
-
-
-const number =
-"01791649266";
-
-
-
-navigator.clipboard.writeText(
-number
-);
-
-
-
-
-const btn =
-document.getElementById(
-"copyBtn"
-);
-
-
-
-
-
-if(btn){
-
-
-
-btn.innerHTML = `
-
-<i class="fa-solid fa-check"></i>
-
-Copied
-
-`;
-
-
-
-
-
-setTimeout(()=>{
-
-
-btn.innerHTML = `
-
-<i class="fa-regular fa-copy"></i>
-
-Copy
-
-`;
-
-
-},2000);
-
-
-
-}
-
-
-
-
-
-}
-/* ==========================================
-PREMIUM CHECKOUT JS FIX PART-3
-WHATSAPP ORDER SYSTEM FIXED
-========================================== */
-
-
-
-function whatsappOrder(){
-
-
-
-// Reload Latest Cart
-
-cart = JSON.parse(
-localStorage.getItem("cart")
-) || [];
-
-
-
-
-// Cart Empty Check
-
-if(cart.length === 0){
-
-
-alert(
-"আপনার কার্ট খালি।"
-);
-
-
-return;
-
-
-}
-
-
-
-
-
-
-// ==========================
-// VALIDATION
-// ==========================
-
-
-const nameOk =
-validateInput(
-"customerName"
-);
-
-
-
-const phoneOk =
-validateInput(
-"customerPhone",
-/^01[3-9]\d{8}$/
-);
-
-
-
-const addressOk =
-validateInput(
-"customerAddress"
-);
-
-
-
-
-
-
-if(
-!nameOk ||
-!phoneOk ||
-!addressOk
-){
-
-
-alert(
-"সঠিক তথ্য পূরণ করুন।"
-);
-
-
-return;
-
-
-}
-
-
-
-
-
-
-
-// ==========================
-// CUSTOMER INFO
-// ==========================
-
-
-const name =
-document.getElementById(
-"customerName"
-).value.trim();
-
-
-
-
-const phone =
-document.getElementById(
-"customerPhone"
-).value.trim();
-
-
-
-
-const address =
-document.getElementById(
-"customerAddress"
-).value.trim();
-
-
-
-
-const note =
-document.getElementById(
-"customerNote"
-)?.value.trim()
-||
-"";
-
-
-
-
-
-
-
-
-// ==========================
-// PAYMENT
-// ==========================
-
-
-const paymentElement =
-document.querySelector(
-'input[name="payment"]:checked'
-);
-
-
-
-const payment =
-paymentElement
-?
-paymentElement.value
-:
-"Cash on Delivery";
-
-
-
-
-
-
-
-// ==========================
-// BKASH TRX CHECK
-// ==========================
-
-
-const trx =
-document.getElementById(
-"trxId"
-)?.value.trim()
-||
-"";
-
-
-
-
-
-if(
-payment==="bKash" &&
-trx===""
-
-){
-
-
-alert(
-"Transaction ID লিখুন।"
-);
-
-
-
-document
-.getElementById("trxId")
-.focus();
-
-
-
-return;
-
-
-}
-
-
-
-
-
-
-
-
-// ==========================
-// DELIVERY CHARGE FIX
-// ==========================
-
-
-const area =
-document.getElementById(
-"deliveryArea"
-);
-
-
-
-let delivery = 150;
-
-
-
-if(area){
-
-
-delivery =
-Number(area.value);
-
-
-}
-
-
-
-
-
-
-
-
-
-// ==========================
-// WHATSAPP MESSAGE
-// ==========================
-
-
-let message = "";
-
-
-
-message +=
-"🌿 *Khati Shad by Takia*";
-
-
-
-message +=
-"\n━━━━━━━━━━━━━━\n\n";
-
-
-
-
-
-message +=
-"👤 নামঃ "
-+ name
-+"\n";
-
-
-
-message +=
-"📞 মোবাইলঃ "
-+ phone
-+"\n";
-
-
-
-message +=
-"📍 ঠিকানাঃ "
-+ address
-+"\n";
-
-
-
-message +=
-"💳 Paymentঃ "
-+ payment
-+"\n";
-
-
-
-
-
-if(payment==="bKash"){
-
-
-message +=
-"🧾 TRX IDঃ "
-+ trx
-+"\n";
-
-
-}
-
-
-
-
-
-
-message +=
-"\n🛒 *অর্ডারের তালিকা*\n";
-
-
-
-message +=
-"━━━━━━━━━━━━━━\n\n";
-
-
-
-
-
-
-
-let subtotal = 0;
-
-
-
-
-
-cart.forEach(
-(item,index)=>{
-
-
-let price =
-Number(item.price)
-||
-0;
-
-
-
-let qty =
-Number(item.qty)
-||
-1;
-
-
-
-
-let itemTotal =
-price * qty;
-
-
-
-subtotal += itemTotal;
-
-
-
-
-
-message +=
-(index+1)
-+". "
-+
-item.name
-+
-"\n";
-
-
-
-
-
-message +=
-"📦 "
-+
-(item.variant || item.weight || "")
-+
-"\n";
-
-
-
-
-
-message +=
-"🔢 Qty: "
-+
-qty
-+
-"\n";
-
-
-
-
-
-message +=
-"💰 Price: ৳"
-+
-price
-+
-"\n";
-
-
-
-
-
-message +=
-"💵 Total: ৳"
-+
-itemTotal
-+
-"\n\n";
-
-
-
-
-
-});
-
-
-
-
-
-
-
-
-
-// FINAL TOTAL
-
-
-let grandTotal =
-subtotal + delivery;
-
-
-
-
-
-message +=
-"━━━━━━━━━━━━━━\n";
-
-
-
-message +=
-"💰 Subtotal: ৳"
-+
-subtotal
-+
-"\n";
-
-
-
-message +=
-"🚚 Delivery: ৳"
-+
-delivery
-+
-"\n";
-
-
-
-message +=
-"💵 Grand Total: ৳"
-+
-grandTotal;
-
-
-
-
-
-
-if(note){
-
-
-message +=
-"\n\n📝 Note: "
-+
-note;
-
-
-}
-
-
-
-
-
-
-
-// ==========================
-// WHATSAPP NUMBER
-// ==========================
-
-
-const whatsappNumber =
-"8801791649266";
-
-
-
-
-
-window.open(
-
-"https://wa.me/"
-+
-whatsappNumber
-+
-"?text="
-+
-encodeURIComponent(message),
-
-"_blank"
-
-);
-
-
-
-}
-/* ==========================================
-PREMIUM CHECKOUT JS FIX PART-4
-BUTTON + TOAST + CART CLEAR
-========================================== */
-
-
-
-// ==========================
-// DOUBLE CLICK CONTROL
-// ==========================
-
-let ordering = false;
-
-
-
-
-
-function disableOrderButton(){
-
-
-if(ordering){
-
-
-return false;
-
-
-}
-
-
-
-ordering = true;
-
-
-
-
-const btn =
-document.querySelector(
-".checkout-submit-btn"
-);
-
-
-
-
-
-if(btn){
-
-
-
-btn.disabled = true;
-
-
-
-btn.classList.add(
-"loading"
-);
-
-
-
-btn.innerHTML = `
-
-<i class="fa-solid fa-spinner"></i>
-
-অর্ডার পাঠানো হচ্ছে...
-
-`;
-
-
-
-}
-
-
-
-return true;
-
-
-}
-
-
-
-
-
-
-
-
-
-// ==========================
-// ENABLE BUTTON
-// ==========================
-
-
-function enableOrderButton(){
-
-
-ordering = false;
-
-
-
-
-const btn =
-document.querySelector(
-".checkout-submit-btn"
-);
-
-
-
-
-
-if(btn){
-
-
-
-btn.disabled = false;
-
-
-
-btn.classList.remove(
-"loading"
-);
-
-
-
-
-btn.innerHTML = `
-
-<i class="fab fa-whatsapp"></i>
-
-WhatsApp-এ অর্ডার নিশ্চিত করুন
-
-`;
-
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-// ==========================
-// CLEAR CART
-// ==========================
-
-
-function clearCart(){
-
-
-
-localStorage.removeItem(
-"cart"
-);
-
-
-
-cart = [];
-
-
-
-updateCartCount();
-
-
-calculateTotal();
-
-
-loadCheckoutCart();
-
-
-
-}
-
-
-
-
-
-
-
-
-
-// ==========================
-// TOAST MESSAGE
-// ==========================
-
-
-function showToast(text){
-
-
-
-const toastText =
-document.getElementById(
-"toastText"
-);
-
-
-
-
-if(toastText){
-
-
-
-toastText.innerHTML =
-text;
-
-
-
-}
-
-
-
-
-
-
-const toast =
-document.getElementById(
-"cartToast"
-);
-
-
-
-
-
-if(
-toast &&
-typeof bootstrap !== "undefined"
-){
-
-
-
-const bsToast =
-new bootstrap.Toast(
-toast,
-{
-
-delay:3000
-
-}
-
-);
-
-
-
-bsToast.show();
-
-
-
-}
-
-else{
-
-
-alert(text);
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-// ==========================
-// SCROLL TOP
-// ==========================
-
-
-function scrollTopSmooth(){
-
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-
-}
-
-
-
-
-
-
-
-
-
-// ==========================
-// PAGE ANIMATION
-// ==========================
-
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-
-document.body.classList.add(
-"checkout-page"
-);
-
-
-
-});
-
-
-
-
-
-
-
-
-
-// ==========================
-// PAYMENT ACTIVE STYLE
-// ==========================
-
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-
-const payments =
-document.querySelectorAll(
-".payment-box"
-);
-
-
-
-
-
-payments.forEach(box=>{
-
-
-box.addEventListener(
-"click",
-()=>{
-
-
-
-payments.forEach(item=>{
-
-
-item.classList.remove(
-"active"
-);
-
-
-
-});
-
-
-
-
-
-box.classList.add(
-"active"
-);
-
-
-
-});
-
-
-
-});
-
-
-
-});
-
-
-
-
-
-
-
-
-// ==========================
-// ORDER BUTTON CONNECT
-// ==========================
-
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-
-
-const btn =
-document.querySelector(
-".checkout-submit-btn"
-);
-
-
-
-
-
-if(btn){
-
-
-
-btn.addEventListener(
-"click",
-()=>{
-
-
-
-
-
-if(!disableOrderButton()){
-
-
-return;
-
-
-}
-
-
-
-
-
-whatsappOrder();
-
-
-
-
-
-setTimeout(()=>{
-
-
-enableOrderButton();
-
-
-},3000);
-
-
-
-
-
-});
-
-
-
-}
-
-
+    }
 
 });
 /* ==========================================
-PREMIUM CHECKOUT JS FIX PART-5
-FINAL INTEGRATION
+   Khati Shad by Takia
+   checkout.js
+   Final Part 3
+   WhatsApp Order
 ========================================== */
 
+// =======================
+// WhatsApp Order
+// =======================
 
+function whatsappOrder() {
 
-// ==========================
-// AUTO DELIVERY UPDATE
-// ==========================
+    reloadCart();
 
+    if (!validateCheckout()) return;
 
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
+    if (cart.length === 0) {
 
+        alert("আপনার কার্ট খালি।");
 
-const area =
-document.getElementById(
-"deliveryArea"
-);
+        return;
 
+    }
 
+    const name =
+        document.getElementById("customerName").value.trim();
 
-if(area){
+    const phone =
+        document.getElementById("customerPhone").value.trim();
 
+    const address =
+        document.getElementById("customerAddress").value.trim();
 
+    const note =
+        document.getElementById("customerNote").value.trim();
 
-area.addEventListener(
-"change",
-()=>{
+    const payment =
+        document.getElementById("paymentMethod").value;
 
+    const trx =
+        document.getElementById("trxId").value.trim();
 
-calculateTotal();
+    let subTotal = 0;
 
+    cart.forEach(function (item) {
 
+        subTotal += Number(item.price) *
+                    Number(item.qty);
 
-});
+    });
 
+    const delivery =
+        Number(localStorage.getItem("checkoutDelivery")) || 0;
 
+    const grandTotal =
+        subTotal + delivery;
+
+    // Update Summary
+
+    localStorage.setItem(
+        "checkoutSubtotal",
+        subTotal
+    );
+
+    localStorage.setItem(
+        "checkoutGrandTotal",
+        grandTotal
+    );
+
+    let message = "";
+
+    message += "🛒 *Khati Shad by Takia*";
+    message += "\n\n";
+
+    message += "👤 নামঃ " + name + "\n";
+    message += "📞 মোবাইলঃ " + phone + "\n";
+    message += "📍 ঠিকানাঃ " + address + "\n";
+    message += "💳 পেমেন্টঃ " + payment + "\n";
+
+    if (payment === "bKash") {
+
+        message +=
+            "🧾 Transaction ID: " + trx + "\n";
+
+    }
+
+    message += "\n";
+    message += "━━━━━━━━━━━━━━━━━━\n";
+    message += "📦 অর্ডারের তালিকা\n";
+    message += "━━━━━━━━━━━━━━━━━━\n\n";
+
+    cart.forEach(function (item, index) {
+
+        const qty =
+            Number(item.qty);
+
+        const total =
+            Number(item.price) * qty;
+
+        message +=
+            (index + 1) + ". " + item.name + "\n";
+
+        if (item.weight) {
+
+            message +=
+                "📦 ওজনঃ " + item.weight + "\n";
+
+        }
+
+        message +=
+            "💰 মূল্যঃ ৳" + item.price + "\n";
+
+        message +=
+            "🔢 পরিমাণঃ " + qty + "\n";
+
+        message +=
+            "💵 মোটঃ ৳" + total + "\n\n";
+
+    });
+
+    message += "━━━━━━━━━━━━━━━━━━\n";
+
+    message +=
+        "💰 সাবটোটালঃ ৳" +
+        subTotal + "\n";
+
+    message +=
+        "🚚 ডেলিভারিঃ ৳" +
+        delivery + "\n";
+
+    message +=
+        "🧾 সর্বমোটঃ ৳" +
+        grandTotal + "\n";
+
+    if (note !== "") {
+
+        message +=
+            "\n📝 নোটঃ\n" + note;
+
+    }
+
+    const whatsappNumber =
+        "8801791649266";
+
+    window.open(
+
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message),
+
+        "_blank"
+
+    );
+    setTimeout(orderSuccess, 1000);
+
+}
+/* ==========================================
+   Khati Shad by Takia
+   checkout.js
+   Final Part 4
+   Order Success & Reset
+========================================== */
+
+// =======================
+// Clear Checkout Data
+// =======================
+
+function clearCheckoutData() {
+
+    localStorage.removeItem("checkoutSubtotal");
+
+    localStorage.removeItem("checkoutDelivery");
+
+    localStorage.removeItem("checkoutGrandTotal");
 
 }
 
 
+// =======================
+// Clear Cart
+// =======================
 
-});
+function clearCartAfterOrder() {
 
+    localStorage.removeItem("cart");
 
+    cart = [];
 
-
-
-
-
-
-
-// ==========================
-// PAYMENT FINAL SYNC
-// ==========================
-
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-
-
-const payments =
-document.querySelectorAll(
-'input[name="payment"]'
-);
-
-
-
-const bkashBox =
-document.getElementById(
-"bkashBox"
-);
-
-
-
-
-
-
-if(!bkashBox)
-return;
-
-
-
-
-
-payments.forEach(payment=>{
-
-
-
-payment.addEventListener(
-"change",
-()=>{
-
-
-
-
-
-if(
-payment.checked &&
-payment.value==="bKash"
-){
-
-
-
-bkashBox.classList.add(
-"show-payment"
-);
-
-
-
-}
-
-else{
-
-
-
-bkashBox.classList.remove(
-"show-payment"
-);
-
-
+    updateCartCount();
 
 }
 
 
+// =======================
+// Reset Checkout Form
+// =======================
 
+function resetCheckoutForm() {
 
+    const form =
+        document.querySelector("form");
 
-});
+    if (form) {
 
+        form.reset();
 
+    }
 
-});
-
-
-
-});
-
-
-
-
-
-
-
-
-
-// ==========================
-// ORDER SUCCESS HANDLER
-// ==========================
-
-
-function orderSuccess(){
-
-
-
-showToast(
-
-"✅ আপনার অর্ডার WhatsApp এ পাঠানো হয়েছে।"
-
-);
-
-
-
-
-
-setTimeout(()=>{
-
-
-clearCart();
-
-
-
-},1000);
-
-
+    toggleBkash();
 
 }
 
 
+// =======================
+// Order Success
+// =======================
 
+function orderSuccess() {
 
+    clearCartAfterOrder();
 
+    clearCheckoutData();
 
+    resetCheckoutForm();
 
-
-
-// ==========================
-// UPDATE ORDER BUTTON EVENT
-// ==========================
-
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-
-
-const btn =
-document.querySelector(
-".checkout-submit-btn"
-);
-
-
-
-
-
-if(btn){
-
-
-
-btn.addEventListener(
-"click",
-()=>{
-
-
-
-setTimeout(()=>{
-
-
-orderSuccess();
-
-
-
-},1500);
-
-
-
-});
-
-
+    alert("🎉 আপনার অর্ডার সফলভাবে পাঠানো হয়েছে।");
 
 }
 
 
+// =======================
+// Complete Order
+// =======================
 
-});
+// whatsappOrder() এর শেষে
+// window.open(...) এর পর
+// নিচের লাইনটি যোগ করবে।
 
-
-
-
-
-
-
-
-
-// ==========================
-// INITIAL LOAD CHECK
-// ==========================
+// setTimeout(orderSuccess, 1000);
 
 
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
+// =======================
+// Page Init
+// =======================
 
+document.addEventListener("DOMContentLoaded", function () {
 
+    updateCartCount();
 
-loadCheckoutCart();
+    loadCheckoutSummary();
 
+    toggleBkash();
 
-calculateTotal();
+    const payment =
+        document.getElementById("paymentMethod");
 
+    if (payment) {
 
-updateCartCount();
+        payment.addEventListener(
 
+            "change",
 
+            toggleBkash
+
+        );
+
+    }
 
 });
