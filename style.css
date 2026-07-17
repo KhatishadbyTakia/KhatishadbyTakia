@@ -120,44 +120,22 @@ section{
         NAVBAR
 ==================================*/
 
-.navbar{
-    background:var(--primary);
-    padding:12px 0;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-}
-
-.navbar-brand{
-    display:flex;
-    align-items:center;
-    font-size:24px;
-    font-weight:700;
-    color:#fff !important;
-}
+/* ==========================
+   Navbar CSS
+========================== */
 
 .navbar-brand img{
-    width:48px;
-    height:48px;
-    object-fit:contain;
+    border-radius:50%;
 }
 
 .nav-link{
-    color:#fff !important;
-    font-size:16px;
-    font-weight:500;
-    margin-left:12px;
-    transition:.3s;
-}
-
-.nav-link:hover,
-.nav-link.active{
-    color:var(--accent) !important;
+    font-size:17px;
 }
 
 #cartCount{
-    font-size:11px;
-    font-weight:700;
+    font-size:12px;
+    padding:4px 7px;
 }
-
 /*==================================
         HERO
 ==================================*/
@@ -172,7 +150,7 @@ section{
 
     background:
     linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("/images/background.png") center center/cover no-repeat;
+    url("/image/background.png") center center/cover no-repeat;
 }
 
 .hero h1{
@@ -638,23 +616,34 @@ section{
 .premium-toast{
 
 position:fixed;
-top:90px;
+
+bottom:20px;   /* নিচে দেখাবে */
+
 right:20px;
+
 width:330px;
-background:white;
+
+background:#fff;
+
 border-radius:15px;
+
 padding:15px;
+
 display:flex;
+
 align-items:center;
+
 gap:12px;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-z-index:9999;
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+z-index:1100000;
 
 transform:translateX(120%);
-transition:.4s;
+
+transition:.4s ease;
 
 }
-
 
 .premium-toast.show{
 
@@ -710,4 +699,21 @@ background:none;
 
 .toast-content h6{
     color:#198754;
+}
+/*==================================
+        ORDER SUMMARY
+==================================*/
+
+.order-summary{
+
+    position:sticky;
+
+    top:90px;
+
+    align-self:flex-start;
+
+    max-height:calc(100vh - 110px);
+
+    overflow-y:auto;
+
 }
