@@ -2,6 +2,7 @@
    Khati Shad by Takia
    Premium Style CSS
 =================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 
 :root{
@@ -123,17 +124,74 @@ section{
    Navbar CSS
 ========================== */
 
+/*==================================
+        NAVBAR
+==================================*/
+
+.navbar .container{
+    display:flex;
+    align-items:center;
+    flex-wrap:nowrap;
+}
+
+.navbar-brand{
+    display:flex;
+    align-items:center;
+    white-space:nowrap;
+    margin-right:15px;
+}
+
 .navbar-brand img{
+    width:55px;
     border-radius:50%;
+}
+
+.navbar-brand span{
+    font-size:1.1rem;
+    font-weight:700;
+    color:#fff;
+    margin-left:8px;
+}
+
+.navbar-nav{
+    display:flex;
+    flex-direction:row !important;
+    align-items:center;
+    margin-left:auto;
 }
 
 .nav-link{
     font-size:17px;
+    color:#fff !important;
+    padding:0 10px !important;
+    white-space:nowrap;
 }
 
 #cartCount{
     font-size:12px;
     padding:4px 7px;
+}
+
+/* Mobile */
+
+@media (max-width:576px){
+
+    .navbar-brand img{
+        width:42px;
+    }
+
+    .navbar-brand span{
+        font-size:.85rem;
+    }
+
+    .nav-link{
+        font-size:14px;
+        padding:0 6px !important;
+    }
+
+    #cartCount{
+        font-size:10px;
+    }
 }
 /*==================================
         HERO
@@ -146,9 +204,10 @@ section{
     justify-content:center;
     text-align:center;
     color:#fff;
+
     background:
     linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("/images/background-1") center center/cover no-repeat;
+    url("/image/background.png") center center/cover no-repeat;
 }
 
 .hero h1{
