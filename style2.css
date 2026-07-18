@@ -15,26 +15,20 @@ font-family: "Noto Sans Bengali", sans-serif;
 
 
 .hero{
+    min-height:600px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
 
-min-height:600px;
+    background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url("images/background-takia.jpeg");
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-color:white;
-
-background:
-        linear-gradient(
-            rgba(0,0,0,.45),
-            rgba(0,0,0,.45)
-        ),
-        url("./images/background-takia.jpeg") center center/cover no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
-
 .hero h1{
 
 font-size:60px;
