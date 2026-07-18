@@ -205,9 +205,9 @@ section{
     text-align:center;
     color:#fff;
 
-    background:
+    /* background:
     linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("images/background-1.jpge") center center/cover no-repeat;
+    url("images/background-1.jpge") center center/cover no-repeat; */
 }
 
 .hero h1{
