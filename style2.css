@@ -30,13 +30,11 @@ justify-content:center;
 color:white;
 
 background:
-
 linear-gradient(
 rgba(0,0,0,.45),
 rgba(0,0,0,.45)
 ),
-
-url("images/background-1.jpge")
+url("images/background-takia.jpge")
 
 center/cover no-repeat;
 
