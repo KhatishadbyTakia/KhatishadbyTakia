@@ -198,18 +198,10 @@ section{
 ==================================*/
 
 .hero{
-    min-height:550px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:#fff;
-
     background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-  url("./images/background-takia.jpeg") center center/cover no-repeat;
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url("images/background-takia.jpeg") center center/cover no-repeat;
 }
-
 .hero h1{
     font-size:58px;
     font-weight:700;
