@@ -532,3 +532,105 @@ background:none;
 .toast-content h6{
     color:#198754;
 }
+/* =========================
+   Navbar
+========================= */
+
+/* ==========================
+   Premium Navbar
+========================== */
+
+.navbar{
+    background:#198754 !important;
+    padding:10px 0;
+}
+
+.navbar .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:nowrap;
+}
+
+/* Left */
+
+.navbar-brand{
+    display:flex;
+    align-items:center;
+    margin:0;
+    white-space:nowrap;
+    flex-shrink:0;
+}
+
+.navbar-brand img{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.navbar-brand span{
+    margin-left:8px;
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+}
+
+/* Right */
+
+.navbar-nav{
+    display:flex;
+    flex-direction:row !important;
+    align-items:center;
+    margin-left:auto;
+    gap:18px;
+}
+
+.nav-link{
+    color:#fff !important;
+    font-size:17px;
+    font-weight:600;
+    padding:0 !important;
+}
+
+.nav-link:hover{
+    color:#FFD54F !important;
+}
+
+#cartCount{
+    font-size:11px;
+    min-width:18px;
+    min-height:18px;
+}
+
+/* Mobile */
+
+@media(max-width:576px){
+
+    .navbar{
+        padding:8px 0;
+    }
+
+    .navbar-brand img{
+        width:40px;
+        height:40px;
+    }
+
+    .navbar-brand span{
+        font-size:14px;
+        margin-left:6px;
+    }
+
+    .navbar-nav{
+        gap:10px;
+    }
+
+    .nav-link{
+        font-size:13px;
+    }
+
+    #cartCount{
+        font-size:9px;
+    }
+
+}
