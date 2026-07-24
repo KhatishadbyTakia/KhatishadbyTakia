@@ -2,1193 +2,2323 @@
 <html lang="bn">
 
 <head>
-    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>পণ্যসমূহ | Khati Shad by Takia</title>
+<title>পণ্যসমূহ | Khati Shad by Takia</title>
 
-    <!-- Bootstrap -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font Awesome -->
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <!-- CSS -->
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
-<!-- Navbar Start -->
 
 <!-- ================= NAVBAR ================= -->
 
 <nav class="navbar navbar-dark bg-success sticky-top">
-    <div class="container d-flex align-items-center">
 
-        <!-- Logo + Website Name -->
-        <a class="navbar-brand fw-bold d-flex align-items-center me-4" href="#">
-            <img src="images/logo 2.png" width="55" class="me-2" alt="Logo">
-            <span class="text-white">Khati Shad by Takia</span>
-        </a>
+<div class="container d-flex align-items-center">
 
-        <!-- Menu -->
-        <ul class="navbar-nav flex-row">
-            <li class="nav-item">
-                <a class="nav-link px-3 active" href="index.html">হোম</a>
-            </li>
 
-            <li class="nav-item">
-                <a class="nav-link px-3" href="products.html">পণ্য</a>
-            </li>
+<a class="navbar-brand fw-bold d-flex align-items-center me-4"
+href="index.html">
 
-            <li class="nav-item">
-                <a class="nav-link px-3 position-relative" href="cart.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span id="cartCount"
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
-                        0
-                    </span>
-                </a>
-            </li>
-        </ul>
+<img src="images/logo 2.png"
+width="55"
+class="me-2">
 
-    </div>
+<span class="text-white">
+Khati Shad by Takia
+</span>
+
+</a>
+
+
+
+<ul class="navbar-nav flex-row">
+
+
+<li class="nav-item">
+
+<a class="nav-link px-3"
+href="index.html">
+
+হোম
+
+</a>
+
+</li>
+
+
+
+<li class="nav-item">
+
+<a class="nav-link px-3 active"
+href="products.html">
+
+পণ্য
+
+</a>
+
+</li>
+
+
+
+<li class="nav-item">
+
+<a class="nav-link px-3 position-relative"
+href="cart.html">
+
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+
+<span id="cartCount"
+class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+
+0
+
+</span>
+
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+</div>
+
 </nav>
 
 
 
 
-<!-- Navbar End -->
+
 <!-- ================= PRODUCTS ================= -->
+
 
 <section class="py-5">
 
-    <div class="container">
 
-        <!-- Search -->
+<div class="container">
 
-        <div class="row justify-content-center mb-4">
 
-            <div class="col-lg-6">
 
-                <div class="search-box">
+<!-- Search -->
 
-                    <i class="fa-solid fa-magnifying-glass"></i>
+<div class="row justify-content-center mb-4">
 
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="searchInput"
-                        placeholder="পণ্যের নাম লিখে খুঁজুন..."
-                        onkeyup="searchProduct()">
 
-                </div>
+<div class="col-lg-6">
 
-            </div>
 
-        </div>
+<div class="search-box">
 
-        <!-- Category Title -->
 
-        <div class="category-title">
+<i class="fa-solid fa-magnifying-glass"></i>
 
-            🛒 আমাদের সকল পণ্য
 
-        </div>
+<input type="text"
+id="searchInput"
+class="form-control"
+placeholder="পণ্যের নাম লিখে খুঁজুন..."
+onkeyup="searchProduct()">
 
-        <!-- Product Row -->
 
-        <div class="row g-4" id="productContainer">
-
-            <!-- ================= Honey ================= -->
-
-            <div class="col-xl-4 col-lg-4 col-md-6 col-6 product-item">
-
-                <div class="card product-card h-100">
-
-                    <img src="images/modhu-+ (2).jpeg"
-                         class="card-img-top"
-                         alt="সুন্দরবনের খাঁটি মধু">
-
-                    <div class="card-body">
-
-                        <h5 class="product-name">
-
-                            সুন্দরবনের খাঁটি মধু
-
-                        </h5>
-
-                        <h3 id="price1"
-                            class="product-price">
-
-                            ৳ ১৮০০
-
-                        </h3>
-
-                        <small
-                            id="weight1"
-                            class="text-muted d-block mb-3">
-
-                            ১ কেজি
-
-                        </small>
-
-                        <!-- Size -->
-
-                        <div class="size-selector">
-
-                            <button
-                                class="size-btn active"
-                                onclick="changeSize(1,1800,'১ কেজি',this)">
-
-                                1 KG
-
-                            </button>
-
-                            <button
-                                class="size-btn"
-                                onclick="changeSize(1,900,'৫০০ গ্রাম',this)">
-
-                                500g
-
-                            </button>
-
-                            <button
-                                class="size-btn"
-                                onclick="changeSize(1,450,'২৫০ গ্রাম',this)">
-
-                                250g
-
-                            </button>
-
-                        </div>
-
-                        <!-- Quantity -->
-
-                        <div class="quantity-box">
-
-                            <button onclick="minusQty(1)">
-
-                                <i class="fa-solid fa-minus"></i>
-
-                            </button>
-
-                            <input
-                                id="qty1"
-                                type="text"
-                                value="1"
-                                readonly>
-
-                            <button onclick="plusQty(1)">
-
-                                <i class="fa-solid fa-plus"></i>
-
-                            </button>
-
-                        </div>
-
-                        <button
-                            class="btn btn-success w-100 mt-3"
-                            onclick="addSelectedCart('সুন্দরবনের খাঁটি মধু','images/modhu-+ (2).jpeg',1)">
-
-                            <i class="fa-solid fa-cart-plus"></i>
-
-                            কার্টে যোগ করুন
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-            <!-- ================= GHEE ================= -->
-
-<div class="col-xl-4 col-lg-4 col-md-6 col-6 product-item">
-
-    <div class="card product-card h-100">
-
-        <img src="images/ghe.offical.jpeg"
-             class="card-img-top"
-             alt="দেশি গাওয়া ঘি">
-
-        <div class="card-body">
-
-            <h5 class="product-name">
-
-                দেশি গাওয়া ঘি
-
-            </h5>
-
-            <h3 id="price2" class="product-price">
-
-                ৳ ১৭০০
-
-            </h3>
-
-            <small id="weight2"
-                   class="text-muted d-block mb-3">
-
-                ১ কেজি
-
-            </small>
-
-            <!-- Size -->
-
-            <div class="size-selector">
-
-                <button class="size-btn active"
-                        onclick="changeSize(2,1700,'১ কেজি',this)">
-
-                    1 KG
-
-                </button>
-
-                <button class="size-btn"
-                        onclick="changeSize(2,850,'৫০০ গ্রাম',this)">
-
-                    500g
-
-                </button>
-
-                <button class="size-btn"
-                        onclick="changeSize(2,430,'২৫০ গ্রাম',this)">
-
-                    250g
-
-                </button>
-
-            </div>
-
-            <!-- Quantity -->
-
-            <div class="quantity-box">
-
-                <button onclick="minusQty(2)">
-
-                    <i class="fa-solid fa-minus"></i>
-
-                </button>
-
-                <input id="qty2"
-                       type="text"
-                       value="1"
-                       readonly>
-
-                <button onclick="plusQty(2)">
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-            </div>
-
-            <!-- Add Cart -->
-
-            <button class="btn btn-success w-100 mt-3"
-                    onclick="addSelectedCart('দেশি গাওয়া ঘি','images/ghe.offical.jpeg',2)">
-
-                <i class="fa-solid fa-cart-plus"></i>
-
-                কার্টে যোগ করুন
-
-            </button>
-
-        </div>
-
-    </div>
 
 </div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="category-title">
+
+🛒 আমাদের সকল পণ্য
+
+</div>
+
+
+
+
+
+<!-- IMPORTANT ROW START -->
+
+<div class="row g-4"
+id="productContainer">
+
+
+
+
+
+
+
+<!-- ================= HONEY ================= -->
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
+
+
+<div class="card product-card h-100">
+
+
+
+<img src="images/modhu-+ (2).jpeg"
+class="card-img-top">
+
+
+
+<div class="card-body">
+
+
+<h5 class="product-name">
+
+সুন্দরবনের খাঁটি মধু
+
+</h5>
+
+
+
+<h3 id="price1"
+class="product-price">
+
+৳ ১৮০০
+
+</h3>
+
+
+
+<small id="weight1"
+class="text-muted d-block mb-3">
+
+১ কেজি
+
+</small>
+
+
+
+
+<div class="size-selector">
+
+
+<button class="size-btn active"
+onclick="changeSize(1,1800,'১ কেজি',this)">
+
+1 KG
+
+</button>
+
+
+<button class="size-btn"
+onclick="changeSize(1,900,'৫০০ গ্রাম',this)">
+
+500g
+
+</button>
+
+
+<button class="size-btn"
+onclick="changeSize(1,450,'২৫০ গ্রাম',this)">
+
+250g
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+<div class="quantity-box">
+
+
+<button onclick="minusQty(1)">
+
+<i class="fa-solid fa-minus"></i>
+
+</button>
+
+
+
+<input id="qty1"
+type="text"
+value="1"
+readonly>
+
+
+
+<button onclick="plusQty(1)">
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<button class="btn btn-success w-100 mt-3"
+
+onclick="addSelectedCart('সুন্দরবনের খাঁটি মধু','images/modhu-+ (2).jpeg',1)">
+
+
+<i class="fa-solid fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= GHEE ================= -->
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
+
+
+<div class="card product-card h-100">
+
+
+<img src="images/ghe.offical.jpeg"
+class="card-img-top">
+
+
+
+<div class="card-body">
+
+
+<h5 class="product-name">
+
+দেশি গাওয়া ঘি
+
+</h5>
+
+
+
+<h3 id="price2"
+class="product-price">
+
+৳ ১৭০০
+
+</h3>
+
+
+
+<small id="weight2"
+class="text-muted d-block mb-3">
+
+১ কেজি
+
+</small>
+
+
+
+<div class="size-selector">
+
+
+<button class="size-btn active"
+onclick="changeSize(2,1700,'১ কেজি',this)">
+
+1 KG
+
+</button>
+
+
+<button class="size-btn"
+onclick="changeSize(2,850,'৫০০ গ্রাম',this)">
+
+500g
+
+</button>
+
+
+<button class="size-btn"
+onclick="changeSize(2,430,'২৫০ গ্রাম',this)">
+
+250g
+
+</button>
+
+
+</div>
+
+
+
+<div class="quantity-box">
+
+
+<button onclick="minusQty(2)">
+
+<i class="fa-solid fa-minus"></i>
+
+</button>
+
+
+
+<input id="qty2"
+type="text"
+value="1"
+readonly>
+
+
+
+<button onclick="plusQty(2)">
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+</div>
+
+
+
+<button class="btn btn-success w-100 mt-3"
+
+onclick="addSelectedCart('দেশি গাওয়া ঘি','images/ghe.offical.jpeg',2)">
+
+
+<i class="fa-solid fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
 <!-- ================= TURMERIC ================= -->
 
-<div class="col-xl-4 col-lg-4 col-md-6 col-6 product-item">
 
-    <div class="card product-card h-100">
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
 
-        <img src="images/holud-gura.jpeg"
-             class="card-img-top"
-             alt="হলুদ গুঁড়া">
 
-        <div class="card-body">
+<div class="card product-card h-100">
 
-            <h5 class="product-name">
 
-                হলুদ গুঁড়া
+<img src="images/holud-gura.jpeg"
+class="card-img-top">
 
-            </h5>
 
-            <h3 id="price3" class="product-price">
 
-                ৳ ৩৫০
+<div class="card-body">
 
-            </h3>
 
-            <small id="weight3"
-                   class="text-muted d-block mb-3">
+<h5 class="product-name">
 
-                ৫০০ গ্রাম
+হলুদ গুঁড়া
 
-            </small>
+</h5>
 
-            <!-- Size -->
 
-            <div class="size-selector">
 
-                <button class="size-btn active"
-                        onclick="changeSize(3,350,'৫০০ গ্রাম',this)">
+<h3 id="price3"
+class="product-price">
 
-                    500g
+৳ ৩৫০
 
-                </button>
+</h3>
 
-                <button class="size-btn"
-                        onclick="changeSize(3,175,'২৫০ গ্রাম',this)">
 
-                    250g
 
-                </button>
+<small id="weight3"
+class="text-muted d-block mb-3">
 
-                <button class="size-btn"
-                        onclick="changeSize(3,70,'১০০ গ্রাম',this)">
+৫০০ গ্রাম
 
-                    100g
+</small>
 
-                </button>
 
-            </div>
 
-            <!-- Quantity -->
+<div class="size-selector">
 
-            <div class="quantity-box">
 
-                <button onclick="minusQty(3)">
+<button class="size-btn active"
+onclick="changeSize(3,350,'৫০০ গ্রাম',this)">
 
-                    <i class="fa-solid fa-minus"></i>
+500g
 
-                </button>
+</button>
 
-                <input id="qty3"
-                       type="text"
-                       value="1"
-                       readonly>
 
-                <button onclick="plusQty(3)">
+<button class="size-btn"
+onclick="changeSize(3,175,'২৫০ গ্রাম',this)">
 
-                    <i class="fa-solid fa-plus"></i>
+250g
 
-                </button>
+</button>
 
-            </div>
 
-            <!-- Add to Cart -->
+<button class="size-btn"
+onclick="changeSize(3,70,'১০০ গ্রাম',this)">
 
-            <button class="btn btn-success w-100 mt-3"
-                    onclick="addSelectedCart('হলুদ গুঁড়া','images/holud-gura.jpeg',3)">
+100g
 
-                <i class="fa-solid fa-cart-plus"></i>
+</button>
 
-                কার্টে যোগ করুন
 
-            </button>
+</div>
 
-        </div>
 
-    </div>
+
+
+<div class="quantity-box">
+
+
+<button onclick="minusQty(3)">
+
+<i class="fa-solid fa-minus"></i>
+
+</button>
+
+
+
+<input id="qty3"
+type="text"
+value="1"
+readonly>
+
+
+
+<button onclick="plusQty(3)">
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+</div>
+
+
+
+<button class="btn btn-success w-100 mt-3"
+
+onclick="addSelectedCart('হলুদ গুঁড়া','images/holud-gura.jpeg',3)">
+
+
+<i class="fa-solid fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+
+</button>
+
+
+</div>
+
+
+</div>
+
 
 </div>
 <!-- ================= CHILI POWDER ================= -->
 
-<div class="col-xl-4 col-lg-4 col-md-6 col-6 product-item">
 
-    <div class="card product-card h-100">
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
 
-        <img src="images/moris-gura.png"
-             class="card-img-top"
-             alt="মরিচ গুঁড়া">
 
-        <div class="card-body">
+<div class="card product-card h-100">
 
-            <h5 class="product-name">
 
-                মরিচ গুঁড়া
+<img src="images/moris-gura.png"
+class="card-img-top"
+alt="মরিচ গুঁড়া">
 
-            </h5>
 
-            <h3 id="price4" class="product-price">
 
-                ৳ ৩৫০
+<div class="card-body">
 
-            </h3>
 
-            <small id="weight4"
-                   class="text-muted d-block mb-3">
+<h5 class="product-name">
 
-                ৫০০ গ্রাম
+মরিচ গুঁড়া
 
-            </small>
+</h5>
 
-            <!-- Size -->
 
-            <div class="size-selector">
 
-                <button class="size-btn active"
-                        onclick="changeSize(4,350,'৫০০ গ্রাম',this)">
+<h3 id="price4"
+class="product-price">
 
-                    500g
+৳ ৩৫০
 
-                </button>
+</h3>
 
-                <button class="size-btn"
-                        onclick="changeSize(4,175,'২৫০ গ্রাম',this)">
 
-                    250g
 
-                </button>
+<small id="weight4"
+class="text-muted d-block mb-3">
 
-                <button class="size-btn"
-                        onclick="changeSize(4,70,'১০০ গ্রাম',this)">
+৫০০ গ্রাম
 
-                    100g
+</small>
 
-                </button>
 
-            </div>
 
-            <!-- Quantity -->
+<div class="size-selector">
 
-            <div class="quantity-box">
 
-                <button onclick="minusQty(4)">
+<button class="size-btn active"
+onclick="changeSize(4,350,'৫০০ গ্রাম',this)">
 
-                    <i class="fa-solid fa-minus"></i>
+500g
 
-                </button>
+</button>
 
-                <input id="qty4"
-                       type="text"
-                       value="1"
-                       readonly>
 
-                <button onclick="plusQty(4)">
 
-                    <i class="fa-solid fa-plus"></i>
+<button class="size-btn"
+onclick="changeSize(4,175,'২৫০ গ্রাম',this)">
 
-                </button>
+250g
 
-            </div>
+</button>
 
-            <!-- Add To Cart -->
 
-            <button class="btn btn-success w-100 mt-3"
-                    onclick="addSelectedCart('মরিচ গুঁড়া','images/moris-gura.png',4)">
 
-                <i class="fa-solid fa-cart-plus"></i>
+<button class="size-btn"
+onclick="changeSize(4,70,'১০০ গ্রাম',this)">
 
-                কার্টে যোগ করুন
+100g
 
-            </button>
+</button>
 
-        </div>
-
-    </div>
 
 </div>
+
+
+
+
+
+<div class="quantity-box">
+
+
+<button onclick="minusQty(4)">
+
+<i class="fa-solid fa-minus"></i>
+
+</button>
+
+
+
+<input id="qty4"
+type="text"
+value="1"
+readonly>
+
+
+
+<button onclick="plusQty(4)">
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+<button class="btn btn-success w-100 mt-3"
+
+onclick="addSelectedCart('মরিচ গুঁড়া','images/moris-gura.png',4)">
+
+
+<i class="fa-solid fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
 <!-- ================= RICE FLOUR ================= -->
 
-<div class="col-xl-4 col-lg-4 col-md-6 col-6 product-item">
 
-    <div class="card product-card h-100">
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
 
-        <img src="images/atob-chal.jpeg"
-             class="card-img-top"
-             alt="আতপ চালের গুঁড়া">
 
-        <div class="card-body">
+<div class="card product-card h-100">
 
-            <h5 class="product-name">
 
-                আতপ চালের গুঁড়া
+<img src="images/atob-chal.jpeg"
+class="card-img-top"
+alt="আতপ চালের গুঁড়া">
 
-            </h5>
 
-            <h3 id="price5" class="product-price">
 
-                ৳ ৫৭০
+<div class="card-body">
 
-            </h3>
 
-            <small id="weight5"
-                   class="text-muted d-block mb-3">
+<h5 class="product-name">
 
-                ৩ কেজি
+আতপ চালের গুঁড়া
 
-            </small>
+</h5>
 
-            <!-- Size -->
 
-            <div class="size-selector">
 
-                <button class="size-btn active"
-                        onclick="changeSize(5,570,'৩ কেজি',this)">
+<h3 id="price5"
+class="product-price">
 
-                    3 KG
+৳ ৫৭০
 
-                </button>
+</h3>
 
-                <button class="size-btn"
-                        onclick="changeSize(5,380,'২ কেজি',this)">
 
-                    2 KG
 
-                </button>
+<small id="weight5"
+class="text-muted d-block mb-3">
 
-                <button class="size-btn"
-                        onclick="changeSize(5,190,'১ কেজি',this)">
+৩ কেজি
 
-                    1 KG
+</small>
 
-                </button>
 
-            </div>
 
-            <!-- Quantity -->
 
-            <div class="quantity-box">
+<div class="size-selector">
 
-                <button onclick="minusQty(5)">
 
-                    <i class="fa-solid fa-minus"></i>
+<button class="size-btn active"
 
-                </button>
+onclick="changeSize(5,570,'৩ কেজি',this)">
 
-                <input id="qty5"
-                       type="text"
-                       value="1"
-                       readonly>
+3 KG
 
-                <button onclick="plusQty(5)">
+</button>
 
-                    <i class="fa-solid fa-plus"></i>
 
-                </button>
 
-            </div>
+<button class="size-btn"
 
-            <!-- Add To Cart -->
+onclick="changeSize(5,380,'২ কেজি',this)">
 
-            <button class="btn btn-success w-100 mt-3"
-                    onclick="addSelectedCart('আতপ চালের গুঁড়া','images/atob-chal.jpeg',5)">
+2 KG
 
-                <i class="fa-solid fa-cart-plus"></i>
+</button>
 
-                কার্টে যোগ করুন
 
-            </button>
 
-        </div>
+<button class="size-btn"
 
-    </div>
+onclick="changeSize(5,190,'১ কেজি',this)">
 
-</div>
-<!-- ================= Garlic Pickle Product ================= -->
+1 KG
 
-<div class="col-lg-4 col-md-6 col-6">
-
-
-    <div class="card product-card h-100">
-
-
-        <img src="images/rosun-achar.jpeg"
-             class="card-img-top"
-             alt="বাসায় তৈরি রসুনের আচার">
-
-
-
-        <div class="card-body">
-
-
-            <h5 class="product-name">
-
-                বাসায় তৈরি রসুনের আচার
-
-            </h5>
-
-
-
-            <h3 id="price6" class="product-price">
-
-                ৳ ৪৪০
-
-            </h3>
-
-
-
-            <small id="weight6"
-                   class="text-muted d-block mb-3">
-
-                ৫০০ গ্রাম
-
-            </small>
-
-
-
-
-            <!-- Size Selector -->
-
-            <div class="size-selector">
-
-
-                <button class="size-btn active"
-                        onclick="changeSize(6,440,'৫০০ গ্রাম',this)">
-
-                    500 GM
-
-                </button>
-
-
-
-                <button class="size-btn"
-                        onclick="changeSize(6,220,'২৫০ গ্রাম',this)">
-
-                    250 GM
-
-                </button>
-
-
-
-                <button class="size-btn"
-                        onclick="changeSize(6,90,'১০০ গ্রাম',this)">
-
-                    100 GM
-
-                </button>
-
-
-            </div>
-
-
-
-
-
-            <!-- Quantity -->
-
-            <div class="quantity-box">
-
-
-                <button onclick="minusQty(6)">
-
-                    <i class="fa-solid fa-minus"></i>
-
-                </button>
-
-
-
-                <input id="qty6"
-                       type="text"
-                       value="1"
-                       readonly>
-
-
-
-
-                <button onclick="plusQty(6)">
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-
-
-            </div>
-
-
-
-
-
-
-
-            <!-- Add To Cart -->
-
-            <button class="btn btn-success w-100 mt-3"
-                    onclick="addSelectedCart(
-                    'বাসায় তৈরি রসুনের আচার',
-                    'images/rosun-achar.jpeg',
-                    6
-                    )">
-
-
-                <i class="fa-solid fa-cart-plus"></i>
-
-                কার্টে যোগ করুন
-
-
-            </button>
-
-
-
-
-        </div>
-
-
-    </div>
+</button>
 
 
 </div>
-<!-- ================= Coconut Oil Product ================= -->
 
-<div class="col-lg-4 col-md-6 col-6">
 
 
-    <div class="card product-card h-100">
 
 
-        <img src="images/narikeltel.jpeg"
-             class="card-img-top"
-             alt="খাঁটি নারিকেল তেল">
+<div class="quantity-box">
 
 
+<button onclick="minusQty(5)">
 
-        <div class="card-body">
+<i class="fa-solid fa-minus"></i>
 
+</button>
 
-            <h5 class="product-name">
 
-                খাঁটি নারিকেল তেল
 
-            </h5>
+<input id="qty5"
+type="text"
+value="1"
+readonly>
 
 
 
-            <h3 id="price7" class="product-price">
+<button onclick="plusQty(5)">
 
-                ৳ ৯৬০
+<i class="fa-solid fa-plus"></i>
 
-            </h3>
-
-
-
-            <small id="weight7"
-                   class="text-muted d-block mb-3">
-
-                ৫০০ মিলি
-
-            </small>
-
-
-
-
-            <!-- Size Selector -->
-
-            <div class="size-selector">
-
-
-                <button class="size-btn active"
-                        onclick="changeSize(7,480,'২৫০মিলি',this)">
-
-                     250 ML
-
-                </button>
-
-
-
-                <button class="size-btn"
-                        onclick="changeSize(7,960,'৫০০ মিলি',this)">
-
-                   500 ML
-
-                </button>
-
-
-
-                <button class="size-btn"
-                        onclick="changeSize(7,1720,'১ লিটার',this)">
-
-                    1 LTR
-
-                </button>
-
-
-            </div>
-
-
-
-
-
-            <!-- Quantity -->
-
-            <div class="quantity-box">
-
-
-                <button onclick="minusQty(7)">
-
-                    <i class="fa-solid fa-minus"></i>
-
-                </button>
-
-
-
-                <input id="qty7"
-                       type="text"
-                       value="1"
-                       readonly>
-
-
-
-
-                <button onclick="plusQty(7)">
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-
-
-            </div>
-
-
-
-
-
-
-
-            <!-- Add To Cart -->
-
-            <button class="btn btn-success w-100 mt-3"
-                    onclick="addSelectedCart(
-                    'খাঁটি নারিকেল তেল',
-                    'images/narikeltel.jpeg',
-                    7
-                    )">
-
-
-                <i class="fa-solid fa-cart-plus"></i>
-
-                কার্টে যোগ করুন
-
-
-            </button>
-
-
-
-
-        </div>
-
-
-    </div>
+</button>
 
 
 </div>
-<!-- ================= Mustard Oil Product ================= -->
 
-<div class="col-lg-4 col-md-6 col-6">
 
 
-    <div class="card product-card h-100">
 
 
-        <img src="images/sorisertel.jpeg"
-             class="card-img-top"
-             alt="খাঁটি সরিষার তেল">
+<button class="btn btn-success w-100 mt-3"
 
+onclick="addSelectedCart('আতপ চালের গুঁড়া','images/atob-chal.jpeg',5)">
 
 
-        <div class="card-body">
+<i class="fa-solid fa-cart-plus"></i>
 
+কার্টে যোগ করুন
 
-            <h5 class="product-name">
 
-                খাঁটি সরিষার তেল
+</button>
 
-            </h5>
-
-
-
-            <h3 id="price8" class="product-price">
-
-                ৳ ২০০
-
-            </h3>
-
-
-
-            <small id="weight8"
-                   class="text-muted d-block mb-3">
-
-                ৫০০ মিলি
-
-            </small>
-
-            <!-- Size Selector -->
-
-            <div class="size-selector">
-
-
-                <button class="size-btn active"
-                        onclick="changeSize(8,200,'৫০০ মিলি',this)">
-
-                    500 ML
-
-                </button>
-
-
-
-                <button class="size-btn"
-                        onclick="changeSize(8,350,'১ লিটার',this)">
-
-                    1 LTR
-
-                </button>
-
-
-
-                <button class="size-btn"
-                        onclick="changeSize(8,700,'২ লিটার',this)">
-
-                    2 LTR
-
-                </button>
-
-
-            </div>
-
-
-
-
-
-            <!-- Quantity -->
-
-            <div class="quantity-box">
-
-
-                <button onclick="minusQty(8)">
-
-                    <i class="fa-solid fa-minus"></i>
-
-                </button>
-
-
-
-                <input id="qty8"
-                       type="text"
-                       value="1"
-                       readonly>
-
-
-
-
-                <button onclick="plusQty(8)">
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-
-
-            </div>
-
-
-
-
-
-
-
-            <!-- Add To Cart -->
-
-            <button class="btn btn-success w-100 mt-3"
-                    onclick="addSelectedCart(
-                    'খাঁটি সরিষার তেল',
-                    'images/sorisertel.jpeg',
-                    8
-                    )">
-
-
-                <i class="fa-solid fa-cart-plus"></i>
-
-                কার্টে যোগ করুন
-
-
-            </button>
-
-
-
-
-        </div>
-
-
-    </div>
 
 
 </div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= GARLIC PICKLE ================= -->
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
+
+
+<div class="card product-card h-100">
+
+
+<img src="images/rosun-achar.jpeg"
+class="card-img-top"
+alt="রসুনের আচার">
+
+
+
+<div class="card-body">
+
+
+<h5 class="product-name">
+
+বাসায় তৈরি রসুনের আচার
+
+</h5>
+
+
+
+<h3 id="price6"
+class="product-price">
+
+৳ ৪৪০
+
+</h3>
+
+
+
+<small id="weight6"
+class="text-muted d-block mb-3">
+
+৫০০ গ্রাম
+
+</small>
+
+
+
+
+
+<div class="size-selector">
+
+
+<button class="size-btn active"
+
+onclick="changeSize(6,440,'৫০০ গ্রাম',this)">
+
+500 GM
+
+</button>
+
+
+
+<button class="size-btn"
+
+onclick="changeSize(6,220,'২৫০ গ্রাম',this)">
+
+250 GM
+
+</button>
+
+
+
+<button class="size-btn"
+
+onclick="changeSize(6,90,'১০০ গ্রাম',this)">
+
+100 GM
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="quantity-box">
+
+
+<button onclick="minusQty(6)">
+
+<i class="fa-solid fa-minus"></i>
+
+</button>
+
+
+
+<input id="qty6"
+type="text"
+value="1"
+readonly>
+
+
+
+<button onclick="plusQty(6)">
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<button class="btn btn-success w-100 mt-3"
+
+onclick="addSelectedCart(
+'বাসায় তৈরি রসুনের আচার',
+'images/rosun-achar.jpeg',
+6
+)">
+
+
+<i class="fa-solid fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+
+</button>
+
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+<!-- ================= COCONUT OIL ================= -->
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
+
+
+<div class="card product-card h-100">
+
+
+<img src="images/narikeltel.jpeg"
+class="card-img-top"
+alt="খাঁটি নারিকেল তেল">
+
+
+
+<div class="card-body">
+
+
+<h5 class="product-name">
+
+খাঁটি নারিকেল তেল
+
+</h5>
+
+
+
+<h3 id="price7"
+class="product-price">
+
+৳ ৯৬০
+
+</h3>
+
+
+
+<small id="weight7"
+class="text-muted d-block mb-3">
+
+৫০০ মিলি
+
+</small>
+
+
+
+
+<div class="size-selector">
+
+
+<button class="size-btn"
+
+onclick="changeSize(7,480,'২৫০ মিলি',this)">
+
+250 ML
+
+</button>
+
+
+
+<button class="size-btn active"
+
+onclick="changeSize(7,960,'৫০০ মিলি',this)">
+
+500 ML
+
+</button>
+
+
+
+<button class="size-btn"
+
+onclick="changeSize(7,1720,'১ লিটার',this)">
+
+1 LTR
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="quantity-box">
+
+
+<button onclick="minusQty(7)">
+
+<i class="fa-solid fa-minus"></i>
+
+</button>
+
+
+
+<input id="qty7"
+type="text"
+value="1"
+readonly>
+
+
+
+<button onclick="plusQty(7)">
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<button class="btn btn-success w-100 mt-3"
+
+onclick="addSelectedCart(
+'খাঁটি নারিকেল তেল',
+'images/narikeltel.jpeg',
+7
+)">
+
+
+<i class="fa-solid fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= MUSTARD OIL ================= -->
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
+
+
+<div class="card product-card h-100">
+
+
+<img src="images/sorisertel.jpeg"
+class="card-img-top"
+alt="খাঁটি সরিষার তেল">
+
+
+
+<div class="card-body">
+
+
+<h5 class="product-name">
+
+খাঁটি সরিষার তেল
+
+</h5>
+
+
+
+<h3 id="price8"
+class="product-price">
+
+৳ ২০০
+
+</h3>
+
+
+
+<small id="weight8"
+class="text-muted d-block mb-3">
+
+৫০০ মিলি
+
+</small>
+
+
+
+
+<div class="size-selector">
+
+
+<button class="size-btn active"
+
+onclick="changeSize(8,200,'৫০০ মিলি',this)">
+
+500 ML
+
+</button>
+
+
+
+<button class="size-btn"
+
+onclick="changeSize(8,350,'১ লিটার',this)">
+
+1 LTR
+
+</button>
+
+
+
+<button class="size-btn"
+
+onclick="changeSize(8,700,'২ লিটার',this)">
+
+2 LTR
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+<div class="quantity-box">
+
+
+<button onclick="minusQty(8)">
+
+<i class="fa-solid fa-minus"></i>
+
+</button>
+
+
+
+<input id="qty8"
+type="text"
+value="1"
+readonly>
+
+
+
+<button onclick="plusQty(8)">
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+<button class="btn btn-success w-100 mt-3"
+
+onclick="addSelectedCart(
+'খাঁটি সরিষার তেল',
+'images/sorisertel.jpeg',
+8
+)">
+
+
+<i class="fa-solid fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= JOLPAI PICKLE ================= -->
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
+
+
+<div class="card product-card h-100">
+
+
+<img src="images/jolpai-acar.jpeg"
+class="card-img-top"
+alt="জলপাই আচার">
+
+
+
+<div class="card-body">
+
+
+<h5 class="product-name">
+
+জলপাই আচার
+
+</h5>
+
+
+
+<h3 id="price9"
+class="product-price">
+
+৳ ২২০
+
+</h3>
+
+
+
+<small id="weight9"
+class="text-muted d-block mb-3">
+
+২৫০ মিলি
+
+</small>
+
+
+
+
+<div class="size-selector">
+
+
+<button class="size-btn"
+
+onclick="changeSize(9,90,'১০০ মিলি',this)">
+
+100 ML
+
+</button>
+
+
+
+<button class="size-btn active"
+
+onclick="changeSize(9,220,'২৫০ মিলি',this)">
+
+250 ML
+
+</button>
+
+
+
+<button class="size-btn"
+
+onclick="changeSize(9,440,'৫০০ মিলি',this)">
+
+500 ML
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+<div class="quantity-box">
+
+
+<button onclick="minusQty(9)">
+
+<i class="fa-solid fa-minus"></i>
+
+</button>
+
+
+
+<input id="qty9"
+type="text"
+value="1"
+readonly>
+
+
+
+<button onclick="plusQty(9)">
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<button class="btn btn-success w-100 mt-3"
+
+onclick="addSelectedCart(
+'জলপাই আচার',
+'images/jolpai-acar.jpeg',
+9
+)">
+
+
+<i class="fa-solid fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= TAMARIND PICKLE ================= -->
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
+
+
+<div class="card product-card h-100">
+
+
+<img src="images/tatuler-acar.png"
+class="card-img-top"
+alt="তেঁতুলের আচার">
+
+
+
+<div class="card-body">
+
+
+<h5 class="product-name">
+
+তেঁতুলের আচার
+
+</h5>
+
+
+
+<h3 id="price10"
+class="product-price">
+
+৳ ২৫০
+
+</h3>
+
+
+
+<small id="weight10"
+class="text-muted d-block mb-3">
+
+২৫০ মিলি
+
+</small>
+
+
+
+
+<div class="size-selector">
+
+
+<button class="size-btn"
+
+onclick="changeSize(10,100,'১০০ মিলি',this)">
+
+100 ML
+
+</button>
+
+
+
+<button class="size-btn active"
+
+onclick="changeSize(10,250,'২৫০ মিলি',this)">
+
+250 ML
+
+</button>
+
+
+
+<button class="size-btn"
+
+onclick="changeSize(10,500,'৫০০ মিলি',this)">
+
+500 ML
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="quantity-box">
+
+
+<button onclick="minusQty(10)">
+
+<i class="fa-solid fa-minus"></i>
+
+</button>
+
+
+
+<input id="qty10"
+type="text"
+value="1"
+readonly>
+
+
+
+<button onclick="plusQty(10)">
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<button class="btn btn-success w-100 mt-3"
+
+onclick="addSelectedCart(
+'তেঁতুলের আচার',
+'images/tatuler-acar.png',
+10
+)">
+
+
+<i class="fa-solid fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+<!-- ================= AMLA PICKLE ================= -->
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
+
+
+<div class="card product-card h-100">
+
+
+<img src="images/amlokir-acar.png"
+class="card-img-top"
+alt="আমলকীর আচার">
+
+
+
+<div class="card-body">
+
+
+<h5 class="product-name">
+
+আমলকীর আচার
+
+</h5>
+
+
+
+<h3 id="price11"
+class="product-price">
+
+৳ ২২০
+
+</h3>
+
+
+
+<small id="weight11"
+class="text-muted d-block mb-3">
+
+২৫০ মিলি
+
+</small>
+
+
+
+
+<div class="size-selector">
+
+
+<button class="size-btn"
+
+onclick="changeSize(11,90,'১০০ মিলি',this)">
+
+100 ML
+
+</button>
+
+
+
+<button class="size-btn active"
+
+onclick="changeSize(11,220,'২৫০ মিলি',this)">
+
+250 ML
+
+</button>
+
+
+
+<button class="size-btn"
+
+onclick="changeSize(11,440,'৫০০ মিলি',this)">
+
+500 ML
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="quantity-box">
+
+
+<button onclick="minusQty(11)">
+
+<i class="fa-solid fa-minus"></i>
+
+</button>
+
+
+
+<input id="qty11"
+type="text"
+value="1"
+readonly>
+
+
+
+<button onclick="plusQty(11)">
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<button class="btn btn-success w-100 mt-3"
+
+onclick="addSelectedCart(
+'আমলকীর আচার',
+'images/amlokir-acar.png',
+11
+)">
+
+
+<i class="fa-solid fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= AMRA PICKLE ================= -->
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
+
+
+<div class="card product-card h-100">
+
+
+<img src="images/amrar-acar.png"
+class="card-img-top"
+alt="আমড়ার আচার">
+
+
+
+<div class="card-body">
+
+
+<h5 class="product-name">
+
+আমড়ার আচার
+
+</h5>
+
+
+
+<h3 id="price12"
+class="product-price">
+
+৳ ২১০
+
+</h3>
+
+
+
+<small id="weight12"
+class="text-muted d-block mb-3">
+
+২৫০ মিলি
+
+</small>
+
+
+
+
+<div class="size-selector">
+
+
+<button class="size-btn"
+
+onclick="changeSize(12,90,'১০০ মিলি',this)">
+
+100 ML
+
+</button>
+
+
+
+<button class="size-btn active"
+
+onclick="changeSize(12,210,'২৫০ মিলি',this)">
+
+250 ML
+
+</button>
+
+
+
+<button class="size-btn"
+
+onclick="changeSize(12,420,'৫০০ মিলি',this)">
+
+500 ML
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="quantity-box">
+
+
+<button onclick="minusQty(12)">
+
+<i class="fa-solid fa-minus"></i>
+
+</button>
+
+
+
+<input id="qty12"
+type="text"
+value="1"
+readonly>
+
+
+
+<button onclick="plusQty(12)">
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<button class="btn btn-success w-100 mt-3"
+
+onclick="addSelectedCart(
+'আমড়ার আচার',
+'images/amrar-acar.png',
+12
+)">
+
+
+<i class="fa-solid fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= CHUI JHAL PICKLE ================= -->
+
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
+
+
+<div class="card product-card h-100">
+
+
+<img src="images/chuijal-acar.png"
+class="card-img-top"
+alt="চুইঝালের আচার">
+
+
+
+<div class="card-body">
+
+
+<h5 class="product-name">
+
+চুইঝালের আচার
+
+</h5>
+
+
+
+<h3 id="price13"
+class="product-price">
+
+৳ ৪০০
+
+</h3>
+
+
+
+<small id="weight13"
+class="text-muted d-block mb-3">
+
+২৫০ মিলি
+
+</small>
+
+
+
+
+<div class="size-selector">
+
+
+<button class="size-btn"
+
+onclick="changeSize(13,160,'১০০ মিলি',this)">
+
+100 ML
+
+</button>
+
+
+
+<button class="size-btn active"
+
+onclick="changeSize(13,400,'২৫০ মিলি',this)">
+
+250 ML
+
+</button>
+
+
+
+<button class="size-btn"
+
+onclick="changeSize(13,800,'৫০০ মিলি',this)">
+
+500 ML
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="quantity-box">
+
+
+<button onclick="minusQty(13)">
+
+<i class="fa-solid fa-minus"></i>
+
+</button>
+
+
+
+<input id="qty13"
+type="text"
+value="1"
+readonly>
+
+
+
+<button onclick="plusQty(13)">
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<button class="btn btn-success w-100 mt-3"
+
+onclick="addSelectedCart(
+'চুইঝালের আচার',
+'images/chuijal-acar.png',
+13
+)">
+
+
+<i class="fa-solid fa-cart-plus"></i>
+
+কার্টে যোগ করুন
+
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- ================= PRODUCT ROW END ================= -->
+
+
+</div>
+
+
+</div>
+
+
+</section>
+<!-- ================= CART TOAST ================= -->
+
+
 <div id="cartToast"
-     class="toast position-fixed bottom-0 end-0 m-3"
-     role="alert"
-     data-bs-autohide="true"
-     data-bs-delay="2500">
+class="toast position-fixed bottom-0 end-0 m-3"
+role="alert"
+data-bs-autohide="true"
+data-bs-delay="2500">
 
-    <div class="toast-body d-flex align-items-center">
 
-        <i class="fa-solid fa-circle-check me-2 text-success"></i>
+<div class="toast-body d-flex align-items-center">
 
-        <div>
-            <h6 class="mb-1">কার্টে যোগ হয়েছে</h6>
-            <p id="toastText" class="mb-0"></p>
-        </div>
 
-    </div>
+<i class="fa-solid fa-circle-check me-2 text-success"></i>
+
+
+
+<div>
+
+<h6 class="mb-1">
+
+কার্টে যোগ হয়েছে
+
+</h6>
+
+
+<p id="toastText"
+class="mb-0">
+
+</p>
+
 
 </div>
 
-            
-<!-- Premium Toast -->
-<!-- ==========================
-     Footer
-========================== -->
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
 
 <footer class="footer-section">
 
-    <div class="container">
 
-        <div class="row gy-4 align-items-start">
+<div class="container">
 
-            <!-- Brand -->
 
-            <div class="col-lg-4">
 
-                <h3 class="fw-bold mb-3">
+<div class="row gy-4 align-items-start">
 
-                    Khati Shad by Takia
 
-                </h3>
 
-                <p class="footer-text">
 
-                    খাঁটি ও প্রাকৃতিক খাদ্যপণ্যের বিশ্বস্ত ঠিকানা।
-                    বিশুদ্ধ মধু, দেশি ঘি, আচার, মসলা, সরিষার তেল,
-                    নারিকেল তেল এবং আরও অনেক প্রিমিয়াম পণ্য
-                    সারা বাংলাদেশে হোম ডেলিভারির মাধ্যমে পৌঁছে দিচ্ছি।
 
-                </p>
+<!-- Brand -->
 
-            </div>
 
-            <!-- Quick Links -->
+<div class="col-lg-4">
 
-            <div class="col-lg-4">
 
-                <h5 class="footer-title">
+<h3 class="fw-bold mb-3">
 
-                    দ্রুত লিংক
+Khati Shad by Takia
 
-                </h5>
+</h3>
 
-                <ul class="footer-links list-unstyled">
 
-                    <li>
-                        <a href="index.html">
-                            <i class="fa-solid fa-house me-2"></i>
-                            হোম
-                        </a>
-                    </li>
 
-                    <li>
-                        <a href="cart.html">
-                            <i class="fa-solid fa-cart-shopping me-2"></i>
-                            কার্ট
-                        </a>
-                    </li>
+<p class="footer-text">
 
-                </ul>
+খাঁটি ও প্রাকৃতিক খাদ্যপণ্যের বিশ্বস্ত ঠিকানা।
+বিশুদ্ধ মধু, দেশি ঘি, আচার, মসলা,
+সরিষার তেল, নারিকেল তেল এবং আরও
+অনেক প্রিমিয়াম পণ্য সারা বাংলাদেশে
+হোম ডেলিভারির মাধ্যমে পৌঁছে দিচ্ছি।
 
-            </div>
+</p>
 
-            <!-- Contact -->
 
-            <div class="col-lg-4">
+</div>
 
-                <h5 class="footer-title">
 
-                    যোগাযোগ
 
-                </h5>
 
-                <p class="footer-text">
 
-                    <i class="fa-solid fa-phone me-2"></i>
 
-                    +8801791649266
 
-                </p>
+<!-- Quick Links -->
 
-                <p class="footer-text">
 
-                    <i class="fa-solid fa-envelope me-2"></i>
+<div class="col-lg-4">
 
-                    jebatakia8@gmail.com
 
-                </p>
+<h5 class="footer-title">
 
-                <p class="footer-text">
+দ্রুত লিংক
 
-                    <i class="fa-solid fa-location-dot me-2"></i>
+</h5>
 
-                    Khulna, Bangladesh
 
-                </p>
 
-                <div class="social-icons mt-3">
+<ul class="footer-links list-unstyled">
 
-                    <a href="https://www.facebook.com/profile.php?id=61591897260380"
-                       target="_blank"
-                       class="social-icon">
 
-                        <i class="fa-brands fa-facebook-f"></i>
+<li>
 
-                    </a>
+<a href="index.html">
 
-                    <a href="#"
-                       class="social-icon">
+<i class="fa-solid fa-house me-2"></i>
 
-                        <i class="fa-brands fa-youtube"></i>
+হোম
 
-                    </a>
+</a>
 
-                    <a href="#"
-                       class="social-icon">
+</li>
 
-                        <i class="fa-brands fa-instagram"></i>
 
-                    </a>
 
-                </div>
+<li>
 
-            </div>
+<a href="cart.html">
 
-        </div>
+<i class="fa-solid fa-cart-shopping me-2"></i>
 
-        <hr class="footer-line">
+কার্ট
 
-        <div class="text-center">
+</a>
 
-            <p class="footer-copy mb-0">
+</li>
 
-                © 2026 <strong>Khati Shad by Takia</strong> |
-                All Rights Reserved.
 
-            </p>
+</ul>
 
-        </div>
 
-    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Contact -->
+
+
+<div class="col-lg-4">
+
+
+<h5 class="footer-title">
+
+যোগাযোগ
+
+</h5>
+
+
+
+
+<p class="footer-text">
+
+<i class="fa-solid fa-phone me-2"></i>
+
++8801791649266
+
+</p>
+
+
+
+
+<p class="footer-text">
+
+<i class="fa-solid fa-envelope me-2"></i>
+
+jebatakia8@gmail.com
+
+</p>
+
+
+
+
+<p class="footer-text">
+
+<i class="fa-solid fa-location-dot me-2"></i>
+
+Khulna, Bangladesh
+
+</p>
+
+
+
+
+
+<div class="social-icons mt-3">
+
+
+<a href="https://www.facebook.com/profile.php?id=61591897260380"
+target="_blank"
+class="social-icon">
+
+
+<i class="fa-brands fa-facebook-f"></i>
+
+
+</a>
+
+
+
+<a href="#"
+class="social-icon">
+
+
+<i class="fa-brands fa-youtube"></i>
+
+
+</a>
+
+
+
+<a href="#"
+class="social-icon">
+
+
+<i class="fa-brands fa-instagram"></i>
+
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<hr class="footer-line">
+
+
+
+
+
+
+<div class="text-center">
+
+
+<p class="footer-copy mb-0">
+
+
+© 2026 <strong>Khati Shad by Takia</strong> |
+
+All Rights Reserved.
+
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
 
 </footer>
 
+
+
+
+
+
+
+
+<!-- Bootstrap JS -->
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+
+<!-- App JS -->
+
+
 <script src="app.js"></script>
+
+
+
+</body>
+
+</html>
