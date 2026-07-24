@@ -515,3 +515,20 @@ background:none;
 .toast-content h6{
     color:#198754;
 }
+.btn-more-products{
+    background: #198754;
+    color: #fff;
+    border-radius: 50px;
+    padding: 14px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.btn-more-products:hover{
+    background: #157347;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
