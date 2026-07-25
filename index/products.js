@@ -22,8 +22,8 @@ const products = {
             "সুন্দরবনের প্রাকৃতিক মৌচাক থেকে সংগ্রহ করা ১০০% খাঁটি মধু।",
         images: [
            '../images/modhu-2.jpeg',
-    '../images/modhu-2.jpeg',
-    '../images/modhu-2.jpeg'
+    '../images/ghe.offical.jpeg',
+    '../images/rosun-achar.jpeg'
   ]
         ],
 
