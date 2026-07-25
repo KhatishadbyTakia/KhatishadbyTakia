@@ -1,2454 +1,1192 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khati Shad by Takia | খাঁটি খাদ্যপণ্য</title>
-<!-- SEO -->
+/* ==========================================
+   Khati Shad by Takia
+   products.js
+   Part-1
+========================================== */
 
-<meta name="description"
-content="Khati Shad by Takia - খাঁটি মধু, ঘি, হলুদ, মরিচসহ প্রাকৃতিক খাদ্যপণ্য।">
 
+const products = {
 
-<!-- Bootstrap -->
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+/* ==========================================
+   1. সুন্দরবনের খাঁটি মধু
+========================================== */
 
+honey: {
 
-<!-- Font Awesome -->
+    id: "honey",
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    category: "প্রাকৃতিক মধু",
 
+    name: "সুন্দরবনের খাঁটি মধু",
 
-<!-- Custom CSS -->
+    stock: "স্টকে আছে",
 
-<link rel="stylesheet" href="/style2.css">
+    description:
+        "সুন্দরবনের প্রাকৃতিক মৌচাক থেকে সংগ্রহ করা ১০০% খাঁটি মধু।",
 
 
-</head>
+    images: [
+        "../images/modhu-2.jpeg",
+        "../images/ghe.offical.jpeg",
+        "../images/rosun-achar.jpeg"
+    ],
 
 
-<body>
+    prices: [
+        {
+            weight: "২৫০ গ্রাম",
+            price: 450
+        },
+        {
+            weight: "৫০০ গ্রাম",
+            price: 900
+        },
+        {
+            weight: "১ কেজি",
+            price: 1800
+        }
+    ],
 
 
-<!-- ================= NAVBAR ================= -->
+    production:
+        "সুন্দরবনের মৌচাক থেকে সংগ্রহ করে ছেঁকে স্বাস্থ্যসম্মতভাবে বোতলজাত করা হয়।",
 
-<nav class="navbar navbar-dark bg-success sticky-top">
-    <div class="container d-flex align-items-center">
 
-        <!-- Logo + Website Name -->
-        <a class="navbar-brand fw-bold d-flex align-items-center me-4" href="#">
-            <img src="images/logo 2.png" width="55" class="me-2" alt="Logo">
-            <span class="text-white">Khati Shad by Takia</span>
-        </a>
+    ingredients:
+        "১০০% খাঁটি প্রাকৃতিক মধু",
 
-        <!-- Menu -->
-        <ul class="navbar-nav flex-row">
-            <li class="nav-item">
-                <a class="nav-link px-3 active" href="#">হোম</a>
-            </li>
 
-            <li class="nav-item">
-                <a class="nav-link px-3" href="products.html">পণ্য</a>
-            </li>
+    nutrition:
+        "গ্লুকোজ, ফ্রুক্টোজ, অ্যান্টিঅক্সিডেন্ট, ভিটামিন ও মিনারেল সমৃদ্ধ।",
 
-            <li class="nav-item">
-                <a class="nav-link px-3 position-relative" href="cart.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span id="cartCount"
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
-                        0
-                    </span>
-                </a>
-            </li>
-        </ul>
 
-    </div>
-</nav>
+    storage:
+        "ঠান্ডা ও শুষ্ক স্থানে রাখুন।",
 
-<!-- ================= HERO SECTION ================= -->
 
+    delivery:
+        "সারা বাংলাদেশে হোম ডেলিভারি।",
 
-<section class="hero">
 
+    benefits:[
+        "রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে",
+        "হজমে সহায়তা করে",
+        "শরীরে শক্তি যোগায়",
+        "সর্দি-কাশিতে উপকারী",
+        "ত্বক ও চুলের যত্নে ব্যবহার করা যায়"
+    ]
 
-<div class="container text-center">
+},
 
 
-<span class="badge bg-warning text-dark px-3 py-2">
 
-১০০% প্রাকৃতিক ও নিরাপদ
+/* ==========================================
+   2. দেশি গাওয়া ঘি
+========================================== */
 
-</span>
 
+ghee: {
 
+    id:"ghee",
 
-<h1 class="mt-3">
+    category:"দেশি ঘি",
 
-খাঁটি স্বাদের নিশ্চয়তা
+    name:"দেশি গাওয়া ঘি",
 
-</h1>
+    stock:"স্টকে আছে",
 
 
+    description:
+        "দেশি গরুর দুধের মাখন থেকে তৈরি খাঁটি গাওয়া ঘি।",
 
-<p>
 
-বিশুদ্ধ মধু, দেশি ঘি, হলুদ, মরিচ এবং প্রাকৃতিক খাদ্যপণ্য
+    images:[
+        "../images/ghe.offical.jpeg",
+        "../images/ghe.offical.jpeg",
+        "../images/ghe.offical.jpeg"
+    ],
 
-</p>
 
+    prices:[
+        {
+            weight:"২৫০ গ্রাম",
+            price:430
+        },
+        {
+            weight:"৫০০ গ্রাম",
+            price:850
+        },
+        {
+            weight:"১ কেজি",
+            price:1700
+        }
+    ],
 
 
-<div class="mt-4">
+    production:
+        "ঐতিহ্যবাহী পদ্ধতিতে দেশি গরুর দুধ থেকে প্রস্তুত।",
 
 
-<a href="products.html"
-class="btn btn-warning btn-lg px-5">
+    ingredients:
+        "১০০% দেশি গরুর দুধের ঘি",
 
 
-এখনই কিনুন
+    nutrition:
+        "ভিটামিন A, D, E ও K সমৃদ্ধ।",
 
-</a>
 
+    storage:
+        "শুষ্ক স্থানে সংরক্ষণ করুন।",
 
 
-<a href="https://www.facebook.com/profile.php?id=61591897260380"
-                       target="_blank"
-class="btn btn-outline-light btn-lg ms-2">
+    delivery:
+        "সারা বাংলাদেশে ডেলিভারি।",
 
 
-আরও জানুন
+    benefits:[
+        "হাড় মজবুত রাখে",
+        "হজমে সহায়তা করে",
+        "শক্তি বৃদ্ধি করে",
+        "স্বাস্থ্যকর ফ্যাটের উৎস",
+        "শিশু ও বয়স্কদের জন্য উপকারী"
+    ]
 
+},
 
-</a>
 
-</div>
 
+/* ==========================================
+   3. হলুদ গুঁড়া
+========================================== */
 
-</div>
 
+turmeric: {
 
-</section>
+    id:"turmeric",
 
+    category:"মসলা",
 
+    name:"হলুদ গুঁড়া",
 
+    stock:"স্টকে আছে",
 
-<!-- ================= WHY CHOOSE US ================= -->
 
+    description:
+        "নির্বাচিত শুকনা হলুদ থেকে তৈরি বিশুদ্ধ হলুদ গুঁড়া।",
 
-<section class="why-us py-5">
 
+    images:[
+        "../images/holud-gura.jpeg",
+        "../images/holud-gura.jpeg",
+        "../images/holud-gura.jpeg"
+    ],
 
-<div class="container">
 
+    prices:[
+        {
+            weight:"১০০ গ্রাম",
+            price:70
+        },
+        {
+            weight:"২৫০ গ্রাম",
+            price:175
+        },
+        {
+            weight:"৫০০ গ্রাম",
+            price:350
+        }
+    ],
 
 
-<div class="text-center mb-5">
+    production:
+        "উন্নতমানের হলুদ শুকিয়ে পরিষ্কার পরিবেশে গুঁড়া করা হয়।",
 
 
-<h2 class="fw-bold">
+    ingredients:
+        "১০০% খাঁটি হলুদ",
 
-কেন আমাদের থেকে কিনবেন?
 
-</h2>
+    nutrition:
+        "কারকিউমিন সমৃদ্ধ।",
 
 
-<p>
+    storage:
+        "বায়ুরোধী পাত্রে রাখুন।",
 
-বিশ্বাস, গুণগত মান এবং দ্রুত ডেলিভারির প্রতিশ্রুতি
 
-</p>
+    delivery:
+        "সারা বাংলাদেশে ডেলিভারি।",
 
 
-</div>
+    benefits:[
+        "রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি",
+        "ত্বকের জন্য উপকারী",
+        "প্রদাহ কমায়",
+        "খাবারের রং বৃদ্ধি করে",
+        "অ্যান্টিঅক্সিডেন্ট সমৃদ্ধ"
+    ]
 
+},
 
 
 
+/* ==========================================
+   4. মরিচ গুঁড়া
+========================================== */
 
-<div class="row g-4">
 
+chili: {
 
+    id:"chili",
 
+    category:"মসলা",
 
+    name:"মরিচ গুঁড়া",
 
-<div class="col-md-3">
+    stock:"স্টকে আছে",
 
 
-<div class="feature-card text-center shadow p-4">
+    description:
+        "শুকনা লাল মরিচ থেকে তৈরি খাঁটি মরিচ গুঁড়া।",
 
 
-<i class="fa-solid fa-leaf"></i>
+    images:[
+        "../images/chili1.jpeg",
+        "../images/chili2.jpeg",
+        "../images/chili3.jpeg"
+    ],
 
 
-<h5>
+    prices:[
+        {
+            weight:"১০০ গ্রাম",
+            price:70
+        },
+        {
+            weight:"২৫০ গ্রাম",
+            price:175
+        },
+        {
+            weight:"৫০০ গ্রাম",
+            price:350
+        }
+    ],
 
-১০০% প্রাকৃতিক
 
-</h5>
+    production:
+        "বাছাইকৃত শুকনা মরিচ পরিষ্কার করে গুঁড়া করা হয়।",
 
 
-<p>
+    ingredients:
+        "১০০% শুকনা মরিচ",
 
-খাঁটি ও নিরাপদ খাদ্যপণ্য
 
-</p>
+    nutrition:
+        "প্রাকৃতিক ভিটামিন A ও C সমৃদ্ধ।",
 
 
-</div>
+    storage:
+        "ঠান্ডা ও শুষ্ক স্থানে রাখুন।",
 
 
-</div>
+    delivery:
+        "সারা বাংলাদেশে ডেলিভারি।",
 
 
+    benefits:[
+        "খাবারের স্বাদ বাড়ায়",
+        "রং বৃদ্ধি করে",
+        "প্রাকৃতিক ঝাল",
+        "ভেজালমুক্ত",
+        "তাজা গুঁড়া"
+    ]
 
+},
+/* ==========================================
+   5. রসুনের আচার
+========================================== */
 
 
+garlic_pickle: {
 
-<div class="col-md-3">
+    id:"garlic_pickle",
 
+    category:"আচার",
 
-<div class="feature-card text-center shadow p-4">
+    name:"রসুনের আচার",
 
+    stock:"স্টকে আছে",
 
-<i class="fa-solid fa-truck-fast"></i>
 
+    description:
+        "বাছাইকৃত রসুন ও বিশেষ মসলার সংমিশ্রণে তৈরি ঘরোয়া স্বাদের সুস্বাদু রসুনের আচার।",
 
-<h5>
 
-দ্রুত ডেলিভারি
+    images:[
+        "../images/rosun-achar.jpeg",
+        "../images/rosun-achar.jpeg",
+        "../images/rosun-achar.jpeg"
+    ],
 
-</h5>
 
+    prices:[
+        {
+            weight:"১০০ গ্রাম",
+            price:90
+        },
+        {
+            weight:"২৫০ গ্রাম",
+            price:220
+        },
+        {
+            weight:"৫০০ গ্রাম",
+            price:440
+        }
+    ],
 
-<p>
 
-সারা বাংলাদেশে হোম ডেলিভারি
+    production:
+        "বাছাইকৃত রসুন পরিষ্কার করে মসলা ও তেলের সাথে প্রাকৃতিক পদ্ধতিতে আচার তৈরি করা হয়।",
 
-</p>
 
+    ingredients:
+        "রসুন, সরিষার তেল, লবণ, মরিচ, মসলা ও প্রাকৃতিক উপকরণ।",
 
-</div>
 
+    nutrition:
+        "রসুনের প্রাকৃতিক গুণাগুণ ও অ্যান্টিঅক্সিডেন্ট সমৃদ্ধ।",
 
-</div>
 
+    storage:
+        "শুকনো ও পরিষ্কার বায়ুরোধী পাত্রে রাখুন।",
 
 
+    delivery:
+        "সারা বাংলাদেশে ডেলিভারি।",
 
 
+    benefits:[
+        "খাবারের স্বাদ বৃদ্ধি করে",
+        "রুচি বাড়াতে সহায়ক",
+        "প্রাকৃতিক উপাদানে তৈরি",
+        "ঘরোয়া স্বাদের আচার",
+        "ভেজালমুক্ত"
+    ]
 
-<div class="col-md-3">
+},
 
 
-<div class="feature-card text-center shadow p-4">
 
+/* ==========================================
+   6. জলপাইয়ের আচার
+========================================== */
 
-<i class="fa-solid fa-shield-heart"></i>
 
+jolpai_pickle: {
 
-<h5>
+    id:"jolpai_pickle",
 
-বিশ্বস্ত মান
+    category:"আচার",
 
-</h5>
+    name:"জলপাইয়ের আচার",
 
+    stock:"স্টকে আছে",
 
-<p>
 
-মান যাচাই করা পণ্য
+    description:
+        "টাটকা জলপাই ও বিশেষ মসলার সংমিশ্রণে তৈরি ঘরোয়া স্বাদের সুস্বাদু জলপাইয়ের আচার।",
 
-</p>
 
+    images:[
+        "../images/jolpai-acar.jpeg",
+        "../images/jolpai-acar.jpeg",
+        "../images/jolpai-acar.jpeg"
+    ],
 
-</div>
 
+    prices:[
+        {
+            weight:"১০০ গ্রাম",
+            price:90
+        },
+        {
+            weight:"২৫০ গ্রাম",
+            price:220
+        },
+        {
+            weight:"৫০০ গ্রাম",
+            price:440
+        }
+    ],
 
-</div>
 
+    production:
+        "বাছাইকৃত জলপাই পরিষ্কার করে মসলা ও সরিষার তেলের সাথে প্রাকৃতিক পদ্ধতিতে আচার তৈরি করা হয়।",
 
 
+    ingredients:
+        "জলপাই, সরিষার তেল, লবণ, চিনি, মরিচ, মসলা ও প্রাকৃতিক উপকরণ।",
 
 
+    nutrition:
+        "ভিটামিন ও অ্যান্টিঅক্সিডেন্ট সমৃদ্ধ।",
 
-<div class="col-md-3">
 
+    storage:
+        "বায়ুরোধী পাত্রে রেখে শুকনো ও ঠান্ডা স্থানে সংরক্ষণ করুন।",
 
-<div class="feature-card text-center shadow p-4">
 
+    delivery:
+        "সারা বাংলাদেশে ডেলিভারি।",
 
-<i class="fa-solid fa-headset"></i>
 
+    benefits:[
+        "খাবারের স্বাদ বৃদ্ধি করে",
+        "রুচি বাড়াতে সহায়ক",
+        "টক-মিষ্টি স্বাদের ঘরোয়া আচার",
+        "প্রাকৃতিক উপাদানে তৈরি",
+        "ভেজালমুক্ত"
+    ]
 
-<h5>
+},
 
-২৪/৭ সাপোর্ট
 
-</h5>
 
+/* ==========================================
+   7. তেঁতুলের আচার
+========================================== */
 
-<p>
 
-সবসময় যোগাযোগ সুবিধা
+tamarind_pickle: {
 
-</p>
+    id:"tamarind_pickle",
 
+    category:"আচার",
 
-</div>
+    name:"তেঁতুলের আচার",
 
+    stock:"স্টকে আছে",
 
-</div>
 
+    description:
+        "বাছাইকৃত তেঁতুল ও বিশেষ মসলার সংমিশ্রণে তৈরি টক-মিষ্টি স্বাদের সুস্বাদু তেঁতুলের আচার।",
 
 
+    images:[
+        "../images/tatuler-acar.png",
+        "../images/tatuler-acar.png",
+        "../images/tatuler-acar.png"
+    ],
 
-</div>
 
+    prices:[
+        {
+            weight:"২৫০ গ্রাম",
+            price:150
+        },
+        {
+            weight:"৫০০ গ্রাম",
+            price:280
+        },
+        {
+            weight:"১ কেজি",
+            price:550
+        }
+    ],
 
-</div>
 
+    production:
+        "বাছাইকৃত তেঁতুল পরিষ্কার করে মসলা, চিনি ও সরিষার তেলের সাথে প্রাকৃতিক পদ্ধতিতে আচার তৈরি করা হয়।",
 
-</section>
 
+    ingredients:
+        "তেঁতুল, সরিষার তেল, চিনি, লবণ, মরিচ, মসলা ও প্রাকৃতিক উপকরণ।",
 
 
+    nutrition:
+        "প্রাকৃতিক খনিজ ও অ্যান্টিঅক্সিডেন্ট সমৃদ্ধ।",
 
 
+    storage:
+        "বায়ুরোধী পাত্রে রেখে শুকনো ও ঠান্ডা স্থানে সংরক্ষণ করুন।",
 
 
+    delivery:
+        "সারা বাংলাদেশে ডেলিভারি।",
 
-<!-- ================= CATEGORY ================= -->
 
+    benefits:[
+        "রুচি বাড়াতে সহায়ক",
+        "খাবারের স্বাদ বৃদ্ধি করে",
+        "টক-মিষ্টি স্বাদের আচার",
+        "প্রাকৃতিক উপাদানে তৈরি",
+        "ভেজালমুক্ত"
+    ]
 
-<section class="py-5 bg-light">
+},
 
 
-<div class="container">
 
+/* ==========================================
+   8. আতপ চাল
+========================================== */
 
-<h2 class="text-center mb-5">
 
-আমাদের ক্যাটাগরি
+rice: {
 
-</h2>
+    id:"rice",
 
+    category:"চাল",
 
+    name:"আতপ চাল",
 
+    stock:"স্টকে আছে",
 
-<div class="row g-4">
 
+    description:
+        "উন্নতমানের আতপ চাল, প্রতিদিনের খাবারের জন্য উপযুক্ত।",
 
 
+    images:[
+        "../images/atob-chal.jpeg",
+        "../images/atob-chal.jpeg",
+        "../images/atob-chal.jpeg"
+    ],
 
 
-<div class="col-md-3">
+    prices:[
+        {
+            weight:"১০০ গ্রাম",
+            price:100
+        },
+        {
+            weight:"২৫০ গ্রাম",
+            price:250
+        },
+        {
+            weight:"৫০০ গ্রাম",
+            price:500
+        }
+    ],
 
 
-<div class="category-card shadow">
+    production:
+        "উন্নতমানের ধান থেকে পরিষ্কার ও স্বাস্থ্যসম্মতভাবে প্রস্তুত।",
 
 
-<img src="images/rosun-takia.png">
+    ingredients:
+        "১০০% আতপ চাল",
 
 
-<h5>
+    nutrition:
+        "কার্বোহাইড্রেট, ভিটামিন ও মিনারেল সমৃদ্ধ।",
 
-রসুন আচার
 
-</h5>
+    storage:
+        "শুকনো ও ঠান্ডা স্থানে রাখুন।",
 
 
-</div>
+    delivery:
+        "সারা বাংলাদেশে ডেলিভারি।",
 
 
-</div>
+    benefits:[
+        "সহজে রান্না হয়",
+        "সুস্বাদু",
+        "উন্নত মানের চাল",
+        "পরিষ্কার ও নিরাপদ",
+        "দৈনন্দিন ব্যবহারের উপযোগী"
+    ]
 
+},
 
 
 
+/* ==========================================
+   9. আমলকির আচার
+========================================== */
 
 
-<div class="col-md-3">
+amloki_pickle: {
 
+    id:"amloki_pickle",
 
-<div class="category-card shadow">
+    category:"আচার",
 
+    name:"আমলকির আচার",
 
-<img src="images/takia -ghe.png">
+    stock:"স্টকে আছে",
 
 
-<h5>
+    description:
+        "টাটকা আমলকি ও বিশেষ মসলার সংমিশ্রণে তৈরি টক-মিষ্টি স্বাদের সুস্বাদু আমলকির আচার।",
 
-দেশি ঘি
 
-</h5>
+    images:[
+        "../images/amlokir-acar.png",
+        "../images/amlokir-acar.png",
+        "../images/amlokir-acar.png"
+    ],
 
 
-</div>
+    prices:[
+        {
+            weight:"২৫০ গ্রাম",
+            price:170
+        },
+        {
+            weight:"৫০০ গ্রাম",
+            price:320
+        },
+        {
+            weight:"১ কেজি",
+            price:620
+        }
+    ],
 
 
-</div>
+    production:
+        "বাছাইকৃত আমলকি পরিষ্কার করে মসলা, সরিষার তেল ও প্রাকৃতিক উপকরণের সাথে যত্নসহকারে আচার তৈরি করা হয়।",
 
 
-<div class="col-md-3">
+    ingredients:
+        "আমলকি, সরিষার তেল, লবণ, চিনি, মরিচ, মসলা ও প্রাকৃতিক উপকরণ।",
 
 
-<div class="category-card shadow">
+    nutrition:
+        "ভিটামিন C ও অ্যান্টিঅক্সিডেন্ট সমৃদ্ধ।",
 
 
-<img src="images/takia narikel tel.png">
+    storage:
+        "বায়ুরোধী পাত্রে রেখে শুকনো ও ঠান্ডা স্থানে সংরক্ষণ করুন।",
 
 
-<h5>
+    delivery:
+        "সারা বাংলাদেশে ডেলিভারি।",
 
-নারিকেল তেল 
 
-</h5>
+    benefits:[
+        "রুচি বাড়াতে সহায়ক",
+        "খাবারের স্বাদ বৃদ্ধি করে",
+        "ভিটামিন C সমৃদ্ধ",
+        "প্রাকৃতিক উপাদানে তৈরি",
+        "ভেজালমুক্ত"
+    ]
 
+},
+/* ==========================================
+   10. খাঁটি আটা
+========================================== */
 
-</div>
+flour: {
 
+    id:"flour",
 
-</div>
+    category:"আটা",
 
+    name:"খাঁটি আটা",
 
+    stock:"স্টকে আছে",
 
+    description:
+        "উন্নতমানের গম থেকে তৈরি খাঁটি আটা।",
 
+    images:[
+        "../images/flour1.jpeg",
+        "../images/flour2.jpeg",
+        "../images/flour3.jpeg"
+    ],
 
+    prices:[
+        {
+            weight:"১০০ গ্রাম",
+            price:90
+        },
+        {
+            weight:"২৫০ গ্রাম",
+            price:220
+        },
+        {
+            weight:"৫০০ গ্রাম",
+            price:440
+        }
+    ],
 
-<div class="col-md-3">
+    production:
+        "উন্নতমানের গম পরিষ্কার করে আধুনিক মিলে ভাঙানো হয়।",
 
+    ingredients:
+        "১০০% গম",
 
-<div class="category-card shadow">
+    nutrition:
+        "ফাইবার, আয়রন ও প্রোটিন সমৃদ্ধ।",
 
+    storage:
+        "শুষ্ক স্থানে রাখুন।",
 
-<img src="images/takia-sorisa.jpeg">
+    delivery:
+        "সারা বাংলাদেশে ডেলিভারি।",
 
+    benefits:[
+        "রুটি নরম হয়",
+        "পুষ্টিকর",
+        "খাঁটি আটা",
+        "ভেজালমুক্ত",
+        "দৈনন্দিন ব্যবহারের উপযোগী"
+    ]
 
-<h5>
+},
 
- সরিষার তেল
 
-</h5>
 
+/* ==========================================
+   11. সরিষার তেল
+========================================== */
 
-</div>
+mustardOil: {
 
+    id:"mustardOil",
 
-</div>
+    category:"তেল",
 
+    name:"খাঁটি সরিষার তেল",
 
+    stock:"স্টকে আছে",
 
+    description:
+        "ঘানিতে ভাঙানো খাঁটি সরিষার তেল।",
 
+    images:[
+        "../images/sorisertel.jpeg",
+        "../images/sorisertel.jpeg",
+        "../images/sorisertel.jpeg"
+    ],
 
-</div>
+    prices:[
+        {
+            weight:"৫০০ মি.লি.",
+            price:200
+        },
+        {
+            weight:"১ লিটার",
+            price:350
+        },
+        {
+            weight:"২ লিটার",
+            price:700
+        }
+    ],
 
+    production:
+        "নির্বাচিত সরিষা থেকে কোল্ড প্রেস পদ্ধতিতে প্রস্তুত।",
 
-</div>
+    ingredients:
+        "১০০% সরিষা",
 
+    nutrition:
+        "ওমেগা ফ্যাটি অ্যাসিড ও ভিটামিন E সমৃদ্ধ।",
 
-</section>
-<!-- ================= PRODUCTS ================= -->
+    storage:
+        "সূর্যের আলো থেকে দূরে রাখুন।",
 
-<section id="products" class="py-5">
+    delivery:
+        "সারা বাংলাদেশে নিরাপদ ডেলিভারি।",
 
+    benefits:[
+        "রান্নার স্বাদ বৃদ্ধি করে",
+        "খাঁটি সরিষার ঘ্রাণ",
+        "স্বাস্থ্যকর",
+        "ভেজালমুক্ত",
+        "দৈনন্দিন রান্নার জন্য উপযুক্ত"
+    ]
 
-<div class="container">
+},
 
 
-<h2 class="text-center mb-5 fw-bold">
 
-আমাদের জনপ্রিয় পণ্য
+/* ==========================================
+   12. নারিকেল তেল
+========================================== */
 
-</h2>
+coconutOil: {
 
+    id:"coconutOil",
 
+    category:"তেল",
 
-<div class="row g-4">
+    name:"খাঁটি নারিকেল তেল",
 
+    stock:"স্টকে আছে",
 
+    description:
+        "পরিষ্কার নারিকেল থেকে তৈরি বিশুদ্ধ নারিকেল তেল।",
 
+    images:[
+        "../images/narikeltel.jpeg",
+        "../images/narikeltel.jpeg",
+        "../images/narikeltel.jpeg"
+    ],
 
+    prices:[
+        {
+            weight:"২৫০ মি.লি.",
+            price:480
+        },
+        {
+            weight:"৫০০ মি.লি.",
+            price:960
+        },
+        {
+            weight:"১ লিটার",
+            price:1720
+        }
+    ],
 
-<!-- Product 1 -->
+    production:
+        "তাজা নারিকেল থেকে স্বাস্থ্যসম্মতভাবে প্রস্তুত করা হয়।",
 
-<div class="col-md-3">
+    ingredients:
+        "১০০% নারিকেল",
 
+    nutrition:
+        "স্বাস্থ্যকর ফ্যাট ও ভিটামিন E সমৃদ্ধ।",
 
-<div class="card product-card shadow">
+    storage:
+        "ঠান্ডা ও শুষ্ক স্থানে রাখুন।",
 
+    delivery:
+        "সারা বাংলাদেশে হোম ডেলিভারি।",
 
-<img src="images/modhu-+ (2).jpeg"
-class="card-img-top">
+    benefits:[
+        "চুলের যত্নে উপকারী",
+        "ত্বকের জন্য ভালো",
+        "খাঁটি নারিকেলের সুগন্ধ",
+        "স্বাস্থ্যকর",
+        "ভেজালমুক্ত"
+    ]
 
+},
 
-<div class="card-body">
 
 
-<h5>
-সুন্দরবনের খাঁটি মধু
-</h5>
+/* ==========================================
+   13. কামরাঙ্গার আচার
+========================================== */
 
+starFruitPickle: {
 
-<h5 class="text-success">
-৳1800
-</h5>
+    id:"starFruitPickle",
 
+    category:"আচার",
 
-<p>
-১কেজি
-</p>
+    name:"কামরাঙ্গার আচার",
 
+    stock:"স্টকে আছে",
 
-<a href="./index/producsts.html?id=honey"
-class="btn btn-outline-success w-100 mb-2">
+    description:
+        "টক-মিষ্টি স্বাদের কামরাঙ্গার আচার।",
 
-See Details
+    images:[
+        "../images/kamranga-acar.jpeg",
+        "../images/kamranga-acar.jpeg",
+        "../images/kamranga-acar.jpeg"
+    ],
 
-</a>
+    prices:[
+        {
+            weight:"১০০ গ্রাম",
+            price:90
+        },
+        {
+            weight:"২৫০ গ্রাম",
+            price:210
+        },
+        {
+            weight:"৫০০ গ্রাম",
+            price:420
+        }
+    ],
 
-<button class="btn btn-success w-100"
+    production:
+        "তাজা কামরাঙ্গা ও প্রাকৃতিক মসলা দিয়ে তৈরি।",
 
-onclick="addHomeCart(
-'সুন্দরবনের খাঁটি মধু',
-1800,
-'images/modhu-+ (2).jpeg',
-'১ কেজি'
-)">
+    ingredients:
+        "কামরাঙ্গা, লবণ, চিনি, মসলা",
 
+    nutrition:
+        "ভিটামিন C সমৃদ্ধ।",
 
-<i class="fa-solid fa-cart-plus"></i>
+    storage:
+        "ঠান্ডা স্থানে রাখুন।",
 
-কার্টে যোগ করুন
+    delivery:
+        "সারা বাংলাদেশে ডেলিভারি।",
 
+    benefits:[
+        "রুচি বাড়ায়",
+        "খাঁটি উপাদান",
+        "টক-মিষ্টি স্বাদ",
+        "ভেজালমুক্ত",
+        "পরিষ্কারভাবে প্রস্তুত"
+    ]
+
+},
+
+
+
+/* ==========================================
+   14. ঝালমুড়ি মসলা
+========================================== */
+
+jhalmuriMasala: {
+
+    id:"jhalmuriMasala",
+
+    category:"মসলা",
+
+    name:"ঝালমুড়ি মসলা",
+
+    stock:"স্টকে আছে",
+
+    description:
+        "বিশেষ মিশ্রণে তৈরি ঝালমুড়ির মসলা।",
+
+    images:[
+        "../images/jalmorir-mosla.jpeg",
+        "../images/jalmorir-mosla.jpeg",
+        "../images/jalmorir-mosla.jpeg"
+    ],
+
+    prices:[
+        {
+            weight:"১০০ গ্রাম",
+            price:79
+        },
+        {
+            weight:"২৫০ গ্রাম",
+            price:199
+        },
+        {
+            weight:"৫০০ গ্রাম",
+            price:399
+        }
+    ],
+
+    production:
+        "নির্বাচিত মসলা মিশিয়ে স্বাস্থ্যসম্মতভাবে প্রস্তুত করা হয়।",
+
+    ingredients:
+        "ধনিয়া, জিরা, বিট লবণ, গোলমরিচ, শুকনা মরিচ ও অন্যান্য প্রাকৃতিক মসলা।",
+
+    nutrition:
+        "প্রাকৃতিক মসলা ও অ্যান্টিঅক্সিডেন্ট সমৃদ্ধ।",
+
+    storage:
+        "বায়ুরোধী পাত্রে সংরক্ষণ করুন।",
+
+    delivery:
+        "সারা বাংলাদেশে হোম ডেলিভারি।",
+
+    benefits:[
+        "ঝালমুড়ির স্বাদ বাড়ায়",
+        "খাঁটি ও ভেজালমুক্ত",
+        "তাজা গুঁড়া মসলা",
+        "সুগন্ধ দীর্ঘক্ষণ থাকে",
+        "ঘরোয়া স্বাদ"
+    ]
+
+}
+
+};
+
+
+
+// ==========================================
+// LOAD PRODUCT DETAILS
+// ==========================================
+
+document.addEventListener("DOMContentLoaded",function(){
+
+
+let id =
+new URLSearchParams(window.location.search).get("id");
+
+
+if(!id){
+    console.log("No Product ID Found");
+    return;
+}
+
+
+let product = products[id];
+
+
+if(!product){
+    console.log("Product Not Found");
+    return;
+}
+
+
+
+document.getElementById("productName").innerHTML =
+product.name;
+
+
+document.getElementById("productCategory").innerHTML =
+product.category;
+
+
+document.getElementById("productDescription").innerHTML =
+product.description;
+
+
+document.getElementById("mainImage").src =
+product.images[0];
+
+
+document.getElementById("stockStatus").innerHTML =
+product.stock;
+
+
+
+let thumbContainer =
+document.getElementById("thumbnailContainer");
+
+
+thumbContainer.innerHTML="";
+
+
+product.images.forEach((img,index)=>{
+
+thumbContainer.innerHTML += `
+
+<img src="${img}"
+class="thumb ${index===0?'active':''}"
+onclick="changeImage('${img}',this)">
+
+`;
+
+});
+
+
+
+let weightBox =
+document.getElementById("weightContainer");
+
+
+weightBox.innerHTML="";
+
+
+product.prices.forEach((item,index)=>{
+
+
+weightBox.innerHTML += `
+
+<button class="weight-btn ${index===0?'active':''}"
+onclick="showPrice(${item.price},this)">
+
+${item.weight}
 
 </button>
 
+`;
 
-</div>
+});
 
 
-</div>
 
+document.getElementById("mainPrice").innerHTML =
+"৳ " + product.prices[0].price;
 
-</div>
 
 
+document.getElementById("production").innerHTML =
+product.production;
 
 
+document.getElementById("ingredients").innerHTML =
+product.ingredients;
 
-<!-- Product 2 -->
 
+document.getElementById("nutrition").innerHTML =
+product.nutrition;
 
-<div class="col-md-3">
 
+document.getElementById("storage").innerHTML =
+product.storage;
 
-<div class="card product-card shadow">
 
+document.getElementById("delivery").innerHTML =
+product.delivery;
 
-<img src="images/ghe.offical.jpeg"
-class="card-img-top">
 
 
-<div class="card-body">
+let benefitBox =
+document.getElementById("benefits");
 
 
-<h5>
-দেশি গাওয়া ঘি
-</h5>
+benefitBox.innerHTML="";
 
 
-<h5 class="text-success">
-৳1700
-</h5>
+product.benefits.forEach(item=>{
 
+benefitBox.innerHTML +=
 
-<p>
-১ কেজি
-</p>
+`<li>${item}</li>`;
 
-<a href="./index/producsts.html?id=ghee"
-class="btn btn-outline-success w-100 mb-2">
+});
 
-See Details
 
-</a>
+});
 
-<button class="btn btn-success w-100"
 
-onclick="addHomeCart(
-'দেশি গাওয়া ঘি',
-1700,
-'images/ghe.offical.jpeg',
-'১ কেজি'
-)">
 
 
-<i class="fa-solid fa-cart-plus"></i>
+// ==========================================
+// CHANGE IMAGE
+// ==========================================
 
-কার্টে যোগ করুন
+function changeImage(src,el){
 
+document.getElementById("mainImage").src = src;
 
-</button>
 
+document.querySelectorAll(".thumb")
+.forEach(img=>{
 
-</div>
+img.classList.remove("active");
 
+});
 
-</div>
 
+el.classList.add("active");
 
-</div>
+}
 
 
 
 
+// ==========================================
+// CHANGE PRICE
+// ==========================================
 
+function showPrice(price,btn){
 
 
-<!-- Product 3 -->
+document.getElementById("mainPrice").innerHTML =
+"৳ " + price;
 
 
-<div class="col-md-3">
+document.querySelectorAll(".weight-btn")
+.forEach(item=>{
 
+item.classList.remove("active");
 
-<div class="card product-card shadow">
+});
 
 
-<img src="images/rosun-achar.jpeg"
-class="card-img-top">
+btn.classList.add("active");
 
 
-<div class="card-body">
-
-
-<h5>
-রসুনের আচার
-</h5>
-
-
-<h5 class="text-success">
-৳220
-</h5>
-
-
-<p>
-২৫০ গ্রাম
-</p>
-
-
-<a href="./index/producsts.html?id=garlicPickle"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'রসুনের আচার',
-220,
-'images/rosun-achar.jpeg',
-'২৫০ গ্রাম'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- Product 4 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/moris-gura.png"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-মরিচ গুঁড়া
-</h5>
-
-
-<h5 class="text-success">
-৳70
-</h5>
-
-
-<p>
-১০০ গ্রাম
-</p>
-
-<a href="./index/producsts.html?id=chili"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'মরিচ গুঁড়া',
-70,
-'images/moris-gura.png',
-'১০০ গ্রাম'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ================= MORE PRODUCTS ================= -->
-
-
-<section class="py-5">
-
-
-<div class="container">
-
-
-<div class="row g-4">
-
-
-
-
-
-<!-- Product 5 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/atob-chal.jpeg"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-আতপ-চাল গুঁড়া
-</h5>
-
-
-<h5 class="text-success">
-৳190
-</h5>
-
-
-<p>
-১ কেজি
-</p>
-
-<a href="./index/producsts.html?id=rice"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'আতপ চালের গুঁড়া',
-190,
-'images/atob-chal.jpeg',
-'১ কেজি'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- Product 6 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/holud-gura.jpeg"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-হলুদ গুঁড়া
-</h5>
-
-
-<h5 class="text-success">
-৳70
-</h5>
-
-
-<p>
-১০০ গ্রাম
-</p>
-
-<a href="./index/producsts.html?id=turmeric"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'হলুদ গুঁড়া',
-70,
-'images/holud-gura.jpeg',
-'১০০ গ্রাম'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- Product 7 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/narikeltel.jpeg"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-খাঁটি নারিকেল তেল
-</h5>
-<h5 class="text-success">
-৳৪৮০
-</h5>
-
-<p>
-২৫০ গ্রাম
-</p>
-
-<a href="./index/producsts.html?id=coconutOil"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'খাঁটি নারিকেল তেল',
-480,
-'images/narikeltel.jpeg',
-'২৫০ মিলি'
-)">
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- Product 8 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/sorisertel.jpeg"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-খাঁটি সরিষার তেল
-</h5>
-
-
-<h5 class="text-success">
-৳৩৫০
-</h5>
-
-
-<p>
-১ লিটার
-</p>
-
-<a href="./index/producsts.html?id=mustardOil"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'খাঁটি সরিষার তেল',
-350,
-'images/sorisertel.jpeg',
-'১ লিটার'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-<!-- Product 9 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/jolpai-acar.jpeg"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-জলপাই আচার
-</h5>
-
-
-<h5 class="text-success">
-৳২২০
-</h5>
-
-
-<p>
-২৫০ গ্রাম
-</p>
-
-<a href="./index/producsts.html?id=olivePickle"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'জলপাই আচার',
-220,
-'images/jolpai-acar.jpeg',
-'২৫০ মিলি'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-<!-- Product 10 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/tatuler-acar.png"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-তেঁতুলের আচার
-</h5>
-
-
-<h5 class="text-success">
-৳২৫০
-</h5>
-
-
-<p>
-২৫০ গ্রাম
-</p>
-
-<a href="./index/producsts.html?id=tamarindPickle"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'তেঁতুলের আচার',
-250,
-'images/tatuler-acar.png',
-'২৫০ মিলি'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-    <!-- Product 11 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/amlokir-acar.png"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-আমলকীর আচার
-</h5>
-
-
-<h5 class="text-success">
-৳২২০
-</h5>
-
-
-<p>
-২৫০ গ্রাম
-</p>
-<a href="./index/producsts.html?id=amlaPickle"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'আমলকীর আচার',
-220,
-'images/amlokir-acar.png',
-'২৫০ মিলি'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
- <!-- Product 12 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/chuijal-acar.png"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-চুইঝালের আচার
-</h5>
-
-
-<h5 class="text-success">
-৳৪০০
-</h5>
-
-
-<p>
-২৫০ গ্রাম
-</p>
-
-<a href="./index/producsts.html?id=chuiJhal"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'চুইঝালের আচার',
-400,
-'images/chuijal-acar.png',
-'২৫০ মিলি'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-<!-- Product 13 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/amrar-acar.png"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-আমড়ার আচার
-</h5>
-
-
-<h5 class="text-success">
-৳২১০
-</h5>
-
-
-<p>
-২৫০ গ্রাম
-</p>
-
-<a href="./index/producsts.html?id=amraPickle"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'আমড়ার আচার',
-210,
-'images/amrar-acar.png',
-'২৫০ মিলি'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-<!-- Product 14 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/kamranga-acar.jpeg"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-কামরাঙ্গা আচার
-</h5>
-
-
-<h5 class="text-success">
-৳১৯৯
-</h5>
-
-
-<p>
-২৫০ গ্রাম
-</p>
-
-<a href="./index/producsts.html?id=kamrangaPickle"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'কামরাঙ্গা আচার',
-199,
-'images/kamranga-acar.jpeg',
-'২৫০ মিলি'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-<!-- Product 16 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/sutkir-acar.jpeg"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-শুটকির আচার
-</h5>
-
-
-<h5 class="text-success">
-৳৩৪৯
-</h5>
-
-
-<p>
-২৫০ গ্রাম
-</p>
-
-<a href="./index/producsts.html?id=dryFishPickle"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'শুটকির আচার',
-349,
-'images/sutkir-acar.jpeg',
-'২৫০ মিলি'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-<!-- Product 16 -->
-
-
-<div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/jalmorir-mosla.jpeg"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-ঝালমুরি মসলা
-</h5>
-
-
-<h5 class="text-success">
-৳৩৪৯
-</h5>
-
-
-<p>
-২৫০ গ্রাম
-</p>
-
-<a href="./index/producsts.html?id=jhalmuriMasala"
-class="btn btn-outline-success w-100 mb-2">
-
-See Details
-
-</a>
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'ঝালমুরি মসলা',
-349,
-'images/jalmorir-mosla.jpeg',
-'২৫০ মিলি'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-<!-- Product 16 -->
-
-
-<!-- <div class="col-md-3">
-
-
-<div class="card product-card shadow">
-
-
-<img src="images/jalmorir-mosla.jpge"
-class="card-img-top">
-
-
-<div class="card-body">
-
-
-<h5>
-আমড়ার আচার
-</h5>
-
-
-<h5 class="text-success">
-৳২১০
-</h5>
-
-
-<p>
-২৫০ গ্রাম
-</p>
-
-
-
-<button class="btn btn-success w-100"
-
-onclick="addHomeCart(
-'আমড়ার আচার',
-210,
-'images/amrar-acar.png',
-'২৫০ মিলি'
-)">
-
-
-<i class="fa-solid fa-cart-plus"></i>
-
-কার্টে যোগ করুন
-
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div> -->
-
-<!-- /////products raw end ///// -->
-
-</div>
-
-
-</div>
-
-
-</section>
-
-<div class="container text-center my-5">
-    <a href="products.html" class="btn-more-products">
-        <i class="fa-solid fa-store"></i>
-        আরও পণ্য দেখুন
-    </a>
-</div>
-
-
-<!-- ================= OFFER SECTION ================= -->
-
-
-<section class="offer-section py-5">
-
-
-<div class="container">
-
-
-<div class="row align-items-center">
-
-
-
-
-
-<div class="col-md-6">
-
-
-
-<span class="badge bg-warning text-dark">
-
-🔥 বিশেষ অফার
-
-</span>
-
-
-
-<h2 class="mt-3">
-
-🎥 ভিডিও রিভিউ দিন, পরের অর্ডারে ডেলিভারি চার্জ ফ্রি!
-
-<span class="text-success">
-
-<!-- ৫% ছাড় -->
-
-</span>
-
-</h2>
-
-
-
-<p>
-
-❤️ আপনার একটি রিভিউ আমাদের জন্য অনেক মূল্যবান।
-
-</p>
-
-
-
-<a href="#products"
-
-class="btn btn-success btn-lg">
-
-ভিডিও রিভিউ দিন
-
-</a>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="col-md-6 text-center">
-
-
-<img src="images/review.jpeg"
-
-class="img-fluid offer-img">
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-<!-- ================= REVIEWS ================= -->
-
-
-<section class="py-5 bg-light">
-
-
-<div class="container">
-
-
-<h2 class="text-center mb-5 fw-bold">
-
-গ্রাহকদের মতামত
-
-</h2>
-
-
-
-
-<div class="row g-4">
-
-
-
-
-
-<div class="col-md-4">
-
-
-<div class="review-card shadow p-4 text-center">
-
-
-<div>
-
-<i class="fa-solid fa-star text-warning"></i>
-<i class="fa-solid fa-star text-warning"></i>
-<i class="fa-solid fa-star text-warning"></i>
-<i class="fa-solid fa-star text-warning"></i>
-<i class="fa-solid fa-star text-warning"></i>
-
-</div>
-
-
-
-<h5 class="mt-3">
-
-মোঃ রহমান
-
-</h5>
-
-
-
-<p>
-
-মধুর মান অনেক ভালো। আবার অর্ডার করবো।
-
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="col-md-4">
-
-
-<div class="review-card shadow p-4 text-center">
-
-
-<div>
-
-<i class="fa-solid fa-star text-warning"></i>
-<i class="fa-solid fa-star text-warning"></i>
-<i class="fa-solid fa-star text-warning"></i>
-<i class="fa-solid fa-star text-warning"></i>
-<i class="fa-solid fa-star text-warning"></i>
-
-</div>
-
-
-
-<h5 class="mt-3">
-
-সাবিনা ইয়াসমিন
-
-</h5>
-
-
-
-<p>
-
-ঘি এর স্বাদ একদম খাঁটি।
-
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="col-md-4">
-
-
-<div class="review-card shadow p-4 text-center">
-
-
-<div>
-
-<i class="fa-solid fa-star text-warning"></i>
-<i class="fa-solid fa-star text-warning"></i>
-<i class="fa-solid fa-star text-warning"></i>
-<i class="fa-solid fa-star text-warning"></i>
-<i class="fa-solid fa-star text-warning"></i>
-
-</div>
-
-
-
-<h5 class="mt-3">
-
-ইয়ামিল হোসেন
-
-</h5>
-
-
-
-<p>
-
-ডেলিভারি দ্রুত পেয়েছি।
-
-</p>
-
-
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ================= GALLERY ================= -->
-
-
-<section class="gallery py-5">
-
-
-<div class="container">
-
-
-<h2 class="text-center mb-5 fw-bold">
-
-আমাদের পণ্যের ঝলক
-
-</h2>
-
-
-
-
-<div class="row g-4">
-
-
-
-<div class="col-md-4">
-
-<img src="images/modhu-+ (2).jpeg"
-
-class="img-fluid rounded shadow">
-
-</div>
-
-
-
-
-
-<div class="col-md-4">
-
-<img src="images/ghe.offical.jpeg"
-
-class="img-fluid rounded shadow">
-
-</div>
-
-
-
-
-
-
-<div class="col-md-4">
-
-<img src="images/holud-gura.jpeg"
-
-class="img-fluid rounded shadow">
-
-</div>
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ================= FAQ ================= -->
-
-
-<section class="py-5 bg-light">
-
-
-<div class="container">
-
-
-<h2 class="text-center mb-5 fw-bold">
-
-সাধারণ প্রশ্ন
-
-</h2>
-
-
-
-
-
-<div class="accordion" id="faq">
-
-
-
-
-
-<div class="accordion-item">
-
-
-<h2 class="accordion-header">
-
-
-<button class="accordion-button"
-
-data-bs-toggle="collapse"
-
-data-bs-target="#faqOne">
-
-
-আপনাদের পণ্য কি খাঁটি?
-
-
-</button>
-
-
-</h2>
-
-
-
-<div id="faqOne"
-
-class="accordion-collapse collapse show"
-
-data-bs-parent="#faq">
-
-
-
-<div class="accordion-body">
-
-জি, আমরা বিশ্বস্ত উৎস থেকে পণ্য সংগ্রহ করি।
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="accordion-item">
-
-
-<h2 class="accordion-header">
-
-
-<button class="accordion-button collapsed"
-
-data-bs-toggle="collapse"
-
-data-bs-target="#faqTwo">
-
-
-ডেলিভারি কত দিনে হয়?
-
-
-</button>
-
-
-</h2>
-
-
-
-<div id="faqTwo"
-
-class="accordion-collapse collapse"
-
-data-bs-parent="#faq">
-
-
-
-<div class="accordion-body">
-
-খুলনা ভিতরে ১-২ দিন এবং খুলনার বাইরে ২-৫ দিন।
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="accordion-item">
-
-
-<h2 class="accordion-header">
-
-
-<button class="accordion-button collapsed"
-
-data-bs-toggle="collapse"
-
-data-bs-target="#faqThree">
-
-
-ক্যাশ অন ডেলিভারি আছে?
-
-
-</button>
-
-
-</h2>
-
-
-
-<div id="faqThree"
-
-class="accordion-collapse collapse"
-
-data-bs-parent="#faq">
-
-
-
-<div class="accordion-body">
-
-জি, সারা বাংলাদেশে Cash On Delivery সুবিধা রয়েছে।
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-</div>
-
-
-</section>
-
-
-<div id="cartToast"
-     class="toast position-fixed bottom-0 end-0 m-3"
-     role="alert"
-     data-bs-autohide="true"
-     data-bs-delay="2500">
-
-    <div class="toast-body d-flex align-items-center">
-
-        <i class="fa-solid fa-circle-check me-2 text-success"></i>
-
-        <div>
-            <h6 class="mb-1">কার্টে যোগ হয়েছে</h6>
-            <p id="toastText" class="mb-0"></p>
-        </div>
-
-    </div>
-
-</div>
-
-<!-- ================= CONTACT ================= -->
-
-
-<section id="contact" class="contact-section py-5">
-
-
-<div class="container">
-
-
-<div class="row text-center g-4">
-
-
-
-
-
-<div class="col-md-4">
-
-
-<div class="contact-card shadow p-4">
-
-
-<i class="fa-solid fa-location-dot"></i>
-
-
-<h5>
-
-ঠিকানা
-
-</h5>
-
-
-<p>
-
-Khulna, Bangladesh
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-<div class="col-md-4">
-
-
-<div class="contact-card shadow p-4">
-
-
-<i class="fa-solid fa-phone"></i>
-
-
-<h5>
-
-ফোন
-
-</h5>
-
-
-<p>
-
-+8801791649266
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="col-md-4">
-
-
-<div class="contact-card shadow p-4">
-
-
-<i class="fa-solid fa-envelope"></i>
-
-
-<h5>
-
-Email
-
-</h5>
-
-
-<p>
-
-jebatakia8@gmail.com
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- ================= FOOTER ================= -->
-
-
-<footer class="footer-section">
-
-    <div class="container">
-
-        <div class="row gy-4 align-items-start">
-
-            <!-- Brand -->
-
-            <div class="col-lg-4">
-
-                <h3 class="fw-bold mb-3">
-
-                    Khati Shad by Takia
-
-                </h3>
-
-                <p class="footer-text">
-
-                    খাঁটি ও প্রাকৃতিক খাদ্যপণ্যের বিশ্বস্ত ঠিকানা।
-                    বিশুদ্ধ মধু, দেশি ঘি, আচার, মসলা, সরিষার তেল,
-                    নারিকেল তেল এবং আরও অনেক প্রিমিয়াম পণ্য
-                    সারা বাংলাদেশে হোম ডেলিভারির মাধ্যমে পৌঁছে দিচ্ছি।
-
-                </p>
-
-            </div>
-
-            <!-- Quick Links -->
-
-            <div class="col-lg-4">
-
-                <h5 class="footer-title">
-
-                    দ্রুত লিংক
-
-                </h5>
-
-                <ul class="footer-links list-unstyled">
-
-                    <li>
-                        <a href="index.html">
-                            <i class="fa-solid fa-house me-2"></i>
-                            হোম
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="products.html">
-                            <i class="fa-solid fa-store me-2"></i>
-                            পণ্যসমূহ
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="cart.html">
-                            <i class="fa-solid fa-cart-shopping me-2"></i>
-                            কার্ট
-                        </a>
-                    </li>
-
-            
-
-                </ul>
-
-            </div>
-
-            <!-- Contact -->
-
-            <div class="col-lg-4">
-
-                <h5 class="footer-title">
-
-                    যোগাযোগ
-
-                </h5>
-
-                <p class="footer-text">
-
-                    <i class="fa-solid fa-phone me-2"></i>
-
-                    +8801791649266
-
-                </p>
-
-                <p class="footer-text">
-
-                    <i class="fa-solid fa-envelope me-2"></i>
-
-                    jebatakia8@gmail.com
-
-                </p>
-
-                <p class="footer-text">
-
-                    <i class="fa-solid fa-location-dot me-2"></i>
-
-                    Khulna, Bangladesh
-
-                </p>
-
-                <div class="social-icons mt-3">
-
-                    <a href="https://www.facebook.com/profile.php?id=61591897260380"
-                       target="_blank"
-                       class="social-icon">
-
-                        <i class="fa-brands fa-facebook-f"></i>
-
-                    </a>
-
-                    <a href="#"
-                       class="social-icon">
-
-                        <i class="fa-brands fa-youtube"></i>
-
-                    </a>
-
-                    <a href="#"
-                       class="social-icon">
-
-                        <i class="fa-brands fa-instagram"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <hr class="footer-line">
-
-        <div class="text-center">
-
-            <p class="footer-copy mb-0">
-
-                © 2026 <strong>Khati Shad by Takia</strong> |
-                All Rights Reserved.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-
-
-
-
-
-
-<!-- ================= WHATSAPP BUTTON ================= -->
-
-
-<a href="https://wa.me/8801791649266"
-
-class="whatsapp"
-
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
-
-<!-- JS -->
-
-<script src="/app.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
-</html>
+}
