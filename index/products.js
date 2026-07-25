@@ -83,9 +83,9 @@ const products = {
             "দেশি গরুর দুধের মাখন থেকে তৈরি খাঁটি গাওয়া ঘি।",
 
         images: [
-            "../images/ghee1.jpeg",
-            "../images/ghee2.jpeg",
-            "../images/ghee3.jpeg"
+            "../images/ghe.offical.jpeg",
+            "../images/ghe.offical.jpeg,
+            "../images/ghe.offical.jpeg"
         ],
 
         prices: [
@@ -145,9 +145,9 @@ const products = {
             "নির্বাচিত শুকনা হলুদ থেকে তৈরি বিশুদ্ধ হলুদ গুঁড়া।",
 
         images: [
-            "../images/turmeric1.jpeg",
-            "../images/turmeric2.jpeg",
-            "../images/turmeric3.jpeg"
+            "../images/holud-gura.jpeg",
+            "../images/holud-gura.jpeg",
+            "../images/holud-gura.jpeg"
         ],
 
         prices: [
@@ -270,9 +270,9 @@ garlic_pickle: {
         "বাছাইকৃত রসুন ও বিশেষ মসলার সংমিশ্রণে তৈরি ঘরোয়া স্বাদের সুস্বাদু রসুনের আচার।",
 
     images: [
-        "../images/garlic_pickle1.jpeg",
-        "../images/garlic_pickle2.jpeg",
-        "../images/garlic_pickle3.jpeg"
+        "../images/rosun-achar.jpeg",
+        "../images/rosun-achar.jpeg",
+        "../images/rosun-achar.jpeg"
     ],
 
     prices: [
@@ -332,9 +332,9 @@ jolpai_pickle: {
         "টাটকা জলপাই ও বিশেষ মসলার সংমিশ্রণে তৈরি ঘরোয়া স্বাদের সুস্বাদু জলপাইয়ের আচার।",
 
     images: [
-        "../images/jolpai_pickle1.jpeg",
-        "../images/jolpai_pickle2.jpeg",
-        "../images/jolpai_pickle3.jpeg"
+        "../images/jolpai-acar.jpeg",
+        "../images/jolpai-acar.jpeg",
+        "../images/jolpai-acar.jpeg"
     ],
 
     prices: [
@@ -394,9 +394,9 @@ tamarind_pickle: {
         "বাছাইকৃত তেঁতুল ও বিশেষ মসলার সংমিশ্রণে তৈরি টক-মিষ্টি স্বাদের সুস্বাদু তেঁতুলের আচার।",
 
     images: [
-        "../images/tamarind_pickle1.jpeg",
-        "../images/tamarind_pickle2.jpeg",
-        "../images/tamarind_pickle3.jpeg"
+        "../images/tatuler-acar.png",
+        "../images/tatuler-acar.png",
+        "../images/tatuler-acar.png"
     ],
 
     prices: [
@@ -456,9 +456,9 @@ tamarind_pickle: {
             "উন্নতমানের আতপ চাল, প্রতিদিনের খাবারের জন্য উপযুক্ত।",
 
         images: [
-            "../images/rice1.jpeg",
-            "../images/rice2.jpeg",
-            "../images/rice3.jpeg"
+            "../images/atob-chal.jpeg",
+            "../images/atob-chal.jpeg",
+            "../images/atob-chal.jpeg"
         ],
 
         prices: [
@@ -518,9 +518,9 @@ amloki_pickle: {
         "টাটকা আমলকি ও বিশেষ মসলার সংমিশ্রণে তৈরি টক-মিষ্টি স্বাদের সুস্বাদু আমলকির আচার।",
 
     images: [
-        "../images/amloki_pickle1.jpeg",
-        "../images/amloki_pickle2.jpeg",
-        "../images/amloki_pickle3.jpeg"
+        "../images/amlokir-acar.png",
+        "../images/amlokir-acar.png",
+        "../images/amlokir-acar.png"
     ],
 
     prices: [
@@ -642,9 +642,9 @@ amra_pickle: {
         "টাটকা আমড়া ও বিশেষ মসলার সংমিশ্রণে তৈরি টক-মিষ্টি স্বাদের সুস্বাদু আমড়ার আচার।",
 
     images: [
-        "../images/amra_pickle1.jpeg",
-        "../images/amra_pickle2.jpeg",
-        "../images/amra_pickle3.jpeg"
+        "../images/amrar-acar.png",
+        "../images/amrar-acar.png",
+        "../images/amrar-acar.png"
     ],
 
     prices: [
@@ -704,9 +704,9 @@ chuijhal_pickle: {
         "সুস্বাদু চুইঝাল ও বিশেষ মসলার সংমিশ্রণে তৈরি ঝাল-মজাদার ঘরোয়া স্বাদের চুইঝালের আচার।",
 
     images: [
-        "../images/chuijhal_pickle1.jpeg",
-        "../images/chuijhal_pickle2.jpeg",
-        "../images/chuijhal_pickle3.jpeg"
+        "../images/chuijal-acar.png",
+        "../images/chuijal-acar.png",
+        "../images/chuijal-acar.png"
     ],
 
     prices: [
@@ -766,9 +766,9 @@ chuijhal_pickle: {
             "ঘানিতে ভাঙানো খাঁটি সরিষার তেল।",
 
         images: [
-            "../images/mustard1.jpeg",
-            "../images/mustard2.jpeg",
-            "../images/mustard3.jpeg"
+            "../images/sorisertel.jpeg",
+            "../imagessorisertel.jpeg",
+            "../images/sorisertel.jpeg"
         ],
 
         prices: [
@@ -828,9 +828,9 @@ chuijhal_pickle: {
             "পরিষ্কার নারিকেল থেকে তৈরি বিশুদ্ধ নারিকেল তেল।",
 
         images: [
-            "../images/coconut1.jpeg",
-            "../images/coconut2.jpeg",
-            "../images/coconut3.jpeg"
+            "../images/narikeltel.jpeg",
+            "../images/narikeltel.jpeg",
+            "../images/narikeltel.jpeg"
         ],
 
         prices: [
@@ -889,9 +889,9 @@ amraPickle:{
     description:"তাজা আমড়া দিয়ে তৈরি ঘরোয়া আচার।",
 
     images:[
-        "../images/amra1.jpeg",
-        "../images/amra2.jpeg",
-        "../images/amra3.jpeg"
+        "../images/amrar-acar.png",
+        "../images/amrar-acar.png",
+        "../images/amrar-acar.png"
     ],
 
     prices:[
@@ -946,9 +946,9 @@ starFruitPickle:{
     description:"টক-মিষ্টি স্বাদের কামরাঙ্গার আচার।",
 
     images:[
-        "../images/starfruit1.jpeg",
-        "../images/starfruit2.jpeg",
-        "../images/starfruit3.jpeg"
+        "../images/kamranga-acar.jpeg",
+        "../images/kamranga-acar.jpeg",
+        "../images/kamranga-acar.jpeg"
     ],
 
     prices:[
@@ -1002,9 +1002,9 @@ jhalmuriMasala:{
     description:"বিশেষ মিশ্রণে তৈরি ঝালমুড়ির মসলা।",
 
     images:[
-        "../images/jhalmuri1.jpeg",
-        "../images/jhalmuri2.jpeg",
-        "../images/jhalmuri3.jpeg"
+        "../images/jalmorir-mosla.jpeg",
+        "../images/jalmorir-mosla.jpeg",
+        "../images/jalmorir-mosla.jpeg"
     ],
 
     prices:[
