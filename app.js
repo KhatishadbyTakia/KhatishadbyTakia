@@ -1,10 +1,13 @@
 /* ==========================================
 Khati Shad by Takia
+
 app.js
 
 Part 1 - Core + Add Cart
 
 ========================================== */
+
+
 
 // =======================
 // Cart Variables
@@ -2100,139 +2103,175 @@ window.addEventListener("load",()=>{
 
 /* ////// our catagory/////////// */
 
-/* =====================================================
+/* ==========================================
 PREMIUM CATEGORY SLIDER
-Part-3 JavaScript
-===================================================== */
+FULL JS
+========================================== */
 
 const slider = document.querySelector(".category-slider");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
 
-let isDown = false;
-let startX;
-let scrollLeft;
+if (slider && prevBtn && nextBtn) {
 
-/* ==========================
-Mouse Drag
-========================== */
+    // Duplicate items for infinite effect
+    slider.innerHTML += slider.innerHTML;
 
-slider.addEventListener("mousedown",(e)=>{
+    let animationId;
+    let speed = 1;
 
-isDown = true;
+    /* ==========================
+       AUTO SLIDE
+    ========================== */
 
-slider.classList.add("active");
+    function startSlider() {
 
-startX = e.pageX - slider.offsetLeft;
+        cancelAnimationFrame(animationId);
 
-scrollLeft = slider.scrollLeft;
+        function animate() {
 
-});
+            slider.scrollLeft += speed;
 
-slider.addEventListener("mouseleave",()=>{
+            if (slider.scrollLeft >= slider.scrollWidth / 2) {
+                slider.scrollLeft = 0;
+            }
 
-isDown = false;
+            animationId = requestAnimationFrame(animate);
+        }
 
-});
+        animate();
+    }
 
-slider.addEventListener("mouseup",()=>{
+    startSlider();
 
-isDown = false;
+    /* ==========================
+       PAUSE ON HOVER
+    ========================== */
 
-});
+    slider.addEventListener("mouseenter", () => {
 
-slider.addEventListener("mousemove",(e)=>{
+        cancelAnimationFrame(animationId);
 
-if(!isDown) return;
+    });
 
-e.preventDefault();
+    slider.addEventListener("mouseleave", () => {
 
-const x = e.pageX - slider.offsetLeft;
+        startSlider();
 
-const walk = (x-startX)*2;
+    });
 
-slider.scrollLeft = scrollLeft-walk;
+    /* ==========================
+       RIGHT BUTTON
+    ========================== */
 
-});
+    nextBtn.addEventListener("click", () => {
 
-/* ==========================
-Mouse Wheel
-========================== */
+        cancelAnimationFrame(animationId);
 
-slider.addEventListener("wheel",(e)=>{
+        slider.scrollBy({
+            left: 220,
+            behavior: "smooth"
+        });
 
-e.preventDefault();
+        setTimeout(startSlider, 600);
 
-slider.scrollLeft += e.deltaY;
+    });
 
-});
+    /* ==========================
+       LEFT BUTTON
+    ========================== */
 
-/* ==========================
-Auto Slide
-========================== */
+    prevBtn.addEventListener("click", () => {
 
-let autoSlide = setInterval(()=>{
+        cancelAnimationFrame(animationId);
 
-slider.scrollLeft += 1.2;
+        slider.scrollBy({
+            left: -220,
+            behavior: "smooth"
+        });
 
-if(
+        setTimeout(startSlider, 600);
 
-slider.scrollLeft + slider.clientWidth >= slider.scrollWidth
+    });
 
-){
+    /* ==========================
+       MOUSE DRAG
+    ========================== */
 
-slider.scrollLeft = 0;
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener("mousedown", (e) => {
+
+        isDown = true;
+
+        startX = e.pageX - slider.offsetLeft;
+
+        scrollLeft = slider.scrollLeft;
+
+        cancelAnimationFrame(animationId);
+
+    });
+
+    slider.addEventListener("mouseleave", () => {
+
+        isDown = false;
+
+        startSlider();
+
+    });
+
+    slider.addEventListener("mouseup", () => {
+
+        isDown = false;
+
+        startSlider();
+
+    });
+
+    slider.addEventListener("mousemove", (e) => {
+
+        if (!isDown) return;
+
+        e.preventDefault();
+
+        const x = e.pageX - slider.offsetLeft;
+
+        const walk = (x - startX) * 2;
+
+        slider.scrollLeft = scrollLeft - walk;
+
+    });
+
+    /* ==========================
+       TOUCH SUPPORT
+    ========================== */
+
+    let touchStart = 0;
+
+    slider.addEventListener("touchstart", (e) => {
+
+        cancelAnimationFrame(animationId);
+
+        touchStart = e.touches[0].clientX;
+
+    });
+
+    slider.addEventListener("touchmove", (e) => {
+
+        let touchEnd = e.touches[0].clientX;
+
+        slider.scrollLeft += (touchStart - touchEnd);
+
+        touchStart = touchEnd;
+
+    });
+
+    slider.addEventListener("touchend", () => {
+
+        startSlider();
+
+    });
 
 }
-
-},20);
-
-/* ==========================
-Pause on Hover
-========================== */
-
-slider.addEventListener("mouseenter",()=>{
-
-clearInterval(autoSlide);
-
-});
-
-slider.addEventListener("mouseleave",()=>{
-
-autoSlide = setInterval(()=>{
-
-slider.scrollLeft += 1.2;
-
-if(
-
-slider.scrollLeft + slider.clientWidth >= slider.scrollWidth
-
-){
-
-slider.scrollLeft = 0;
-
-}
-
-},20);
-
-});
-
-/* ==========================
-Touch Swipe
-========================== */
-
-let touchStart = 0;
-
-slider.addEventListener("touchstart",(e)=>{
-
-touchStart = e.touches[0].clientX;
-
-});
-
-slider.addEventListener("touchmove",(e)=>{
-
-let touchEnd = e.touches[0].clientX;
-
-slider.scrollLeft += (touchStart-touchEnd);
-
-touchStart = touchEnd;
-
-});
