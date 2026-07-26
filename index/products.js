@@ -1072,9 +1072,9 @@ shutkirAchar: {
         "ঘরোয়া পদ্ধতিতে তৈরি ঝাল ও মজাদার শুটকির আচার।",
 
     images:[
-        "../images/shutkir-achar.jpeg",
-        "../images/shutkir-achar.jpeg",
-        "../images/shutkir-achar.jpeg"
+        "../images/sutkir-acar.jpeg",
+        "../images/sutkir-acar.jpeg",
+        "../images/sutkir-acar.jpeg"
     ],
 
     prices:[
