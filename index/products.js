@@ -3,6 +3,8 @@
    products.js
    Part-1
 ========================================== */
+
+
 const products = {
 
 
@@ -306,9 +308,9 @@ chili: {
 ========================================== */
 
 
-garlicPickle: {
+olivePickle: {
 
-    id:"garlicPickle",
+    id:"olivePickle",
 
     category:"আচার",
 
