@@ -1,6 +1,5 @@
 /* ==========================================
 Khati Shad by Takia
-
 app.js
 
 Part 1 - Core + Add Cart
