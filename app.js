@@ -1,842 +1,2241 @@
 /* ==========================================
-   Khati Shad by Takia
-   app.js
-   Part 1 - Core
+Khati Shad by Takia
+
+app.js
+
+Part 1 - Core + Add Cart
+
 ========================================== */
+
+
+
 // =======================
 // Cart Variables
 // =======================
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let cart = JSON.parse(
+    localStorage.getItem("cart")
+) || [];
+
+
 
 let DELIVERY_CHARGE =
-    Number(localStorage.getItem("deliveryCharge")) || 80;
+Number(
+    localStorage.getItem("deliveryCharge")
+) || 80;
+
+
+
 
 
 // =======================
 // Reload Cart
 // =======================
 
-function reloadCart() {
 
-    cart = JSON.parse(localStorage.getItem("cart")) || [];
+function reloadCart(){
+
+
+cart =
+JSON.parse(
+localStorage.getItem("cart")
+) || [];
+
 
 }
+
+
+
 
 
 // =======================
 // Save Cart
 // =======================
 
-function saveCart() {
 
-    localStorage.setItem(
+function saveCart(){
 
-        "cart",
 
-        JSON.stringify(cart)
+localStorage.setItem(
 
-    );
+"cart",
 
-    updateCartCount();
+JSON.stringify(cart)
+
+);
+
+
+
+updateCartCount();
+
 
 }
+
+
+
 
 
 // =======================
 // Update Cart Count
 // =======================
 
-function updateCartCount() {
 
-    reloadCart();
+function updateCartCount(){
 
-    let count = 0;
 
-    cart.forEach(function(item){
+reloadCart();
 
-        count += Number(
 
-            item.qty ||
 
-            item.quantity ||
+let count = 0;
 
-            1
 
-        );
 
-    });
+cart.forEach(function(item){
 
-    const badge =
-        document.getElementById("cartCount");
 
-    if(badge){
+count += Number(
 
-        badge.innerHTML = count;
+item.qty ||
 
-    }
+item.quantity ||
+
+1
+
+);
+
+
+});
+
+
+
+
+const badge =
+document.getElementById(
+"cartCount"
+);
+
+
+
+if(badge){
+
+
+badge.innerHTML = count;
+
 
 }
 
 
+}
+
+
+
+
+
 // =======================
-// Toast
+// Toast Message
 // =======================
+
 
 function showToast(message){
 
-    const toast =
-        document.getElementById("cartToast");
 
-    const text =
-        document.getElementById("toastText");
 
-    if(!toast || !text) return;
+const toast =
+document.getElementById(
+"cartToast"
+);
 
-    text.innerHTML = message;
 
-    const bsToast =
-        bootstrap.Toast.getOrCreateInstance(toast);
 
-    bsToast.show();
+const text =
+document.getElementById(
+"toastText"
+);
+
+
+
+if(!toast || !text)
+return;
+
+
+
+text.innerHTML = message;
+
+
+
+const bsToast =
+bootstrap.Toast.getOrCreateInstance(
+toast
+);
+
+
+
+bsToast.show();
+
+
 
 }
+
+
+
+
+
 
 
 // =======================
 // Add To Cart
 // =======================
 
-function addToCart(name, price, image, weight = "", qty = 1){
 
-    reloadCart();
+function addToCart(
 
-    let existing = cart.find(item =>
+name,
 
-        item.name === name &&
+price,
 
-        item.weight === weight
+image,
 
-    );
+weight = "",
 
-    if(existing){
+qty = 1,
 
-        existing.qty += Number(qty);
+id = ""
 
-    }else{
+){
 
-        cart.push({
 
-            name: name,
 
-            price: Number(price),
+reloadCart();
 
-            image: image,
 
-            weight: weight,
 
-            qty: Number(qty)
 
-        });
+let existing = cart.find(item =>
 
-    }
 
-    saveCart();
+item.name === name &&
 
-    showToast("✅ " + name + " সফলভাবে কার্টে যোগ হয়েছে");
+item.weight === weight
+
+
+);
+
+
+
+
+
+if(existing){
+
+
+existing.qty += Number(qty);
+
+
 
 }
+
+else{
+
+
+
+cart.push({
+
+
+id:id,
+
+
+name:name,
+
+
+price:Number(price),
+
+
+image:image,
+
+
+weight:weight,
+
+
+qty:Number(qty)
+
+
+
+});
+
+
+
+}
+
+
+
+
+
+saveCart();
+
+
+
+
+showToast(
+
+"✅ " + name + 
+" সফলভাবে কার্টে যোগ হয়েছে"
+
+);
+
+
+
+}
+
+
+
 
 
 // =======================
 // Page Load
 // =======================
 
-document.addEventListener("DOMContentLoaded", function(){
 
-    updateCartCount();
+document.addEventListener(
 
-});
+"DOMContentLoaded",
+
+function(){
+
+
+updateCartCount();
+
+
+}
+
+);
 /* ==========================================
-   Khati Shad by Takia
-   app.js
-   Part 2 - Product Functions
+Khati Shad by Takia
+
+app.js
+
+Part 2 - Product Functions
+
 ========================================== */
+
+
 
 // =======================
 // Selected Product Data
 // =======================
 
+
 const selectedData = {};
+
+
+
+
 
 
 // =======================
 // Change Product Size
 // =======================
 
-function changeSize(id, price, weight, button){
 
-    selectedData[id] = {
+function changeSize(
+id,
+price,
+weight,
+button
+){
 
-        price: Number(price),
 
-        weight: weight
 
-    };
+selectedData[id] = {
 
-    const priceBox =
-        document.getElementById("price" + id);
 
-    const weightBox =
-        document.getElementById("weight" + id);
+price:Number(price),
 
-    if(priceBox){
 
-        priceBox.innerHTML = "৳" + price;
+weight:weight
 
-    }
 
-    if(weightBox){
 
-        weightBox.innerHTML = weight;
+};
 
-    }
 
-    if(button){
 
-        button.parentElement
-            .querySelectorAll(".size-btn")
-            .forEach(function(btn){
 
-                btn.classList.remove("active");
 
-            });
 
-        button.classList.add("active");
+const priceBox =
 
-    }
+document.getElementById(
+"price" + id
+);
+
+
+
+
+const weightBox =
+
+document.getElementById(
+"weight" + id
+);
+
+
+
+
+
+
+if(priceBox){
+
+
+priceBox.innerHTML =
+"৳" + price;
+
 
 }
+
+
+
+
+if(weightBox){
+
+
+weightBox.innerHTML =
+weight;
+
+
+}
+
+
+
+
+
+
+if(button){
+
+
+
+button.parentElement
+
+.querySelectorAll(".size-btn")
+
+.forEach(function(btn){
+
+
+btn.classList.remove(
+"active"
+);
+
+
+});
+
+
+
+
+button.classList.add(
+"active"
+);
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
 
 
 // =======================
 // Quantity Plus
 // =======================
 
+
 function plusQty(id){
 
-    const qty =
-        document.getElementById("qty" + id);
 
-    if(!qty) return;
 
-    qty.value = Number(qty.value) + 1;
+const qty =
+
+document.getElementById(
+"qty" + id
+);
+
+
+
+
+if(!qty)
+return;
+
+
+
+
+qty.value =
+Number(qty.value) + 1;
+
+
 
 }
+
+
+
+
+
+
 
 
 // =======================
 // Quantity Minus
 // =======================
 
+
 function minusQty(id){
 
-    const qty =
-        document.getElementById("qty" + id);
 
-    if(!qty) return;
 
-    if(Number(qty.value) > 1){
+const qty =
 
-        qty.value = Number(qty.value) - 1;
+document.getElementById(
+"qty" + id
+);
 
-    }
+
+
+
+if(!qty)
+return;
+
+
+
+
+
+if(Number(qty.value) > 1){
+
+
+qty.value =
+Number(qty.value) - 1;
+
+
 
 }
+
+
+
+}
+
+
+
+
+
+
 
 
 // =======================
 // Add Selected Product
 // =======================
 
-function addSelectedCart(name, image, id){
 
-    const qty =
-        Number(document.getElementById("qty" + id).value);
+function addSelectedCart(
 
-    if(!selectedData[id]){
+name,
 
-        showToast("⚠️ আগে ওজন নির্বাচন করুন");
+image,
 
-        return;
+id
 
-    }
+){
 
-    addToCart(
 
-        name,
 
-        selectedData[id].price,
+const qty =
 
-        image,
+Number(
 
-        selectedData[id].weight,
+document.getElementById(
+"qty" + id
+).value
 
-        qty
+);
 
-    );
+
+
+
+
+
+if(!selectedData[id]){
+
+
+showToast(
+"⚠️ আগে ওজন নির্বাচন করুন"
+);
+
+
+return;
+
+
+}
+
+
+
+
+
+
+addToCart(
+
+
+
+name,
+
+selectedData[id].price,
+
+image,
+
+selectedData[id].weight,
+
+qty
+
+
+
+);
+
+
 
 }
 
 
+
+
+
+
+
+
+
 // =======================
-// Home Page Add To Cart
+// Home Page Add Cart
 // =======================
 
-function addHomeCart(name, price, image, weight = ""){
 
-    addToCart(
+function addHomeCart(
 
-        name,
+name,
 
-        Number(price),
+price,
 
-        image,
+image,
 
-        weight,
+weight = ""
 
-        1
+){
 
-    );
+
+
+addToCart(
+
+
+
+name,
+
+
+Number(price),
+
+
+image,
+
+
+weight,
+
+
+1
+
+
+
+);
+
+
 
 }
+
+
+
+
+
+
+
 
 
 // =======================
 // Product Search
 // =======================
 
+
 function searchProduct(){
 
-    const input =
-        document.getElementById("searchInput");
 
-    if(!input) return;
 
-    const keyword =
-        input.value.toLowerCase();
+const input =
 
-    document.querySelectorAll(".product-item")
-        .forEach(function(product){
+document.getElementById(
+"searchInput"
+);
 
-            const name =
-                product.querySelector(".product-name")
-                .innerText
-                .toLowerCase();
 
-            product.style.display =
-                name.includes(keyword)
-                ? ""
-                : "none";
 
-        });
+
+if(!input)
+return;
+
+
+
+
+
+const keyword =
+
+input.value.toLowerCase();
+
+
+
+
+
+
+document
+
+.querySelectorAll(
+".product-item"
+)
+
+.forEach(function(product){
+
+
+
+
+
+const name =
+
+product
+
+.querySelector(
+".product-name"
+)
+
+.innerText
+
+.toLowerCase();
+
+
+
+
+
+
+
+product.style.display =
+
+name.includes(keyword)
+
+?
+
+""
+
+:
+
+"none";
+
+
+
+
+
+});
+
+
 
 }
 /* ==========================================
-   Khati Shad by Takia
-   app.js
-   Part 3 - Cart Page
+Khati Shad by Takia
+
+app.js
+
+Part 3 - Cart Page
+
 ========================================== */
+
+
 
 // =======================
 // Load Cart
 // =======================
 
-function loadCart() {
 
-    reloadCart();
-
-    const cartItems = document.getElementById("cartItems");
-    const emptyCart = document.getElementById("emptyCart");
-   const table = document.getElementById("cartTable");
-   
-    if (!cartItems) return;
-
-    cartItems.innerHTML = "";
-
-    // =======================
-    // Empty Cart
-    // =======================
-
-    if (cart.length === 0) {
-
-        if (emptyCart)
-            emptyCart.classList.remove("d-none");
-
-        if (table)
-            table.classList.add("d-none");
-
-        
-        calculateTotal();
-
-        return;
-    }
-
-    // =======================
-    // Show Cart
-    // =======================
-
-    if (emptyCart)
-        emptyCart.classList.add("d-none");
-
-    if (table)
-        table.classList.remove("d-none");
+function loadCart(){
 
 
-    cart.forEach(function(item, index){
 
-        const total =
-            Number(item.price) *
-            Number(item.qty);
+reloadCart();
 
-        cartItems.innerHTML += `
+
+
+
+const cartItems =
+
+document.getElementById(
+"cartItems"
+);
+
+
+
+const emptyCart =
+
+document.getElementById(
+"emptyCart"
+);
+
+
+
+
+const table =
+
+document.getElementById(
+"cartTable"
+);
+
+
+
+
+
+
+if(!cartItems)
+return;
+
+
+
+
+
+
+cartItems.innerHTML = "";
+
+
+
+
+
+
+
+// =======================
+// Empty Cart
+// =======================
+
+
+if(cart.length === 0){
+
+
+
+if(emptyCart){
+
+emptyCart.classList.remove(
+"d-none"
+);
+
+}
+
+
+
+if(table){
+
+table.classList.add(
+"d-none"
+);
+
+}
+
+
+
+
+
+calculateTotal();
+
+
+return;
+
+
+
+}
+
+
+
+
+
+
+
+
+// =======================
+// Show Cart
+// =======================
+
+
+
+if(emptyCart){
+
+emptyCart.classList.add(
+"d-none"
+);
+
+}
+
+
+
+
+if(table){
+
+table.classList.remove(
+"d-none"
+);
+
+}
+
+
+
+
+
+
+
+// =======================
+// Cart Items
+// =======================
+
+
+cart.forEach(function(item,index){
+
+
+
+const total =
+
+Number(item.price) *
+
+Number(item.qty);
+
+
+
+
+
+
+cartItems.innerHTML += `
+
+
 
 <tr>
 
+
 <td>
 
-<div class="d-flex align-items-center">
 
 <img src="${item.image}"
-width="70"
-height="70"
-class="rounded me-3"
-style="object-fit:cover;">
 
-<div>
+width="60"
 
-<h6 class="mb-1 fw-bold">
-${item.name}
-</h6>
+class="rounded">
 
-<small class="text-muted">
-${item.weight}
-</small>
-
-</div>
-
-</div>
 
 </td>
 
-<td class="text-center">
+
+
+<td>
+
+${item.name}
+
+<br>
+
+<small>
+
+${item.weight}
+
+</small>
+
+
+</td>
+
+
+
+
+<td>
 
 ৳${item.price}
 
 </td>
 
-<td class="text-center">
 
-<div class="d-flex justify-content-center align-items-center">
+
+
+<td>
+
 
 <button
-class="btn btn-outline-danger btn-sm"
+
+class="btn btn-sm btn-success"
+
 onclick="decreaseQty(${index})">
 
-<i class="fa-solid fa-minus"></i>
+-
+
 
 </button>
 
-<span class="mx-3 fw-bold">
+
+
+
+
+<span class="mx-2">
 
 ${item.qty}
 
 </span>
 
+
+
+
+
 <button
-class="btn btn-outline-success btn-sm"
+
+class="btn btn-sm btn-success"
+
 onclick="increaseQty(${index})">
 
-<i class="fa-solid fa-plus"></i>
+
++
+
 
 </button>
 
-</div>
+
 
 </td>
 
-<td class="text-center fw-bold text-success">
+
+
+
+<td>
 
 ৳${total}
 
 </td>
 
-<td class="text-center">
+
+
+
+<td>
+
 
 <button
+
 class="btn btn-danger btn-sm"
+
 onclick="removeItem(${index})">
+
 
 <i class="fa-solid fa-trash"></i>
 
+
 </button>
+
+
 
 </td>
 
+
+
 </tr>
+
+
 
 `;
 
-    });
 
-    calculateTotal();
 
-    updateCartCount();
+
+});
+
+
+
+
+
+
+
+calculateTotal();
+
+
+updateCartCount();
+
+
 
 }
 
 
+
+
+
+
+
+
+
 // =======================
-// Increase Qty
+// Increase Quantity
 // =======================
+
 
 function increaseQty(index){
 
-    reloadCart();
 
-    cart[index].qty++;
 
-    saveCart();
+reloadCart();
 
-    loadCart();
+
+
+
+cart[index].qty++;
+
+
+
+
+saveCart();
+
+
+
+loadCart();
+
+
 
 }
 
 
+
+
+
+
+
+
+
 // =======================
-// Decrease Qty
+// Decrease Quantity
 // =======================
+
 
 function decreaseQty(index){
 
-    reloadCart();
 
-    if(cart[index].qty > 1){
 
-        cart[index].qty--;
+reloadCart();
 
-    }else{
 
-        cart.splice(index,1);
 
-    }
 
-    saveCart();
 
-    loadCart();
+if(cart[index].qty > 1){
+
+
+
+cart[index].qty--;
+
+
 
 }
+
+else{
+
+
+cart.splice(index,1);
+
+
+
+}
+
+
+
+
+
+saveCart();
+
+
+
+loadCart();
+
+
+
+}
+
+
+
+
+
+
+
 
 
 // =======================
 // Remove Item
 // =======================
 
+
 function removeItem(index){
 
-    reloadCart();
 
-    const name = cart[index].name;
 
-    cart.splice(index,1);
+reloadCart();
 
-    saveCart();
 
-    loadCart();
 
-    showToast("❌ " + name + " কার্ট থেকে সরানো হয়েছে");
+const name =
+
+cart[index].name;
+
+
+
+
+
+cart.splice(index,1);
+
+
+
+
+
+saveCart();
+
+
+
+loadCart();
+
+
+
+
+
+showToast(
+
+"❌ " + name +
+
+" কার্ট থেকে সরানো হয়েছে"
+
+);
+
+
 
 }
 /* ==========================================
-   Khati Shad by Takia
-   app.js
-   Part 4 - Cart Total & Checkout
+Khati Shad by Takia
+
+app.js
+
+Part 4 - Cart Total + Checkout
+
 ========================================== */
+
+
+
+
 
 // =======================
 // Calculate Total
 // =======================
 
-function calculateTotal() {
 
-    reloadCart();
+function calculateTotal(){
 
-    let subTotal = 0;
 
-    cart.forEach(function(item){
 
-        subTotal += Number(item.price) * Number(item.qty);
+reloadCart();
 
-    });
 
-    const area =
-        document.getElementById("deliveryArea");
 
-    let delivery = 0;
 
-    if(area){
+let subTotal = 0;
 
-        delivery = Number(area.value);
 
-    }
 
-    if(cart.length === 0){
 
-        delivery = 0;
+cart.forEach(function(item){
 
-    }
 
-    const grandTotal =
-        subTotal + delivery;
 
-    // =======================
-    // Summary
-    // =======================
+subTotal +=
 
-    const sub =
-        document.getElementById("subTotal");
+Number(item.price) *
 
-    const del =
-        document.getElementById("deliveryCharge");
+Number(item.qty);
 
-    const grand =
-        document.getElementById("grandTotal");
 
-    if(sub){
 
-        sub.innerHTML = "৳" + subTotal;
+});
 
-    }
 
-    if(del){
 
-        del.innerHTML = "৳" + delivery;
 
-    }
 
-    if(grand){
 
-        grand.innerHTML = "৳" + grandTotal;
 
-    }
+// =======================
+// Delivery Charge
+// =======================
 
-    // =======================
-    // Save Checkout Data
-    // =======================
 
-    localStorage.setItem(
 
-        "checkoutSubtotal",
+const area =
 
-        subTotal
+document.getElementById(
+"deliveryArea"
+);
 
-    );
 
-    localStorage.setItem(
 
-        "checkoutDelivery",
 
-        delivery
+let delivery = 0;
 
-    );
 
-    localStorage.setItem(
 
-        "checkoutGrandTotal",
 
-        grandTotal
 
-    );
+if(area){
+
+
+delivery =
+
+Number(area.value);
+
+
 
 }
+
+
+
+
+
+
+
+if(cart.length === 0){
+
+
+
+delivery = 0;
+
+
+
+}
+
+
+
+
+
+
+
+const grandTotal =
+
+subTotal + delivery;
+
+
+
+
+
+
+
+
+
+// =======================
+// Update Summary
+// =======================
+
+
+
+const sub =
+
+document.getElementById(
+"subTotal"
+);
+
+
+
+
+const del =
+
+document.getElementById(
+"deliveryCharge"
+);
+
+
+
+
+const grand =
+
+document.getElementById(
+"grandTotal"
+);
+
+
+
+
+
+
+
+
+if(sub){
+
+
+sub.innerHTML =
+
+"৳" + subTotal;
+
+
+}
+
+
+
+
+
+
+
+if(del){
+
+
+del.innerHTML =
+
+"৳" + delivery;
+
+
+}
+
+
+
+
+
+
+
+if(grand){
+
+
+grand.innerHTML =
+
+"৳" + grandTotal;
+
+
+}
+
+
+
+
+
+
+
+
+// =======================
+// Save Checkout Data
+// =======================
+
+
+
+localStorage.setItem(
+
+"checkoutSubtotal",
+
+subTotal
+
+);
+
+
+
+localStorage.setItem(
+
+"checkoutDelivery",
+
+delivery
+
+);
+
+
+
+localStorage.setItem(
+
+"checkoutGrandTotal",
+
+grandTotal
+
+);
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
 
 
 // =======================
 // Delivery Change
 // =======================
 
+
 function deliveryChanged(){
 
-    calculateTotal();
+
+
+calculateTotal();
+
+
 
 }
+
+
+
+
+
+
+
 
 
 // =======================
 // Go Checkout
 // =======================
 
+
 function goCheckout(){
 
-    reloadCart();
 
-    if(cart.length === 0){
 
-        showToast("⚠️ আপনার কার্ট খালি");
+reloadCart();
 
-        return;
 
-    }
 
-    calculateTotal();
 
-    window.location.href = "checkout.html";
+
+if(cart.length === 0){
+
+
+
+showToast(
+
+"⚠️ আপনার কার্ট খালি"
+
+);
+
+
+
+return;
+
+
 
 }
+
+
+
+
+
+
+calculateTotal();
+
+
+
+
+
+window.location.href =
+
+"checkout.html";
+
+
+
+
+
+}
+
+
+
+
+
+
+
 
 
 // =======================
 // Continue Shopping
 // =======================
 
+
 function continueShopping(){
 
-    window.location.href = "products.html";
+
+
+window.location.href =
+
+"products.html";
+
+
 
 }
 /* ==========================================
-   Khati Shad by Takia
-   app.js
-   Part 5 - Final
+Khati Shad by Takia
+
+app.js
+
+Part 5 - Final
+
 ========================================== */
+
+
 
 // =======================
 // Clear Cart
 // =======================
 
+
 function clearCart(){
 
-    const modalElement =
-        document.getElementById("clearCartModal");
 
-    if(modalElement){
 
-        const modal =
-            new bootstrap.Modal(modalElement);
+const modalElement =
 
-        modal.show();
+document.getElementById(
+"clearCartModal"
+);
 
-    }else{
 
-        if(confirm("আপনি কি কার্ট খালি করতে চান?")){
 
-            confirmClearCart();
 
-        }
 
-    }
+
+if(modalElement){
+
+
+
+const modal =
+
+new bootstrap.Modal(
+modalElement
+);
+
+
+
+modal.show();
+
+
 
 }
+
+else{
+
+
+
+if(confirm(
+"আপনি কি কার্ট খালি করতে চান?"
+)){
+
+
+confirmClearCart();
+
+
+
+}
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
 
 
 // =======================
 // Confirm Clear Cart
 // =======================
 
+
 function confirmClearCart(){
 
-    cart = [];
 
-    saveCart();
 
-    localStorage.removeItem("checkoutSubtotal");
-    localStorage.removeItem("checkoutDelivery");
-    localStorage.removeItem("checkoutGrandTotal");
+cart = [];
 
-    loadCart();
 
-    calculateTotal();
 
-    const modalElement =
-        document.getElementById("clearCartModal");
 
-    if(modalElement){
+saveCart();
 
-        const modal =
-            bootstrap.Modal.getInstance(modalElement);
 
-        if(modal){
 
-            modal.hide();
 
-        }
 
-    }
+localStorage.removeItem(
+"checkoutSubtotal"
+);
 
-    showToast("🗑️ কার্ট খালি করা হয়েছে");
+
+
+localStorage.removeItem(
+"checkoutDelivery"
+);
+
+
+
+localStorage.removeItem(
+"checkoutGrandTotal"
+);
+
+
+
+
+
+
+
+loadCart();
+
+
+
+calculateTotal();
+
+
+
+
+
+
+
+
+const modalElement =
+
+document.getElementById(
+"clearCartModal"
+);
+
+
+
+
+
+if(modalElement){
+
+
+
+const modal =
+
+bootstrap.Modal.getInstance(
+modalElement
+);
+
+
+
+
+
+if(modal){
+
+
+modal.hide();
+
 
 }
+
+
+
+}
+
+
+
+
+
+
+
+
+showToast(
+"🗑️ কার্ট খালি করা হয়েছে"
+);
+
+
+
+
+
+}
+
+
+
+
+
+
+
 
 
 // =======================
 // Page Initialize
 // =======================
 
-document.addEventListener("DOMContentLoaded", function(){
 
-    updateCartCount();
+document.addEventListener(
 
-    if(document.getElementById("cartItems")){
+"DOMContentLoaded",
 
-        loadCart();
+function(){
 
-    }
 
-    const area =
-        document.getElementById("deliveryArea");
 
-    if(area){
+updateCartCount();
 
-        area.addEventListener("change", function(){
 
-            calculateTotal();
 
-        });
 
-    }
 
-    calculateTotal();
+
+if(
+
+document.getElementById(
+"cartItems"
+)
+
+){
+
+
+
+loadCart();
+
+
+
+}
+
+
+
+
+
+
+
+
+const area =
+
+document.getElementById(
+"deliveryArea"
+);
+
+
+
+
+
+if(area){
+
+
+
+area.addEventListener(
+
+"change",
+
+function(){
+
+
+calculateTotal();
+
+
+}
+
+);
+
+
+
+}
+
+
+
+
+
+
+
+
+calculateTotal();
+
+
+
+
 
 });
+
+
+
+
+
+
+
 
 
 // =======================
 // Refresh Cart From Other Tab
 // =======================
 
-window.addEventListener("storage", function(e){
 
-    if(e.key === "cart"){
+window.addEventListener(
 
-        reloadCart();
+"storage",
 
-        updateCartCount();
+function(e){
 
-        if(document.getElementById("cartItems")){
 
-            loadCart();
 
-        }
+if(e.key === "cart"){
 
-    }
+
+
+reloadCart();
+
+
+
+updateCartCount();
+
+
+
+
+
+
+if(
+
+document.getElementById(
+"cartItems"
+)
+
+){
+
+
+
+loadCart();
+
+
+
+}
+
+
+
+}
+
+
 
 });
+
+
+
+
+
+
+
 
 
 // =======================
 // Safety Check
 // =======================
 
+
 reloadCart();
 
+
+
 updateCartCount();
+
+
+ ///// our vedio section /////////
+
+ /* =========================================================
+PREMIUM VIDEO REVIEW SECTION V2
+Part-3 JavaScript
+========================================================= */
+
+const reviewVideo = document.getElementById("reviewVideo");
+const reviewSource = reviewVideo.querySelector("source");
+
+const cards = document.querySelectorAll(".playlist-card");
+
+let currentIndex = 0;
+
+/* ==========================
+Load Video
+========================== */
+
+function playVideo(index){
+
+    currentIndex = index;
+
+    // Remove Active
+    cards.forEach(card=>{
+        card.classList.remove("active");
+    });
+
+    // Active Card
+    cards[index].classList.add("active");
+
+    // Get Video Path
+    const videoPath = cards[index].dataset.video;
+
+    // Fade Out
+    reviewVideo.style.opacity="0";
+
+    setTimeout(()=>{
+
+        reviewSource.src = videoPath;
+
+        reviewVideo.load();
+
+        reviewVideo.play().catch(()=>{});
+
+        reviewVideo.style.opacity="1";
+
+    },300);
+
+    // Auto Scroll Active Card
+    cards[index].scrollIntoView({
+
+        behavior:"smooth",
+
+        inline:"center",
+
+        block:"nearest"
+
+    });
+
+}
+
+/* ==========================
+Thumbnail Click
+========================== */
+
+cards.forEach((card,index)=>{
+
+    card.addEventListener("click",()=>{
+
+        playVideo(index);
+
+    });
+
+});
+
+/* ==========================
+Auto Next Video
+========================== */
+
+reviewVideo.addEventListener("ended",()=>{
+
+    currentIndex++;
+
+    if(currentIndex>=cards.length){
+
+        currentIndex=0;
+
+    }
+
+    playVideo(currentIndex);
+
+});
+
+/* ==========================
+Keyboard Support
+========================== */
+
+document.addEventListener("keydown",(e)=>{
+
+    // Next
+
+    if(e.key==="ArrowRight"){
+
+        currentIndex++;
+
+        if(currentIndex>=cards.length){
+
+            currentIndex=0;
+
+        }
+
+        playVideo(currentIndex);
+
+    }
+
+    // Previous
+
+    if(e.key==="ArrowLeft"){
+
+        currentIndex--;
+
+        if(currentIndex<0){
+
+            currentIndex=cards.length-1;
+
+        }
+
+        playVideo(currentIndex);
+
+    }
+
+});
+
+/* ==========================
+Double Click Fullscreen
+========================== */
+
+reviewVideo.addEventListener("dblclick",()=>{
+
+    if(reviewVideo.requestFullscreen){
+
+        reviewVideo.requestFullscreen();
+
+    }
+
+});
+
+/* ==========================
+Video Fade Effect
+========================== */
+
+reviewVideo.style.transition="0.35s ease";
+
+/* ==========================
+Auto Play First Video
+========================== */
+
+window.addEventListener("load",()=>{
+
+    playVideo(0);
+
+});
+
+/* ////// our catagory/////////// */
+
+/* =====================================================
+PREMIUM CATEGORY SLIDER
+Part-3 JavaScript
+===================================================== */
+
+const slider = document.querySelector(".category-slider");
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+/* ==========================
+Mouse Drag
+========================== */
+
+slider.addEventListener("mousedown",(e)=>{
+
+isDown = true;
+
+slider.classList.add("active");
+
+startX = e.pageX - slider.offsetLeft;
+
+scrollLeft = slider.scrollLeft;
+
+});
+
+slider.addEventListener("mouseleave",()=>{
+
+isDown = false;
+
+});
+
+slider.addEventListener("mouseup",()=>{
+
+isDown = false;
+
+});
+
+slider.addEventListener("mousemove",(e)=>{
+
+if(!isDown) return;
+
+e.preventDefault();
+
+const x = e.pageX - slider.offsetLeft;
+
+const walk = (x-startX)*2;
+
+slider.scrollLeft = scrollLeft-walk;
+
+});
+
+/* ==========================
+Mouse Wheel
+========================== */
+
+slider.addEventListener("wheel",(e)=>{
+
+e.preventDefault();
+
+slider.scrollLeft += e.deltaY;
+
+});
+
+/* ==========================
+Auto Slide
+========================== */
+
+let autoSlide = setInterval(()=>{
+
+slider.scrollLeft += 1.2;
+
+if(
+
+slider.scrollLeft + slider.clientWidth >= slider.scrollWidth
+
+){
+
+slider.scrollLeft = 0;
+
+}
+
+},20);
+
+/* ==========================
+Pause on Hover
+========================== */
+
+slider.addEventListener("mouseenter",()=>{
+
+clearInterval(autoSlide);
+
+});
+
+slider.addEventListener("mouseleave",()=>{
+
+autoSlide = setInterval(()=>{
+
+slider.scrollLeft += 1.2;
+
+if(
+
+slider.scrollLeft + slider.clientWidth >= slider.scrollWidth
+
+){
+
+slider.scrollLeft = 0;
+
+}
+
+},20);
+
+});
+
+/* ==========================
+Touch Swipe
+========================== */
+
+let touchStart = 0;
+
+slider.addEventListener("touchstart",(e)=>{
+
+touchStart = e.touches[0].clientX;
+
+});
+
+slider.addEventListener("touchmove",(e)=>{
+
+let touchEnd = e.touches[0].clientX;
+
+slider.scrollLeft += (touchStart-touchEnd);
+
+touchStart = touchEnd;
+
+});
