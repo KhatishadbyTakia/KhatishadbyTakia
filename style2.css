@@ -4,7 +4,9 @@ padding:0;
 box-sizing:border-box;
 }
 body{
+
 font-family: "Noto Sans Bengali", sans-serif;
+
 }
 
 /* HERO */
@@ -1148,29 +1150,28 @@ Heading
 ========================== */
 
 .category-title{
-
     font-size:42px;
-
     font-weight:800;
-
     color:#173d2b;
-
     margin-bottom:12px;
-
 }
 
 .title-line{
-
     width:90px;
-
     height:4px;
-
     background:#198754;
-
     border-radius:50px;
-
     margin:auto;
+}
 
+/* ==========================
+Slider Wrapper
+========================== */
+
+.category-slider-wrapper{
+    position:relative;
+    display:flex;
+    align-items:center;
 }
 
 /* ==========================
@@ -1178,37 +1179,50 @@ Slider
 ========================== */
 
 .category-slider{
-
-    display:flex;
-
-    gap:18px;
-
-    overflow-x:auto;
-
-    scroll-behavior:smooth;
-
-    padding:15px 5px;
-
+display:flex;
+align-items:center;
+gap:20px;
+overflow-x:auto;
+overflow-y:hidden;
+white-space:nowrap;
+scroll-behavior:smooth;
+flex:1;
+padding:15px 10px;
+scrollbar-width:none;
 }
-
 .category-slider::-webkit-scrollbar{
-
-    height:8px;
-
+    display:none;
 }
 
-.category-slider::-webkit-scrollbar-thumb{
+/* ==========================
+Arrow Button
+========================== */
 
+.slider-btn{
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
     background:#198754;
-
-    border-radius:50px;
-
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    z-index:5;
 }
 
-.category-slider::-webkit-scrollbar-track{
+.slider-btn:hover{
+    background:#146c43;
+    transform:scale(1.08);
+}
 
-    background:#ddd;
+.prev-btn{
+    margin-right:15px;
+}
 
+.next-btn{
+    margin-left:15px;
 }
 
 /* ==========================
@@ -1216,39 +1230,24 @@ Card
 ========================== */
 
 .category-item{
-
-    min-width:120px;
-
+    flex:0 0 auto;
+    width:140px;
     background:#fff;
-
     border-radius:20px;
-
     padding:18px 12px;
-
     text-align:center;
-
     text-decoration:none;
-
     color:#222;
-
-    border:1px solid #dfe9df;
-
+    border:1px solid #e8e8e8;
     transition:.35s;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.05);
-
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
 }
 
 .category-item:hover{
-
     transform:translateY(-8px);
-
     border-color:#198754;
-
-    box-shadow:0 18px 40px rgba(25,135,84,.18);
-
     color:#198754;
-
+    box-shadow:0 18px 40px rgba(25,135,84,.20);
 }
 
 /* ==========================
@@ -1256,51 +1255,30 @@ Image
 ========================== */
 
 .category-icon{
-
-    width:72px;
-
-    height:72px;
-
+    width:74px;
+    height:74px;
     margin:auto;
-
     border-radius:50%;
-
     background:#eef9f1;
-
     display:flex;
-
-    align-items:center;
-
     justify-content:center;
-
+    align-items:center;
     transition:.35s;
-
-}
-
-.category-item:hover .category-icon{
-
-    background:#198754;
-
-    transform:rotate(5deg) scale(1.08);
-
 }
 
 .category-icon img{
-
     width:48px;
-
     height:48px;
-
     object-fit:contain;
-
     transition:.35s;
+}
 
+.category-item:hover .category-icon{
+    background:#198754;
 }
 
 .category-item:hover .category-icon img{
-
     transform:scale(1.1);
-
 }
 
 /* ==========================
@@ -1308,15 +1286,10 @@ Text
 ========================== */
 
 .category-item span{
-
     display:block;
-
-    margin-top:15px;
-
-    font-size:17px;
-
+    margin-top:14px;
+    font-size:16px;
     font-weight:700;
-
 }
 
 /* ==========================
@@ -1326,9 +1299,11 @@ Responsive
 @media(max-width:992px){
 
 .category-title{
+    font-size:34px;
+}
 
-font-size:34px;
-
+.category-item{
+    width:125px;
 }
 
 }
@@ -1336,69 +1311,66 @@ font-size:34px;
 @media(max-width:768px){
 
 .premium-category{
-
-padding:60px 0;
-
+    padding:60px 0;
 }
 
 .category-title{
+    font-size:28px;
+}
 
-font-size:28px;
+.slider-btn{
+    display:none;
+}
 
+.category-slider{
+    overflow-x:auto;
+    gap:15px;
 }
 
 .category-item{
-
-min-width:105px;
-
-padding:15px 10px;
-
+    width:110px;
+    padding:15px 10px;
 }
 
 .category-icon{
-
-width:60px;
-
-height:60px;
-
+    width:60px;
+    height:60px;
 }
 
 .category-icon img{
-
-width:40px;
-
-height:40px;
-
+    width:38px;
+    height:38px;
 }
 
 .category-item span{
-
-font-size:15px;
-
+    font-size:14px;
 }
 
 }
 
 @media(max-width:576px){
 
-.category-slider{
-
-gap:12px;
-
+.category-title{
+    font-size:24px;
 }
 
 .category-item{
-
-min-width:95px;
-
-border-radius:16px;
-
+    width:95px;
+    border-radius:16px;
 }
 
-.category-title{
+.category-icon{
+    width:54px;
+    height:54px;
+}
 
-font-size:24px;
+.category-icon img{
+    width:34px;
+    height:34px;
+}
 
+.category-item span{
+    font-size:13px;
 }
 
 }
