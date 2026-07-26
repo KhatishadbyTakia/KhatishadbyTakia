@@ -23,9 +23,9 @@ honey: {
 
 
     images: [
-        "../images/modhu-2.jpeg",
-        "../images/modhu-2.jpeg",
-        "../images/modhu-2.jpeg"
+         "../images/modhu-+ (2).jpeg",
+        "../images/modhu-+ (2).jpeg",
+        "../images/modhu-+ (2).jpeg"
     ],
 
 
