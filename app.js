@@ -937,7 +937,7 @@ class="rounded">
 </td>
 
 
-<td style="padding-left:16px;">
+<td>
     ${item.name}
     <br>
 
