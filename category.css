@@ -1,0 +1,515 @@
+/* ==========================================
+   Khati Shad by Takia
+   category.css
+========================================== */
+
+body{
+    background:#f8f9fa;
+    font-family:'Hind Siliguri',sans-serif;
+}
+
+/* ==========================
+   Category Header
+========================== */
+
+#categoryTitle{
+    font-size:34px;
+    font-weight:700;
+    color:#1f4d2e;
+}
+
+.bg-light{
+    background:#f7f8f6!important;
+}
+
+/* ==========================
+   Search
+========================== */
+
+.search-box{
+    position:relative;
+}
+
+.search-box i{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#777;
+}
+
+.search-box input{
+    padding-left:48px;
+    height:52px;
+    border-radius:50px;
+    border:1px solid #ddd;
+    box-shadow:none;
+}
+
+.search-box input:focus{
+    border-color:#198754;
+    box-shadow:0 0 0 .15rem rgba(25,135,84,.15);
+}
+
+/* ==========================
+   Product Card
+========================== */
+
+.product-card{
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    background:#fff;
+    transition:.35s;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.product-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.product-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+/* ==========================
+   Card Body
+========================== */
+
+.product-card .card-body{
+    padding:18px;
+}
+
+.product-name{
+    font-size:20px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:10px;
+}
+
+.product-price{
+    color:#198754;
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+/* ==========================
+   Size Button
+========================== */
+
+.size-selector{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin:18px 0;
+}
+
+.size-btn{
+    flex:1;
+    min-width:70px;
+    border:none;
+    border-radius:30px;
+    padding:8px 10px;
+    background:#f1f1f1;
+    transition:.3s;
+    font-weight:600;
+}
+
+.size-btn:hover{
+    background:#198754;
+    color:#fff;
+}
+
+.size-btn.active{
+    background:#198754;
+    color:#fff;
+}
+
+/* ==========================
+   Quantity
+========================== */
+
+.quantity-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-top:15px;
+}
+
+.quantity-box button{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:50%;
+    background:#198754;
+    color:#fff;
+}
+
+.quantity-box input{
+    width:60px;
+    text-align:center;
+    border:none;
+    background:#f5f5f5;
+    border-radius:8px;
+    height:38px;
+    font-weight:700;
+}
+
+/* ==========================
+   Add Cart Button
+========================== */
+
+.product-card .btn-success{
+    border-radius:40px;
+    height:48px;
+    font-weight:700;
+    margin-top:18px;
+}
+
+/* ==========================
+   Stock Badge
+========================== */
+
+.stock-badge{
+    position:absolute;
+    top:0;
+    right:0;
+    background:#198754;
+    color:#fff;
+    padding:6px 12px;
+    font-size:11px;
+    font-weight:bold;
+    border-radius:0 16px 0 16px;
+    z-index:10;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:991px){
+
+    .product-card img{
+        height:220px;
+    }
+
+}
+
+@media(max-width:767px){
+
+    #categoryTitle{
+        font-size:26px;
+    }
+
+    .product-name{
+        font-size:17px;
+    }
+
+    .product-price{
+        font-size:22px;
+    }
+
+    .product-card img{
+        height:170px;
+    }
+
+    .size-btn{
+        font-size:12px;
+        padding:7px;
+    }
+
+    .product-card .btn-success{
+        font-size:14px;
+    }
+
+}
+/* =========================
+   Navbar
+========================= */
+
+.navbar .container{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-right: 15px;
+}
+
+.navbar-brand img{
+    width: 55px;
+    border-radius: 50%;
+}
+
+.navbar-brand span{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-left: 8px;
+}
+
+.navbar-nav{
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-link{
+    font-size: 17px;
+    color: #fff !important;
+    padding: 0 10px !important;
+    white-space: nowrap;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width:576px){
+
+    .navbar-brand img{
+        width: 42px;
+    }
+
+    .navbar-brand span{
+        font-size: .85rem;
+    }
+
+    .nav-link{
+        font-size: 14px;
+        padding: 0 6px !important;
+    }
+
+    #cartCount{
+        font-size: 10px;
+    }
+}
+
+#cartCount{
+
+font-size:12px;
+
+padding:4px 7px;
+
+}
+.feature-card i{
+
+font-size:40px;
+
+color:#198754;
+
+margin-bottom:15px;
+
+}
+
+
+.category-card{
+
+background:white;
+
+border-radius:15px;
+
+overflow:hidden;
+
+text-align:center;
+
+padding-bottom:15px;
+
+}
+
+
+.category-card img{
+
+width:100%;
+
+height:180px;
+
+object-fit:cover;
+
+}
+
+
+.product-card img{
+
+height:250px;
+
+object-fit:cover;
+
+}
+
+
+.product-card{
+
+border:none;
+
+transition:.3s;
+
+}
+
+
+.product-card:hover{
+
+transform:translateY(-8px);
+
+}
+.offer-section{
+
+background:#f8f9fa;
+
+}
+
+
+
+.offer-img{
+
+max-height:350px;
+
+border-radius:20px;
+
+}
+
+
+
+.review-card{
+
+background:white;
+
+border-radius:15px;
+
+}
+
+
+
+.gallery img{
+
+height:250px;
+
+width:100%;
+
+object-fit:cover;
+
+transition:.3s;
+
+}
+
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+.contact-card{
+
+border-radius:15px;
+
+background:white;
+
+}
+
+
+
+.contact-card i{
+
+font-size:35px;
+
+color:#198754;
+
+}
+
+
+
+.whatsapp{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:60px;
+
+height:60px;
+
+background:#25d366;
+
+color:white;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:35px;
+
+z-index:999;
+
+text-decoration:none;
+
+}
+
+
+.footer-section{
+    background:#198754;
+    color:#fff;
+    padding:60px 0 20px;
+}
+
+.footer-title{
+    color:#ffd54f;
+    margin-bottom:18px;
+}
+
+.footer-text,
+.footer-copy{
+    color:#f8f9fa;
+}
+
+.footer-links li{
+    margin-bottom:10px;
+}
+
+.footer-links a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#ffd54f;
+    padding-left:6px;
+}
+
+.footer-line{
+    border-color:rgba(255,255,255,.2);
+}
+
+.social-icon{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    margin-right:10px;
+    transition:.3s;
+}
+
+.social-icon:hover{
+    background:#ffc107;
+    color:#000;
+}
