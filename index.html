@@ -202,13 +202,11 @@ Khati Shad by Takia
 
                     <!-- Main Video -->
 
-                    <video
-                        id="reviewVideo"
-                        class="main-video"
-                        controls
-                        autoplay
-                        muted
-                        playsinline>
+                   <video
+                            id="reviewVideo"
+                            class="main-video"
+                            controls
+                            playsinline>
 
                         <source src="videos/rosun-acar.mp4" type="video/mp4">
 
@@ -251,7 +249,7 @@ Khati Shad by Takia
 
                     <div class="thumb">
 
-                        <img src="images/review-thumb1.jpg" alt="">
+                        <img src="images/rosun-achar.jpeg" alt="">
 
                         <div class="play-icon">
 
@@ -274,11 +272,11 @@ Khati Shad by Takia
                 <!-- Item -->
 
                 <div class="playlist-card"
-                     data-video="videos/rosun-acar.mp4">
+                     data-video="videos/">
 
                     <div class="thumb">
 
-                        <img src="images/review-thumb2.jpg" alt="">
+                        <img src="images/takia -ghe.png" alt="">
 
                         <div class="play-icon">
 
@@ -301,11 +299,11 @@ Khati Shad by Takia
                 <!-- Item -->
 
                 <div class="playlist-card"
-                     data-video="videos/rosun-acar.mp4">
+                     data-video="videos/">
 
                     <div class="thumb">
 
-                        <img src="images/review-thumb3.jpg" alt="">
+                        <img src="images/modhu-+ (2).jpeg" alt="">
 
                         <div class="play-icon">
 
@@ -328,11 +326,11 @@ Khati Shad by Takia
                 <!-- Item -->
 
                 <div class="playlist-card"
-                     data-video="videos/rosun-acar.mp4">
+                     data-video="videos/">
 
                     <div class="thumb">
 
-                        <img src="images/review-thumb4.jpg" alt="">
+                        <img src="images/takia-sorisa.jpeg" alt="">
 
                         <div class="play-icon">
 
@@ -355,11 +353,11 @@ Khati Shad by Takia
                 <!-- Item -->
 
                 <div class="playlist-card"
-                     data-video="videos/rosun-acar.mp4">
+                     data-video="videos/">
 
                     <div class="thumb">
 
-                        <img src="images/review-thumb5.jpg" alt="">
+                        <img src="images/takia narikel tel.png" alt="">
 
                         <div class="play-icon">
 
@@ -382,11 +380,11 @@ Khati Shad by Takia
                 <!-- Item -->
 
                 <div class="playlist-card"
-                     data-video="videos/rosun-acar.mp4">
+                     data-video="videos/">
 
                     <div class="thumb">
 
-                        <img src="images/review-thumb6.jpg" alt="">
+                        <img src="images/moshla-moris.png" alt="">
 
                         <div class="play-icon">
 
@@ -2526,6 +2524,48 @@ if ("scrollRestoration" in history) {
 window.addEventListener("load", function () {
     window.scrollTo(0, 0);
 });
+</script>
+<script>
+
+const video = document.getElementById("reviewVideo");
+const playlistItems = document.querySelectorAll(".playlist-card");
+
+
+playlistItems.forEach(item => {
+
+    item.addEventListener("click", function(){
+
+        playlistItems.forEach(card=>{
+            card.classList.remove("active");
+        });
+
+
+        this.classList.add("active");
+
+
+        let videoFile = this.dataset.video;
+
+
+        video.pause();
+
+        video.src = videoFile;
+
+        video.load();
+
+        video.play();
+
+    });
+
+});
+
+
+// video শেষ হলে বন্ধ থাকবে
+video.addEventListener("ended", ()=>{
+
+    video.pause();
+
+});
+
 </script>
     
 </body>
