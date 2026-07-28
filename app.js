@@ -897,159 +897,52 @@ table.classList.remove(
 
 
 
-// =======================
-// Cart Items
-// =======================
-
-
 cart.forEach(function(item,index){
 
-
-
-const total =
-
-Number(item.price) *
-
-Number(item.qty);
-
-
-
-
-
+const total = item.price * item.qty;
 
 cartItems.innerHTML += `
-
-
-
-<tr>
-
+<tr class="align-middle text-center">
 
 <td>
+  <div class="cart-info">
 
+    <img src="${item.image}" 
+    class="cart-img">
 
-<img src="${item.image}"
+    <div class="cart-text">
+      <p class="mb-0">${item.name}</p>
+      <small>${item.weight}</small>
+    </div>
 
-width="60"
-
-class="rounded">
-
-
+  </div>
 </td>
 
+<td>৳${item.price}</td>
 
 <td>
-    ${item.name}
-    <br>
+<button class="btn btn-sm btn-success"
+onclick="decreaseQty(${index})">-</button>
 
-<small>
+<span class="mx-2">${item.qty}</span>
 
-${item.weight}
-
-</small>
-
-
+<button class="btn btn-sm btn-success"
+onclick="increaseQty(${index})">+</button>
 </td>
 
-
-
-
-<td>
-
-৳${item.price}
-
-</td>
-
-
-
+<td>৳${total}</td>
 
 <td>
-
-
-<button
-
-class="btn btn-sm btn-success"
-
-onclick="decreaseQty(${index})">
-
--
-
-
-</button>
-
-
-
-
-
-<span class="mx-2">
-
-${item.qty}
-
-</span>
-
-
-
-
-
-<button
-
-class="btn btn-sm btn-success"
-
-onclick="increaseQty(${index})">
-
-
-+
-
-
-</button>
-
-
-
-</td>
-
-
-
-
-<td>
-
-৳${total}
-
-</td>
-
-
-
-
-<td>
-
-
-<button
-
-class="btn btn-danger btn-sm"
-
+<button class="btn btn-danger btn-sm"
 onclick="removeItem(${index})">
-
-
 <i class="fa-solid fa-trash"></i>
-
-
 </button>
-
-
-
 </td>
-
-
 
 </tr>
-
-
-
 `;
 
-
-
-
 });
-
 
 
 
