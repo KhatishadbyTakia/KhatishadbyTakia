@@ -202,13 +202,14 @@ Khati Shad by Takia
 
                     <!-- Main Video -->
 
-                   <video
-                            id="reviewVideo"
-                            class="main-video"
-                            controls
-                            playsinline>
+                  <video
+                    id="reviewVideo"
+                    class="main-video"
+                    controls
+                    playsinline
+                    preload="metadata">
 
-                        <source src="videos/rosun-acar.mp4" type="video/mp4">
+                    <source src="videos/rosun-acar.mp4" type="video/mp4">
 
                     </video>
 
@@ -2527,6 +2528,12 @@ const video = document.getElementById("reviewVideo");
 const playlistItems = document.querySelectorAll(".playlist-card");
 
 
+// প্রথমে ভিডিও বন্ধ থাকবে
+video.pause();
+
+
+// Playlist click
+
 playlistItems.forEach(item => {
 
     item.addEventListener("click", function(){
@@ -2542,11 +2549,18 @@ playlistItems.forEach(item => {
         let videoFile = this.dataset.video;
 
 
+        // নতুন ভিডিও সেট
+
         video.pause();
+
+        video.currentTime = 0;
 
         video.src = videoFile;
 
         video.load();
+
+
+        // শুধু click করার পর play হবে
 
         video.play();
 
@@ -2555,10 +2569,13 @@ playlistItems.forEach(item => {
 });
 
 
-// video শেষ হলে বন্ধ থাকবে
-video.addEventListener("ended", ()=>{
+// ভিডিও শেষ হলে pause
+
+video.addEventListener("ended", function(){
 
     video.pause();
+
+    video.currentTime = 0;
 
 });
 
