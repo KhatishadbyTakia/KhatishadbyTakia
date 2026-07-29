@@ -2328,7 +2328,25 @@ jebatakia8@gmail.com
 
 </section>
 
+<!-- 
+////////Contact Our Support ///// -->
+<section class="support-section py-5">
+    <div class="container">
+        <div class="support-box text-center">
+            <i class="fa-solid fa-headset"></i>
 
+            <h2>Contact Our Support</h2>
+
+            <p>
+                যেকোনো প্রশ্নের উত্তর জানতে আমাদের AI Support Bot-এর সাথে কথা বলুন।
+            </p>
+
+            <a href="support.html" class="btn btn-success btn-lg">
+                Chat With Support
+            </a>
+        </div>
+    </div>
+</section>
 
 
 
@@ -2528,11 +2546,16 @@ const video = document.getElementById("reviewVideo");
 const playlistItems = document.querySelectorAll(".playlist-card");
 
 
-// প্রথমে ভিডিও বন্ধ থাকবে
-video.pause();
+// Page load হলে সবসময় বন্ধ থাকবে
+window.addEventListener("load", () => {
+
+    video.pause();
+    video.currentTime = 0;
+
+});
 
 
-// Playlist click
+// Playlist click করলে play হবে
 
 playlistItems.forEach(item => {
 
@@ -2549,19 +2572,16 @@ playlistItems.forEach(item => {
         let videoFile = this.dataset.video;
 
 
-        // নতুন ভিডিও সেট
-
         video.pause();
 
-        video.currentTime = 0;
+        video.removeAttribute("autoplay");
 
         video.src = videoFile;
 
         video.load();
 
 
-        // শুধু click করার পর play হবে
-
+        // শুধু click করলে play
         video.play();
 
     });
@@ -2569,9 +2589,9 @@ playlistItems.forEach(item => {
 });
 
 
-// ভিডিও শেষ হলে pause
+// শেষ হলে বন্ধ হবে
 
-video.addEventListener("ended", function(){
+video.addEventListener("ended", ()=>{
 
     video.pause();
 
