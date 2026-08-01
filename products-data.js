@@ -486,6 +486,58 @@ const products = [
         }
     ]
 
+},
+{
+    id: 17,
+    category: "snacks",
+    name: "কাঁচা কলার চিপস",
+    image: "images/koler-cips.jpeg",
+    stock: true,
+
+    sizes: [
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 500
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 250
+        },
+        {
+            label: "100 GM",
+            weight: "১০০ গ্রাম",
+            price: 100
+        }
+    ]
+
+},
+{
+    id: 18,
+    category: "achar",
+    name: "বোম্বাই মরিচের আচার",
+    image: "images/bombai-moris-acar.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 1000
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 500
+        },
+        {
+            label: "100 GM",
+            weight: "১০০ গ্রাম",
+            price: 200
+        }
+    ]
+
 }
 /* ==========================================
    END OF PRODUCTS
