@@ -24,7 +24,7 @@ honey: {
 
     images: [
          "../images/modhu-+ (2).jpeg",
-        "../images/modhu-+ (2).jpeg",
+        "../images/modu-4.jpeg",
         "../images/modhu-+ (2).jpeg"
     ],
 
@@ -99,8 +99,8 @@ ghee: {
 
     images:[
         "../images/ghe.offical.jpeg",
-        "../images/ghe.offical.jpeg",
-        "../images/ghe.offical.jpeg"
+        "../images/ghe-4.jpeg",
+        "../images/ghe 3.png"
     ],
 
 
@@ -174,8 +174,8 @@ turmeric: {
 
     images:[
         "../images/holud-gura.jpeg",
-        "../images/holud-gura.jpeg",
-        "../images/holud-gura.jpeg"
+        "../images/holud-3.jpeg",
+        "../images/holud-4.jpeg"
     ],
 
 
@@ -249,8 +249,8 @@ chili: {
 
     images:[
         "../images/moris-gura.png",
-        "../images/moris-gura.png",
-        "../images/moris-gura.png"
+        "../images/moris-3.jpeg",
+        "../images/moris-4.png"
     ],
 
 
@@ -755,8 +755,8 @@ mustardOil: {
 
     images:[
         "../images/sorisertel.jpeg",
-        "../images/sorisertel.jpeg",
-        "../images/sorisertel.jpeg"
+        "../images/sorisa-3.jpeg",
+        "../images/sorisa-4.jpeg"
     ],
 
     prices:[
@@ -881,8 +881,8 @@ coconutOil: {
 
     images:[
         "../images/narikeltel.jpeg",
-        "../images/narikeltel.jpeg",
-        "../images/narikeltel.jpeg"
+        "../images/narikel-3.jpeg",
+        "../images/narikel-4.jpeg"
     ],
 
     prices:[
