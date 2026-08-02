@@ -32,37 +32,124 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 <!-- ================= NAVBAR ================= -->
 
-<nav class="navbar navbar-dark bg-success sticky-top">
-    <div class="container d-flex align-items-center">
+<!-- ================= TOP NOTICE ================= -->
 
-        <!-- Logo + Website Name -->
-        <a class="navbar-brand fw-bold d-flex align-items-center me-4" href="#">
-            <img src="images/logo 2.png" width="55" class="me-2" alt="Logo">
-            <span class="text-white">Khati Shad by Takia</span>
+<div class="top-notice">
+
+    <div class="notice-label">
+        ⚡ SPECIAL NOTICE
+    </div>
+
+    <div class="notice-marquee">
+        <div class="notice-track">
+
+                        <span>
+                📦 সারা বাংলাদেশে দ্রুত হোম ডেলিভারি &nbsp;&nbsp;•&nbsp;&nbsp;
+                🥇 ১০০% খাঁটি ও প্রাকৃতিক খাদ্যপণ্য &nbsp;&nbsp;•&nbsp;&nbsp;
+                ⭐ প্রিমিয়াম মানের নিশ্চয়তা &nbsp;&nbsp;•&nbsp;&nbsp;
+                ☎️ অর্ডার: 01791649266 &nbsp;&nbsp;•&nbsp;&nbsp;
+                💳 বিকাশ | নগদ | রকেট গ্রহণযোগ্য
+                </span>
+
+                        <span>
+                📦 সারা বাংলাদেশে দ্রুত হোম ডেলিভারি &nbsp;&nbsp;•&nbsp;&nbsp;
+                🥇 ১০০% খাঁটি ও প্রাকৃতিক খাদ্যপণ্য &nbsp;&nbsp;•&nbsp;&nbsp;
+                ⭐ প্রিমিয়াম মানের নিশ্চয়তা &nbsp;&nbsp;•&nbsp;&nbsp;
+                ☎️ অর্ডার: 01791649266 &nbsp;&nbsp;•&nbsp;&nbsp;
+                💳 বিকাশ | নগদ | রকেট গ্রহণযোগ্য
+                </span>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top shadow-sm">
+
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+            <img src="images/logo 2.png"
+                 alt="Khati Shad by Takia"
+                 width="50"
+                 height="50"
+                 class="me-2">
+
+            <span class="fw-bold">
+                Khati Shad by Takia
+            </span>
+
         </a>
 
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
         <!-- Menu -->
-        <ul class="navbar-nav flex-row">
-            <li class="nav-item">
-                <a class="nav-link px-3 active" href="#">হোম</a>
-            </li>
+        <div class="collapse navbar-collapse" id="mainNavbar">
 
-            <li class="nav-item">
-                <a class="nav-link px-3" href="products.html">পণ্য</a>
-            </li>
+            <ul class="navbar-nav ms-auto align-items-lg-center">
 
-            <li class="nav-item">
-                <a class="nav-link px-3 position-relative" href="cart.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span id="cartCount"
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
-                        0
-                    </span>
-                </a>
-            </li>
-        </ul>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fa-solid fa-house me-1"></i>
+                        হোম
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">
+                        <i class="fa-solid fa-store me-1"></i>
+                        পণ্যসমূহ
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                        <i class="fa-solid fa-circle-info me-1"></i>
+                        আমাদের সম্পর্কে
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        <i class="fa-solid fa-phone me-1"></i>
+                        যোগাযোগ
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-2">
+
+                    <a href="cart.html"
+                       class="btn btn-warning position-relative">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        <span id="cartCount"
+                              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
 
     </div>
+
 </nav>
 
 <!-- ================= HERO SECTION ================= -->
