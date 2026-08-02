@@ -6,6 +6,7 @@ box-sizing:border-box;
 body{
 font-family: "Noto Sans Bengali", sans-serif;
 }
+
 /* HERO */
 
 
@@ -1654,4 +1655,53 @@ Khati Shad by Takia
 
     color:white;
 
+}
+.live-stats{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 6px;
+    max-width: 250px;
+    margin-top: 10px;
+}
+
+.stat-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#ffd42a,#f2b400);
+    border: 1px solid #8f6b00;
+    border-radius: 4px;
+    padding: 3px 6px;
+    min-height: 22px;
+    overflow: hidden;
+}
+
+.stat-title{
+    font-size: 12px;
+    font-weight: 500;
+    color: #222;
+    white-space: nowrap;
+}
+
+.stat-value{
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    margin-left: 6px;
+    white-space: nowrap;
+}
+
+@media (max-width:576px){
+    .live-stats{
+        max-width:100%;
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat-title{
+        font-size:11px;
+    }
+
+    .stat-value{
+        font-size:12px;
+    }
 }
