@@ -170,46 +170,55 @@ ${recipe.description}
 
     <div class="premium-box">
 
-        <h2>🎥 ভিডিও রেসিপি</h2>
+        <h2 class="mb-4">🎥 ভিডিও রেসিপি</h2>
 
         ${
-            recipe.video.endsWith(".mp4")
-            ?
-            `
+        recipe.video.endsWith(".mp4")
+
+        ?
+
+        `
+        <div class="video-wrapper">
+
             <video
-                class="w-100 rounded-4 mt-3"
                 controls
                 poster="${recipe.image}">
 
-                <source
-                    src="${recipe.video}"
-                    type="video/mp4">
-
-                আপনার ব্রাউজার ভিডিও সাপোর্ট করে না।
+                <source src="${recipe.video}" type="video/mp4">
 
             </video>
-            `
-            :
-            `
-            <div class="text-center mt-4">
 
-                <img
-                    src="${recipe.image}"
-                    class="img-fluid rounded-4 mb-4"
-                    alt="${recipe.title}">
+        </div>
+        `
 
-                <a
-                    href="${recipe.video}"
-                    target="_blank"
-                    class="btn btn-primary btn-lg">
+        :
 
-                    <i class="fab fa-facebook-f"></i>
-                    Facebook-এ ভিডিও দেখুন
+        `
+        <div class="video-wrapper">
 
-                </a>
+            <iframe
+                src="${recipe.video}"
+                allowfullscreen>
 
-            </div>
-            `
+            </iframe>
+
+        </div>
+
+        <div class="text-center mt-3">
+
+            <a href="${recipe.video}"
+               target="_blank"
+               class="btn btn-primary">
+
+               <i class="fab fa-facebook"></i>
+               Facebook-এ খুলুন
+
+            </a>
+
+        </div>
+
+        `
+
         }
 
     </div>
