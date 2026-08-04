@@ -166,38 +166,55 @@ ${recipe.description}
  VIDEO
 ========================= -->
 
-
 <section class="container py-5">
 
+    <div class="premium-box">
 
-<div class="premium-box">
+        <h2>🎥 ভিডিও রেসিপি</h2>
 
+        ${
+            recipe.video.endsWith(".mp4")
+            ?
+            `
+            <video
+                class="w-100 rounded-4 mt-3"
+                controls
+                poster="${recipe.image}">
 
-<h2>
-🎥 ভিডিও রেসিপি
-</h2>
+                <source
+                    src="${recipe.video}"
+                    type="video/mp4">
 
+                আপনার ব্রাউজার ভিডিও সাপোর্ট করে না।
 
+            </video>
+            `
+            :
+            `
+            <div class="text-center mt-4">
 
-<video 
-class="w-100 rounded-4 mt-3"
-controls
-poster="${recipe.image}">
+                <img
+                    src="${recipe.image}"
+                    class="img-fluid rounded-4 mb-4"
+                    alt="${recipe.title}">
 
+                <a
+                    href="${recipe.video}"
+                    target="_blank"
+                    class="btn btn-primary btn-lg">
 
-<source 
-src="${recipe.video}"
-type="video/mp4">
+                    <i class="fab fa-facebook-f"></i>
+                    Facebook-এ ভিডিও দেখুন
 
+                </a>
 
-</video>
+            </div>
+            `
+        }
 
-
-</div>
-
+    </div>
 
 </section>
-
 
 
 
