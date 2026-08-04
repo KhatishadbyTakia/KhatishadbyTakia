@@ -7,9 +7,9 @@ const recipes = [
 
     category: "দেশি ঘি",
 
-    image: "images/recipe-khichuri.jpg",
+    image: "images/ghe 3.png",
 
-    video: "videos/recipe-khichuri.mp4",
+    video: "https://www.facebook.com/reel/936316012087791/?mibextid=rS40aB7S9Ucbxw6v",
 
     description:
     "খাঁটি দেশি ঘির সুগন্ধে তৈরি নরম ও সুস্বাদু খিচুড়ি।",
@@ -24,7 +24,7 @@ const recipes = [
 
     productName: "দেশি গাওয়া ঘি",
 
-    productImage: "images/ghe.offical.jpeg",
+    productImage: "images/ghe 3.png",
 
     productLink:
     "product-details.html?id=ghee",
@@ -81,9 +81,9 @@ const recipes = [
 
     category:"খাঁটি মধু",
 
-    image:"images/recipe-honey-tea.jpg",
+    image:"images/modu-4.jpeg",
 
-    video:"videos/recipe-honey-tea.mp4",
+    video:"https://www.facebook.com/share/r/1HegmB3Hbz/",
 
     description:
     "খাঁটি মধু ও লেবুর সতেজতায় তৈরি স্বাস্থ্যকর পানীয়।",
@@ -98,7 +98,7 @@ const recipes = [
 
     productName:"খাঁটি মধু",
 
-    productImage:"images/honey.offical.jpeg",
+    productImage:"images/modu-4.jpeg",
 
     productLink:
     "product-details.html?id=honey",
@@ -140,9 +140,9 @@ const recipes = [
 
     category:"সরিষার তেল",
 
-    image:"images/recipe-begun-vorta.jpg",
+    image:"images/sorisa-3.jpeg",
 
-    video:"videos/recipe-begun-vorta.mp4",
+    video:"https://www.facebook.com/share/r/1EGCBfx1Bp/",
 
     description:
     "খাঁটি সরিষার তেলের ঘ্রাণে তৈরি গ্রামবাংলার ঐতিহ্যবাহী বেগুন ভর্তা।",
@@ -158,7 +158,7 @@ const recipes = [
 
     productName:"খাঁটি সরিষার তেল",
 
-    productImage:"images/sorisha-tel.jpeg",
+    productImage:"images/sorisa-3.jpeg",
 
     productLink:
     "product-details.html?id=mustard-oil",
@@ -201,9 +201,9 @@ const recipes = [
 
     category: "আচার",
 
-    image: "images/recipe-garlic-pickle.jpg",
+    image: "images/rosun-achar.jpeg",
 
-    video: "videos/recipe-garlic-pickle.mp4",
+    video: "videos/rosun-acar.mp4",
 
     description: "ঘরোয়া মসলায় তৈরি ঝাল-মিষ্টি স্বাদের রসুনের আচার।",
 
@@ -217,7 +217,7 @@ const recipes = [
 
     productName: "রসুনের আচার",
 
-    productImage: "images/garlic-pickle.jpeg",
+    productImage: "images/rosun-achar.jpeg",
 
     productLink: "product-details.html?id=garlic-pickle",
 
