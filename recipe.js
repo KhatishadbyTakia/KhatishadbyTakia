@@ -4,7 +4,6 @@
    Recipe Details Page
 ========================================== */
 
-
 const recipeDetails = document.getElementById("recipeDetails");
 
 
