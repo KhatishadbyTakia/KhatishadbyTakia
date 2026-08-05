@@ -2175,3 +2175,24 @@ height:200px;
 }
 
 /* recipies */
+.payment-icons{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:20px;
+}
+
+.payment-icon{
+    width:55px;
+    height:35px;
+    object-fit:contain;
+    background:#fff;
+    padding:5px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.payment-icon:hover{
+    transform:translateY(-3px);
+}
