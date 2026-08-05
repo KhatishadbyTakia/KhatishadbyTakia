@@ -2799,7 +2799,6 @@ window.addEventListener("load", function () {
 });
 </script>
 <script>
-
 const video = document.getElementById("reviewVideo");
 const playlistItems = document.querySelectorAll(".playlist-card");
 
@@ -2809,12 +2808,12 @@ video.loop = false;
 video.removeAttribute("autoplay");
 video.removeAttribute("loop");
 
-// Page Load হলে ভিডিও বন্ধ থাকবে
+// Page Load হলে কোনো ভিডিও চলবে না
 window.addEventListener("load", () => {
-
     video.pause();
     video.currentTime = 0;
-
+    video.removeAttribute("src");
+    video.load();
 });
 
 // Playlist Item Click
@@ -2822,46 +2821,52 @@ playlistItems.forEach(item => {
 
     item.addEventListener("click", function () {
 
-        // Active Class Remove
-        playlistItems.forEach(card => {
-            card.classList.remove("active");
-        });
-
-        // Active Add
+        // Active Class পরিবর্তন
+        playlistItems.forEach(card => card.classList.remove("active"));
         this.classList.add("active");
 
         // আগের ভিডিও বন্ধ
         video.pause();
         video.currentTime = 0;
 
-        // নতুন ভিডিও সেট
-        video.src = this.dataset.video;
+        // নতুন ভিডিও URL
+        const newVideo = this.getAttribute("data-video");
 
-        // Load
+        // একই ভিডিও হলে আবার শুরু থেকে চালাবে
+        if (video.src.includes(newVideo)) {
+            video.currentTime = 0;
+            video.play().catch(() => {});
+            return;
+        }
+
+        // আগের Source Remove
+        video.removeAttribute("src");
         video.load();
 
-        // Play
-        video.play().catch(() => {});
+        // নতুন Source Set
+        video.src = newVideo;
+        video.load();
+
+        // Video Ready হলে Play
+        video.oncanplay = function () {
+            video.play().catch(() => {});
+            video.oncanplay = null;
+        };
 
     });
 
 });
 
 // ভিডিও শেষ হলে Stop হবে
-video.onended = function () {
-
+video.addEventListener("ended", () => {
     video.pause();
     video.currentTime = 0;
+});
 
-};
-
-// Play Event
-video.onplay = function () {
-
+// Loop বন্ধ থাকবে
+video.addEventListener("play", () => {
     video.loop = false;
-
-};
-
+});
 </script>
     
 </body>
