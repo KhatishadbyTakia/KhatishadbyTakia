@@ -945,21 +945,13 @@ Standard Video Size
 ========================== */
 
 .main-video{
-
     width:100%;
-
     aspect-ratio:16/9;
-
-    object-fit:cover;
-
+    object-fit:contain;
     display:block;
-
     border-radius:22px;
-
     background:#000;
-
 }
-
 /* ==========================
 Bottom Floating Button
 ========================== */
