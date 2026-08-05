@@ -545,7 +545,7 @@ rice: {
 
 
     images:[
-        "../images/atob-chal.jpeg",
+        "../images/acob-chaal2.jpeg",
         "../images/atob-chal.jpeg",
         "../images/atob-chal.jpeg"
     ],
@@ -817,7 +817,7 @@ amrarAchar: {
         "টক-মিষ্টি স্বাদের ঘরোয়া পদ্ধতিতে তৈরি সুস্বাদু আমড়ার আচার।",
 
     images:[
-        "../images/amrar-acar.png",
+        "../images/amrar-acar2.jpeg",
         "../images/amrar-acar.png",
         "../images/amrar-acar.png"
     ],
@@ -1194,23 +1194,23 @@ jhalmuriMasala: {
         "বাছাইকৃত কাঁচা কলা থেকে স্বাস্থ্যসম্মতভাবে তৈরি মুচমুচে ও সুস্বাদু কাঁচা কলার চিপস। কোনো কৃত্রিম রং বা ক্ষতিকর প্রিজারভেটিভ ছাড়া প্রস্তুত।",
 
     images:[
-        "../images/koler-cips.jpeg",
-        "../images/koler-cips.jpeg",
+        "../images/kacakolacips2.jpeg",
+        "../images/kacakolacips3.jpeg",
         "../images/koler-cips.jpeg"
     ],
 
     prices:[
         {
             weight:"১০০ গ্রাম",
-            price:100
+            price:150
         },
         {
             weight:"২৫০ গ্রাম",
-            price:250
+            price:375
         },
         {
             weight:"৫০০ গ্রাম",
-            price:500
+            price:750
         }
     ],
 
