@@ -211,7 +211,7 @@ const products = [
     id: 5,
     category: "spices",
     name: "আতপ চালের গুঁড়া",
-    image: "images/atob-chal.jpeg",
+    image: "images/acob-chaal2.jpeg",
     stock: true,
 
     sizes: [
@@ -384,7 +384,7 @@ const products = [
     id: 12,
     category: "achar",
     name: "আমড়ার আচার",
-    image: "images/amrar-acar.png",
+    image: "images/amrar-acar2.jpeg",
     stock: true,
 
     sizes: [
@@ -491,24 +491,24 @@ const products = [
     id: 17,
     category: "snacks",
     name: "কাঁচা কলার চিপস",
-    image: "images/koler-cips.jpeg",
+    image: "images/kacakolacips2.jpeg",
     stock: true,
 
     sizes: [
         {
             label: "500 GM",
             weight: "৫০০ গ্রাম",
-            price: 500
+            price: 750
         },
         {
             label: "250 GM",
             weight: "২৫০ গ্রাম",
-            price: 250
+            price: 375
         },
         {
             label: "100 GM",
             weight: "১০০ গ্রাম",
-            price: 100
+            price: 150
         }
     ]
 
