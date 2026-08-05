@@ -2803,8 +2803,13 @@ window.addEventListener("load", function () {
 const video = document.getElementById("reviewVideo");
 const playlistItems = document.querySelectorAll(".playlist-card");
 
+// প্রথমে Auto Play ও Loop বন্ধ
+video.autoplay = false;
+video.loop = false;
+video.removeAttribute("autoplay");
+video.removeAttribute("loop");
 
-// Page load হলে সবসময় বন্ধ থাকবে
+// Page Load হলে ভিডিও বন্ধ থাকবে
 window.addEventListener("load", () => {
 
     video.pause();
@@ -2812,50 +2817,50 @@ window.addEventListener("load", () => {
 
 });
 
-
-// Playlist click করলে play হবে
-
+// Playlist Item Click
 playlistItems.forEach(item => {
 
-    item.addEventListener("click", function(){
+    item.addEventListener("click", function () {
 
-        playlistItems.forEach(card=>{
+        // Active Class Remove
+        playlistItems.forEach(card => {
             card.classList.remove("active");
         });
 
-
+        // Active Add
         this.classList.add("active");
 
-
-        let videoFile = this.dataset.video;
-
-
+        // আগের ভিডিও বন্ধ
         video.pause();
+        video.currentTime = 0;
 
-        video.removeAttribute("autoplay");
+        // নতুন ভিডিও সেট
+        video.src = this.dataset.video;
 
-        video.src = videoFile;
-
+        // Load
         video.load();
 
-
-        // শুধু click করলে play
-        video.play();
+        // Play
+        video.play().catch(() => {});
 
     });
 
 });
 
-
-// শেষ হলে বন্ধ হবে
-
-video.addEventListener("ended", ()=>{
+// ভিডিও শেষ হলে Stop হবে
+video.onended = function () {
 
     video.pause();
-
     video.currentTime = 0;
 
-});
+};
+
+// Play Event
+video.onplay = function () {
+
+    video.loop = false;
+
+};
 
 </script>
     
