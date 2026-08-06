@@ -538,6 +538,32 @@ const products = [
         }
     ]
 
+},
+{
+    id: 19,
+    category: "spices",
+    name: "চুইঝাল",
+    image: "images/chuijhal.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 400
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 200
+        },
+        {
+            label: "100 GM",
+            weight: "১০০ গ্রাম",
+            price: 80
+        }
+    ]
+
 }
 /* ==========================================
    END OF PRODUCTS
