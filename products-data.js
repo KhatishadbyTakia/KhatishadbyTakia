@@ -242,7 +242,7 @@ const products = [
     id: 16,
     category: "spices",
     name: "ঝালমুড়ি মসলা",
-    image: "images/jalmorir-mosla.jpeg",
+    image: "images/jhalmuri-moshla2.jpeg",
     stock: true,
 
     sizes: [
@@ -276,7 +276,7 @@ const products = [
     id: 6,
     category: "achar",
     name: "রসুনের আচার",
-    image: "images/rosun-achar.jpeg",
+    image: "images/rosun-acar2.jpeg",
     stock: true,
 
     sizes: [
@@ -303,7 +303,7 @@ const products = [
     id: 9,
     category: "achar",
     name: "জলপাই আচার",
-    image: "images/jolpai-acar.jpeg",
+    image: "images/jolpai-acar2.jpeg",
     stock: true,
 
     sizes: [
@@ -330,7 +330,7 @@ const products = [
     id: 10,
     category: "achar",
     name: "তেঁতুলের আচার",
-    image: "images/tatuler-acar.png",
+    image: "images/tatul-acar2.jpeg",
     stock: true,
 
     sizes: [
@@ -357,7 +357,7 @@ const products = [
     id: 11,
     category: "achar",
     name: "আমলকীর আচার",
-    image: "images/amlokir-acar.png",
+    image: "images/amlokir-acar2.jpeg",
     stock: true,
 
     sizes: [
@@ -411,7 +411,7 @@ const products = [
     id: 13,
     category: "achar",
     name: "চুইঝালের আচার",
-    image: "images/chuijal-acar.png",
+    image: "images/chuijhal-acar2.jpeg",
     stock: true,
 
     sizes: [
@@ -438,7 +438,7 @@ const products = [
     id: 14,
     category: "achar",
     name: "কামরাঙ্গা আচার",
-    image: "images/kamranga-acar.jpeg",
+    image: "images/kamranga-acar3.jpeg",
     stock: true,
 
     sizes: [
@@ -465,7 +465,7 @@ const products = [
     id: 15,
     category: "achar",
     name: "শুটকির আচার",
-    image: "images/sutkir-acar.jpeg",
+    image: "images/sutkir-acar2.jpeg",
     stock: true,
 
     sizes: [
@@ -517,7 +517,7 @@ const products = [
     id: 18,
     category: "achar",
     name: "বোম্বাই মরিচের আচার",
-    image: "images/bombai-moris-acar.png",
+    image: "images/bombai-moris2.png",
     stock: true,
 
     sizes: [
