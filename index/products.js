@@ -320,7 +320,7 @@ rosunacar: {
 
 
     images:[
-        "../images/rosun-achar.jpeg",
+        "../images/rosun-acar2.jpeg",
         "../images/rosun-achar.jpeg",
         "../images/rosun-achar.jpeg"
     ],
@@ -395,7 +395,7 @@ olivePickle: {
 
 
     images:[
-        "../images/jolpai-acar.jpeg",
+        "../images/jolpai-acar2.jpeg",
         "../images/jolpai-acar.jpeg",
         "../images/jolpai-acar.jpeg"
     ],
@@ -470,7 +470,7 @@ tamarind_pickle: {
 
 
     images:[
-        "../images/tatuler-acar.png",
+        "../images/tatul-acar2.jpeg",
         "../images/tatuler-acar.png",
         "../images/tatuler-acar.png"
     ],
@@ -546,7 +546,7 @@ rice: {
 
     images:[
         "../images/acob-chaal2.jpeg",
-        "../images/atob-chal.jpeg",
+        "../images/atobchal-gura3.jpeg",
         "../images/atob-chal.jpeg"
     ],
 
@@ -620,8 +620,8 @@ amloki_pickle: {
 
 
     images:[
+        "../images/amlokir-acar2.jpeg",
         "../images/amlokir-acar.png",
-        "../images/aamlokir-acar.png",
         "../images/amlokir-acar.png"
     ],
 
@@ -818,7 +818,7 @@ amrarAchar: {
 
     images:[
         "../images/amrar-acar2.jpeg",
-        "../images/amrar-acar.png",
+        "../images/amrar-acar3.jpeg",
         "../images/amrar-acar.png"
     ],
 
@@ -945,7 +945,7 @@ starFruitPickle: {
         "টক-মিষ্টি স্বাদের কামরাঙ্গার আচার।",
 
     images:[
-        "../images/kamranga-acar.jpeg",
+        "../images/kamranga-acar3.jpeg",
         "../images/kamranga-acar.jpeg",
         "../images/kamranga-acar.jpeg"
     ],
@@ -1007,7 +1007,7 @@ chuijalAchar: {
         "বিশেষ ঘরোয়া পদ্ধতিতে তৈরি চুইঝালের ঝাল ও সুস্বাদু আচার।",
 
     images:[
-        "../images/chuijal-acar.png",
+        "../images/chuijhal-acar2.jpeg",
         "../images/chuijal-acar.png",
         "../images/chuijal-acar.png"
     ],
@@ -1070,7 +1070,7 @@ shutkirAchar: {
         "ঘরোয়া পদ্ধতিতে তৈরি ঝাল ও মজাদার শুটকির আচার।",
 
     images:[
-        "../images/sutkir-acar.jpeg",
+        "../images/sutkir-acar2.jpeg",
         "../images/sutkir-acar.jpeg",
         "../images/sutkir-acar.jpeg"
     ],
@@ -1132,7 +1132,7 @@ jhalmuriMasala: {
         "বিশেষ মিশ্রণে তৈরি ঝালমুড়ির মসলা।",
 
     images:[
-        "../images/jalmorir-mosla.jpeg",
+        "../images/jhalmuri-moshla2.jpeg",
         "../images/jalmorir-mosla.jpeg",
         "../images/jalmorir-mosla.jpeg"
     ],
@@ -1255,7 +1255,7 @@ bombaiMorichAchar:{
         "বাছাইকৃত তাজা বোম্বাই মরিচ, সরিষার তেল ও প্রাকৃতিক মসলার সমন্বয়ে তৈরি সুস্বাদু ও ঝাল বোম্বাই মরিচের আচার। কোনো কৃত্রিম রং বা ক্ষতিকর প্রিজারভেটিভ ছাড়া প্রস্তুত।",
 
     images:[
-        "../images/bombai-moris-acar.png",
+        "../images/bombai-moris2.png",
         "../images/bombai-moris-acar.png",
         "../images/bombai-moris-acar.png"
     ],
