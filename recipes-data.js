@@ -1,4 +1,5 @@
 const recipes = [
+
 {
     id: "khichuri",
 
@@ -6,7 +7,7 @@ const recipes = [
 
     category: "দেশি ঘি",
 
-    image: "images/ghe 3.png",
+    image: "images/ghe.offical.jpeg",
 
     video: "https://www.facebook.com/reel/936316012087791/?mibextid=rS40aB7S9Ucbxw6v",
 
@@ -23,10 +24,9 @@ const recipes = [
 
     productName: "দেশি গাওয়া ঘি",
 
-    productImage: "images/ghe 3.png",
+    productImage: "images/ghe.offical.jpeg",
 
-    productLink:
-    "product-details.html?id=ghee",
+     productLink: "products.html",
 
 
     ingredients:[
@@ -99,8 +99,7 @@ const recipes = [
 
     productImage:"images/modu-4.jpeg",
 
-    productLink:
-    "product-details.html?id=honey",
+   productLink: "products.html",
 
 
     ingredients:[
@@ -131,24 +130,23 @@ const recipes = [
 },
 
 
-
 {
-    id:"mustard-fish",
+    id:"amra-vorta",
 
-    title:"সরিষার তেলে বেগুন ভর্তা",
+    title:"সরিষার তেলে আমড়ার ভর্তা",
 
     category:"সরিষার তেল",
 
     image:"images/sorisa-3.jpeg",
 
-    video:"https://www.facebook.com/share/r/1EGCBfx1Bp/",
+    video:"videos/amrar-vorta.mp4",
 
     description:
-    "খাঁটি সরিষার তেলের ঘ্রাণে তৈরি গ্রামবাংলার ঐতিহ্যবাহী বেগুন ভর্তা।",
+    "খাঁটি সরিষার তেল, কাঁচা মরিচ ও দেশীয় মসলার স্বাদে তৈরি টক-ঝাল আমড়ার ভর্তা।",
 
     rating:"5.0",
 
-    time:"২৫ মিনিট",
+    time:"২০ মিনিট",
 
     serves:"৩ জন",
 
@@ -159,18 +157,17 @@ const recipes = [
 
     productImage:"images/sorisa-3.jpeg",
 
-    productLink:
-    "product-details.html?id=mustard-oil",
+    productLink: "products.html",
 
 
     ingredients:[
 
-        "১টি বড় বেগুন",
-        "২ টেবিল চামচ সরিষার তেল",
-        "পেঁয়াজ কুচি",
-        "কাঁচা মরিচ",
-        "ধনেপাতা",
-        "লবণ"
+        "৪-৫টি সেদ্ধ আমড়া",
+        "২ টেবিল চামচ খাঁটি সরিষার তেল",
+        "১টি মাঝারি পেঁয়াজ কুচি",
+        "৩-৪টি কাঁচা মরিচ কুচি",
+        "ধনেপাতা কুচি",
+        "স্বাদমতো লবণ"
 
     ],
 
@@ -179,18 +176,17 @@ const recipes = [
 
         {
             title:"ধাপ ১",
-            text:"বেগুন পুড়িয়ে নরম করে নিন।"
+            text:"আমড়া সেদ্ধ করে খোসা ও আঁটি ফেলে মিহি করে ভর্তা করুন।"
         },
 
         {
             title:"ধাপ ২",
-            text:"সব উপকরণ সরিষার তেল দিয়ে মিশিয়ে নিন।"
+            text:"এর সঙ্গে পেঁয়াজ, কাঁচা মরিচ, ধনেপাতা, লবণ ও খাঁটি সরিষার তেল দিয়ে ভালোভাবে মেখে পরিবেশন করুন।"
         }
 
     ]
 
 },
-
 
 {
    
@@ -200,7 +196,7 @@ const recipes = [
 
     category: "আচার",
 
-    image: "images/rosun-achar.jpeg",
+    image: "images/rosun-acar2.jpeg",
 
     video: "videos/rosun-acar.mp4",
 
@@ -216,10 +212,9 @@ const recipes = [
 
     productName: "রসুনের আচার",
 
-    productImage: "images/rosun-achar.jpeg",
+    productImage: "images/rosun-acar2.jpeg",
 
-    productLink: "product-details.html?id=garlic-pickle",
-
+    productLink: "products.html",
     ingredients: [
 
         "৫০০ গ্রাম রসুন",
