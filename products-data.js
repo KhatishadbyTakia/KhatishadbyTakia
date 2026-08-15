@@ -563,7 +563,403 @@ const products = [
         }
     ]
 
-}
+},
+{
+    id: 20,
+    category: "onnano",
+    name: "প্রিমিয়াম সাবুদানা",
+    image: "images/sabudana.jpeg",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 kg",
+            weight: "১ কেজি",
+            price: 400
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 200
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 100
+        }
+    ]
+
+},
+{
+    id: 21,
+    category: "honey",
+    name: "খলিশা ফুলের চাষের মধু",
+    image: "images/kolishaful-modu.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 kg",
+            weight: "১ কেজি",
+            price: 1450
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 725
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 365
+        }
+    ]
+},
+{
+    id: 22,
+    category: "honey",
+    name: 'কালোজিরা ফুলের মধু',
+    image: "images/kalojira-modu.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 kg",
+            weight: "১ কেজি",
+            price: 1250
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 625
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 315
+        }
+    ]
+},
+{
+    id: 23,
+    category: "honey",
+    name: "মিশ্র কালোজিরা ফুলের মধু",
+    image: "images/kalojira-modu.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 kg",
+            weight: "১ কেজি",
+            price: 1050
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 525
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 265
+        }
+    ]
+},
+{
+    id: 24,
+    category: "honey",
+    name: 'জলপাই ফুলের মধু',
+    image: "images/jolpaiful-modu.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 kg",
+            weight: "১ কেজি",
+            price: 850
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 425
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 215
+        }
+    ]
+},
+
+{
+    id: 25,
+    category: "honey",
+    name: "বড়ই ফুলের মধু",
+    image: "images/boroi-modu.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 kg",
+            weight: "১ কেজি",
+            price: 850
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 425
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 215
+        }
+    ]
+},
+{
+    id: 26,
+    category: "honey",
+    name: "পাহাড়ি ফুলের মধু",
+    image: "images/pahari-modhu.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 kg",
+            weight: "১ কেজি",
+            price: 850
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 425
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 215
+        }
+    ]
+},
+{
+    id: 27,
+    category: "honey",
+    name: "লিচু ফুলের মধু",
+    image: "images/litchi-modhu.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 kg",
+            weight: "১ কেজি",
+            price: 650
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 325
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 165
+        }
+    ]
+},
+{
+    id: 28,
+    category: "honey",
+    name: "সরিষা ফুলের মধু",
+    image: "images/shorisha-modhu.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 kg",
+            weight: "১ কেজি",
+            price: 650
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 325
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 165
+        }
+    ]
+},
+{
+    id: 29,
+    category: "tel",
+    name: "প্রিমিয়াম অলিভ অয়েল (তুর্কি)",
+    image: "images/olive-oil.png",
+    stock: true,
+
+    sizes: [
+
+        {
+            label: "100 ML",
+            weight: "১০০ মিলি",
+            price: 420
+        },
+
+        {
+            label: "200 ML",
+            weight: "২০০ মিলি",
+            price: 840
+        },
+
+        {
+            label: "250 ML",
+            weight: "২৫০ মিলি",
+            price: 1050
+        }
+
+    ]
+
+},
+{
+    id: 30,
+    category: "tel",
+    name: "খাঁটি কালোজিরার তেল",
+    image: "images/kalojeera-tel.png",
+    stock: true,
+
+    sizes: [
+
+        {
+            label: "100 ML",
+            weight: "১০০ মিলি",
+            price: 280
+        },
+
+        {
+            label: "200 ML",
+            weight: "২০০ মিলি",
+            price: 560
+        },
+
+        {
+            label: "250 ML",
+            weight: "২৫০ মিলি",
+            price: 700
+        }
+
+    ]
+
+},
+{
+    id: 31,
+    category: "tel",
+    name: "খাঁটি ক্যাস্টর অয়েল",
+    image: "images/castor-oil.png",
+    stock: true,
+
+    sizes: [
+
+        {
+            label: "100 ML",
+            weight: "১০০ মিলি",
+            price: 140
+        },
+
+        {
+            label: "200 ML",
+            weight: "২০০ মিলি",
+            price: 280
+        },
+
+        {
+            label: "250 ML",
+            weight: "২৫০ মিলি",
+            price: 350
+        }
+
+    ]
+
+},
+{
+    id: 32,
+    category: "achar",
+    name: "আমচুড় আচার",
+    image: "images/amchur- achar.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 KG",
+            weight: "১ কেজি",
+            price: 1000
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 500
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 250
+        }
+    ]
+
+},
+{
+    id: 33,
+    category: "achar",
+    name: "শুকনা বরইয়ের আচার",
+    image: "images/shukna-boroi- achar.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 KG",
+            weight: "১ কেজি",
+            price: 1000
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 500
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 250
+        }
+    ]
+
+},
+{
+    id: 34,
+    category: "achar",
+    name: "চালতার আচার",
+    image: "images/chalta- achar.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 KG",
+            weight: "১ কেজি",
+            price: 800
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 400
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 220
+        }
+    ]
+
+},
+
 /* ==========================================
    END OF PRODUCTS
 ========================================== */
