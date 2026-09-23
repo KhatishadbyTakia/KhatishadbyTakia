@@ -4171,6 +4171,87 @@ onclick="addSelectedCart(
     </div>
 
 </div>
+<div class="col-xl-4 col-lg-4 col-md-4 col-6 product-item">
+
+    <div class="card product-card h-100" style="position:relative;">
+
+        <span style="position:absolute;top:0;right:0;background:#16a34a;color:#fff;padding:5px 12px;font-size:11px;font-weight:bold;border-radius:0 12px 0 12px;z-index:99;">
+            in stock
+        </span>
+
+        <img src="images/elishacar1.jpeg"
+             class="card-img-top"
+             alt="ইলিশ আচার">
+
+        <div class="card-body">
+
+            <h5 class="product-name">
+                ইলিশ আচার
+            </h5>
+
+            <h3 id="price35" class="product-price">
+                ৳ ৭০০
+            </h3>
+
+            <small id="weight35"
+                   class="text-muted d-block mb-3">
+                ২৫০ গ্রাম
+            </small>
+
+            <div class="size-selector">
+
+                <button class="size-btn active"
+                    onclick="changeSize(35,700,'২৫০ গ্রাম',this)">
+                    250 GM
+                </button>
+
+                <button class="size-btn"
+                    onclick="changeSize(35,1400,'৫০০ গ্রাম',this)">
+                    500 GM
+                </button>
+
+                <button class="size-btn"
+                    onclick="changeSize(35,2800,'১ কেজি',this)">
+                    1 KG
+                </button>
+
+            </div>
+
+            <div class="quantity-box">
+
+                <button onclick="minusQty(35)">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+
+                <input id="qty35"
+                       type="text"
+                       value="1"
+                       readonly>
+
+                <button onclick="plusQty(35)">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+            </div>
+
+            <button class="btn btn-success w-100 mt-3"
+                onclick="addSelectedCart(
+                    'ইলিশ আচার',
+                    'images/elishacar1.jpeg',
+                    35
+                )">
+
+                <i class="fa-solid fa-cart-plus"></i>
+
+                কার্টে যোগ করুন
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 <!-- ================= PRODUCT ROW END ================= -->
 
 
