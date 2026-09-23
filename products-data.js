@@ -959,6 +959,31 @@ const products = [
     ]
 
 },
+{
+    id: 35,
+    category: "achar",
+    name: "ইলিশ আচার",
+    image: "images/elishacar1.jpeg",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 KG",
+            weight: "১ কেজি",
+            price: 2800
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 1400
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 700
+        }
+    ]
+},
 
 /* ==========================================
    END OF PRODUCTS
