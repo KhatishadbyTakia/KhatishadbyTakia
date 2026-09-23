@@ -818,7 +818,7 @@ amrarAchar: {
     images:[
         "../images/amrar-acar2.jpeg",
         "../images/amrar-acar3.jpeg",
-        "../images/amrar-acar.png"
+        "../images/amraracar5.jpeg"
     ],
 
     prices:[
@@ -881,7 +881,7 @@ coconutOil: {
     images:[
         "../images/narikeltel.jpeg",
         "../images/narikel-3.jpeg",
-        "../images/narikel-4.jpeg"
+        "../images/narikeltel5.jpeg"
     ],
 
     prices:[
@@ -1381,7 +1381,7 @@ premiumSabudana: {
 
     images: [
         "../images/sabudana.jpeg",
-        "../images/sabudana.jpeg",
+        "../images/sabudana2.jpeg",
         "../images/sabudana.jpeg"
     ],
 
@@ -2273,7 +2273,7 @@ chaltaAchar: {
 
     images: [
         "../images/chalta- achar.png",
-        "../images/chalta- achar.png",
+        "../images/calteracar4.jpeg",
         "../images/chalta- achar.png"
     ],
 
@@ -2314,6 +2314,69 @@ chaltaAchar: {
         "ঘরোয়া ঐতিহ্যবাহী স্বাদ",
         "ভাত ও খিচুড়ির সঙ্গে উপযোগী",
         "রুটি, পরোটা ও নাস্তার সঙ্গে খাওয়া যায়"
+    ]
+
+},
+/* ==========================================
+   35. ইলিশ আচার
+========================================== */
+
+ilishAchar: {
+
+    id: 35,
+
+    category: "আচার",
+
+    name: "ইলিশ আচার",
+
+    stock: "স্টকে আছে",
+
+    description:
+        "বাছাইকৃত ইলিশ মাছ, খাঁটি সরিষার তেল ও প্রাকৃতিক মসলার সমন্বয়ে তৈরি আমাদের ঘরোয়া ইলিশ আচার। ঝাল, টক ও সুগন্ধি স্বাদের এই আচার গরম ভাত, খিচুড়ি, পোলাও, রুটি ও পরোটার সঙ্গে দারুণ উপভোগ্য।",
+
+    images: [
+        "../images/elishacar1.jpeg",
+        "../images/elishacar1.jpeg",
+        "../images/elishacar1.jpeg"
+    ],
+
+    prices: [
+        {
+            weight: "২৫০ গ্রাম",
+            price: 700
+        },
+        {
+            weight: "৫০০ গ্রাম",
+            price: 1400
+        },
+        {
+            weight: "১ কেজি",
+            price: 2800
+        }
+    ],
+
+    production:
+        "তাজা বাছাইকৃত ইলিশ মাছ স্বাস্থ্যসম্মতভাবে পরিষ্কার করে খাঁটি সরিষার তেল ও মানসম্মত প্রাকৃতিক মসলার সঙ্গে যত্নসহকারে প্রস্তুত করা হয়।",
+
+    ingredients:
+        "ইলিশ মাছ, সরিষার তেল, লবণ, মরিচ গুঁড়া, হলুদ, সরিষা, রসুন, আদা, ভিনেগার ও অন্যান্য প্রাকৃতিক মসলা।",
+
+    nutrition:
+        "ইলিশের প্রোটিন ও স্বাস্থ্যকর চর্বির পাশাপাশি ঐতিহ্যবাহী মসলার সমন্বয়ে তৈরি সুস্বাদু ঘরোয়া আচার।",
+
+    storage:
+        "ঠান্ডা ও শুকনো স্থানে সংরক্ষণ করুন। সবসময় শুকনো চামচ ব্যবহার করুন এবং সরাসরি রোদ থেকে দূরে রাখুন।",
+
+    delivery:
+        "সারা বাংলাদেশে হোম ডেলিভারি।",
+
+    benefits: [
+        "বাছাইকৃত ইলিশ দিয়ে তৈরি",
+        "খাঁটি সরিষার তেলে প্রস্তুত",
+        "প্রাকৃতিক মসলার সমন্বয়",
+        "ঘরোয়া ঐতিহ্যবাহী স্বাদ",
+        "গরম ভাত ও খিচুড়ির সঙ্গে দারুণ",
+        "রুটি, পরোটা ও পোলাওয়ের সঙ্গেও উপযোগী"
     ]
 
 },
