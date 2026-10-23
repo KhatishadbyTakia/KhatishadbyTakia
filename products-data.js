@@ -148,7 +148,7 @@ const products = [
     id: 3,
     category: "spices",
     name: "হলুদ গুঁড়া",
-    image: "images/holud-gura.jpeg",
+    image: "images/holud-gura6.png",
     stock: true,
 
     sizes: [
@@ -179,7 +179,7 @@ const products = [
     id: 4,
     category: "spices",
     name: "মরিচ গুঁড়া",
-    image: "images/moris-gura.png",
+    image: "images/moris-gura6.png",
     stock: true,
 
     sizes: [
@@ -981,6 +981,56 @@ const products = [
             label: "250 GM",
             weight: "২৫০ গ্রাম",
             price: 700
+        }
+    ]
+},
+{
+    id: 36,
+    category: "spices",
+    name: "ধনিয়া গুঁড়া",
+    image: "images/doniya-gura.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "1 KG",
+            weight: "১ কেজি",
+            price: 600
+        },
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 300
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 150
+        }
+    ]
+},
+{
+    id: 37,
+    category: "spices",
+    name: "জিরা গুঁড়া",
+    image: "images/jira-gura.png",
+    stock: true,
+
+    sizes: [
+        {
+            label: "500 GM",
+            weight: "৫০০ গ্রাম",
+            price: 750
+        },
+        {
+            label: "250 GM",
+            weight: "২৫০ গ্রাম",
+            price: 375
+        },
+        {
+            label: "100 GM",
+            weight: "১০০ গ্রাম",
+            price: 150
         }
     ]
 },
